@@ -1,0 +1,15 @@
+PODS:
+  - Cartography (3.0.1)
+  - UPCarouselFlowLayout (1.1.1)
+
+DEPENDENCIES:
+  - Cartography
+  - UPCarouselFlowLayout
+
+SPEC CHECKSUMS:
+  Cartography: f8c899bb0f5cf20758644a8eea59a75e98a03a5d
+  UPCarouselFlowLayout: 02045c1505d63057fba3d9975be880a8d16bf17d
+
+PODFILE CHECKSUM: 59ec577f73d73ad1b9c88af6c7c4554ab0ef4da9
+
+COCOAPODS: 1.4.0

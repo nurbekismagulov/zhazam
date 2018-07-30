@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A82BE012104CE19002F8094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE002104CE19002F8094 /* AppDelegate.swift */; };
+		7A82BE032104CE19002F8094 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE022104CE19002F8094 /* MainMenuViewController.swift */; };
+		7A82BE062104CE19002F8094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A82BE042104CE19002F8094 /* Main.storyboard */; };
+		7A82BE082104CE1D002F8094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A82BE072104CE1D002F8094 /* Assets.xcassets */; };
+		7A82BE0B2104CE1D002F8094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A82BE092104CE1D002F8094 /* LaunchScreen.storyboard */; };
+		7A82BE182105C5BA002F8094 /* String+TransformToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE172105C5BA002F8094 /* String+TransformToColor.swift */; };
+		7A82BE1A2105C5FC002F8094 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE192105C5FC002F8094 /* UIColor+Palette.swift */; };
+		7A82BE1C2105D31E002F8094 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE1B2105D31E002F8094 /* MenuView.swift */; };
+		7A82BE1E2105D8B4002F8094 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE1D2105D8B4002F8094 /* UIViewExtensions.swift */; };
+		7A82BE2021062C13002F8094 /* UILabelExtenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE1F21062C13002F8094 /* UILabelExtenstions.swift */; };
+		7A82BE22210758A5002F8094 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE21210758A5002F8094 /* PlayViewController.swift */; };
+		7A82BE262107AA03002F8094 /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE252107AA03002F8094 /* SwitchView.swift */; };
+		7A82BE282109095C002F8094 /* ModesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE272109095C002F8094 /* ModesViewController.swift */; };
+		7A82BE6C210C7DF2002F8094 /* CarsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE6B210C7DF2002F8094 /* CarsCollectionViewController.swift */; };
+		7A82BE6E210C8621002F8094 /* CarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE6D210C8621002F8094 /* CarCollectionViewCell.swift */; };
+		7A82BE72210C9F6C002F8094 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE71210C9F6C002F8094 /* Vehicle.swift */; };
+		7A82BE74210ED865002F8094 /* ClassicModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE73210ED865002F8094 /* ClassicModeViewController.swift */; };
+		7A82BE76210EFA98002F8094 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE75210EFA98002F8094 /* Reusable.swift */; };
+		7A82BE78210F373E002F8094 /* UITextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE77210F373E002F8094 /* UITextfield.swift */; };
+		7A82BE7A210FAD4F002F8094 /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE79210FAD4F002F8094 /* ComingSoonViewController.swift */; };
+		7A9FF607BA740448A8EE677D /* Pods_Typeracer_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8806C0110A58CEB22A3FAD04 /* Pods_Typeracer_iOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A36EF5E0069D366EB27E1AF /* Pods-Typeracer-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Typeracer-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Typeracer-iOS/Pods-Typeracer-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2117082F1AB53BEB12184AE9 /* Pods-Typeracer-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Typeracer-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Typeracer-iOS/Pods-Typeracer-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		7A82BDFD2104CE19002F8094 /* Typeracer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Typeracer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A82BE002104CE19002F8094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7A82BE022104CE19002F8094 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		7A82BE052104CE19002F8094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A82BE072104CE1D002F8094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A82BE0A2104CE1D002F8094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A82BE0C2104CE1D002F8094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A82BE172105C5BA002F8094 /* String+TransformToColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+TransformToColor.swift"; sourceTree = "<group>"; };
+		7A82BE192105C5FC002F8094 /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		7A82BE1B2105D31E002F8094 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		7A82BE1D2105D8B4002F8094 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		7A82BE1F21062C13002F8094 /* UILabelExtenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtenstions.swift; sourceTree = "<group>"; };
+		7A82BE21210758A5002F8094 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		7A82BE252107AA03002F8094 /* SwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
+		7A82BE272109095C002F8094 /* ModesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesViewController.swift; sourceTree = "<group>"; };
+		7A82BE6B210C7DF2002F8094 /* CarsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsCollectionViewController.swift; sourceTree = "<group>"; };
+		7A82BE6D210C8621002F8094 /* CarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCollectionViewCell.swift; sourceTree = "<group>"; };
+		7A82BE71210C9F6C002F8094 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		7A82BE73210ED865002F8094 /* ClassicModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicModeViewController.swift; sourceTree = "<group>"; };
+		7A82BE75210EFA98002F8094 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		7A82BE77210F373E002F8094 /* UITextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextfield.swift; sourceTree = "<group>"; };
+		7A82BE79210FAD4F002F8094 /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
+		8806C0110A58CEB22A3FAD04 /* Pods_Typeracer_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Typeracer_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A82BDFA2104CE19002F8094 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A9FF607BA740448A8EE677D /* Pods_Typeracer_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		634CA569655EBD5ED5C4AB8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A36EF5E0069D366EB27E1AF /* Pods-Typeracer-iOS.debug.xcconfig */,
+				2117082F1AB53BEB12184AE9 /* Pods-Typeracer-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A80E538E7CFD79284225602 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8806C0110A58CEB22A3FAD04 /* Pods_Typeracer_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A82BDF42104CE19002F8094 = {
+			isa = PBXGroup;
+			children = (
+				7A82BDFF2104CE19002F8094 /* Typeracer-iOS */,
+				7A82BDFE2104CE19002F8094 /* Products */,
+				634CA569655EBD5ED5C4AB8D /* Pods */,
+				6A80E538E7CFD79284225602 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7A82BDFE2104CE19002F8094 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A82BDFD2104CE19002F8094 /* Typeracer-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A82BDFF2104CE19002F8094 /* Typeracer-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7A82BE002104CE19002F8094 /* AppDelegate.swift */,
+				7A82BE162104CEC8002F8094 /* Model */,
+				7A82BE152104CEBD002F8094 /* View */,
+				7A82BE132104CE83002F8094 /* Controller */,
+				7A82BE142104CEB5002F8094 /* Extenstion */,
+				7A82BE122104CE34002F8094 /* Additional */,
+			);
+			path = "Typeracer-iOS";
+			sourceTree = "<group>";
+		};
+		7A82BE122104CE34002F8094 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				7A82BE042104CE19002F8094 /* Main.storyboard */,
+				7A82BE072104CE1D002F8094 /* Assets.xcassets */,
+				7A82BE092104CE1D002F8094 /* LaunchScreen.storyboard */,
+				7A82BE0C2104CE1D002F8094 /* Info.plist */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		7A82BE132104CE83002F8094 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A82BE022104CE19002F8094 /* MainMenuViewController.swift */,
+				7A82BE21210758A5002F8094 /* PlayViewController.swift */,
+				7A82BE272109095C002F8094 /* ModesViewController.swift */,
+				7A82BE6B210C7DF2002F8094 /* CarsCollectionViewController.swift */,
+				7A82BE73210ED865002F8094 /* ClassicModeViewController.swift */,
+				7A82BE79210FAD4F002F8094 /* ComingSoonViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7A82BE142104CEB5002F8094 /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				7A82BE172105C5BA002F8094 /* String+TransformToColor.swift */,
+				7A82BE192105C5FC002F8094 /* UIColor+Palette.swift */,
+				7A82BE1D2105D8B4002F8094 /* UIViewExtensions.swift */,
+				7A82BE1F21062C13002F8094 /* UILabelExtenstions.swift */,
+				7A82BE77210F373E002F8094 /* UITextfield.swift */,
+			);
+			path = Extenstion;
+			sourceTree = "<group>";
+		};
+		7A82BE152104CEBD002F8094 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A82BE1B2105D31E002F8094 /* MenuView.swift */,
+				7A82BE252107AA03002F8094 /* SwitchView.swift */,
+				7A82BE6D210C8621002F8094 /* CarCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7A82BE162104CEC8002F8094 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A82BE71210C9F6C002F8094 /* Vehicle.swift */,
+				7A82BE75210EFA98002F8094 /* Reusable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A82BDFC2104CE19002F8094 /* Typeracer-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A82BE0F2104CE1D002F8094 /* Build configuration list for PBXNativeTarget "Typeracer-iOS" */;
+			buildPhases = (
+				04A4D86E9BB6FAA025BC6E9B /* [CP] Check Pods Manifest.lock */,
+				7A82BDF92104CE19002F8094 /* Sources */,
+				7A82BDFA2104CE19002F8094 /* Frameworks */,
+				7A82BDFB2104CE19002F8094 /* Resources */,
+				D02D9027DE9BAB75F29A5F6B /* [CP] Embed Pods Frameworks */,
+				1FA8AB1A1D86CE5D13D5293A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Typeracer-iOS";
+			productName = "Typeracer-iOS";
+			productReference = 7A82BDFD2104CE19002F8094 /* Typeracer-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A82BDF52104CE19002F8094 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = theSmartest;
+				TargetAttributes = {
+					7A82BDFC2104CE19002F8094 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 7A82BDF82104CE19002F8094 /* Build configuration list for PBXProject "Typeracer-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A82BDF42104CE19002F8094;
+			productRefGroup = 7A82BDFE2104CE19002F8094 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A82BDFC2104CE19002F8094 /* Typeracer-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A82BDFB2104CE19002F8094 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A82BE0B2104CE1D002F8094 /* LaunchScreen.storyboard in Resources */,
+				7A82BE082104CE1D002F8094 /* Assets.xcassets in Resources */,
+				7A82BE062104CE19002F8094 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04A4D86E9BB6FAA025BC6E9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Typeracer-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FA8AB1A1D86CE5D13D5293A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Typeracer-iOS/Pods-Typeracer-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D02D9027DE9BAB75F29A5F6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Typeracer-iOS/Pods-Typeracer-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Typeracer-iOS/Pods-Typeracer-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A82BDF92104CE19002F8094 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A82BE74210ED865002F8094 /* ClassicModeViewController.swift in Sources */,
+				7A82BE22210758A5002F8094 /* PlayViewController.swift in Sources */,
+				7A82BE1C2105D31E002F8094 /* MenuView.swift in Sources */,
+				7A82BE78210F373E002F8094 /* UITextfield.swift in Sources */,
+				7A82BE7A210FAD4F002F8094 /* ComingSoonViewController.swift in Sources */,
+				7A82BE262107AA03002F8094 /* SwitchView.swift in Sources */,
+				7A82BE282109095C002F8094 /* ModesViewController.swift in Sources */,
+				7A82BE182105C5BA002F8094 /* String+TransformToColor.swift in Sources */,
+				7A82BE032104CE19002F8094 /* MainMenuViewController.swift in Sources */,
+				7A82BE012104CE19002F8094 /* AppDelegate.swift in Sources */,
+				7A82BE6E210C8621002F8094 /* CarCollectionViewCell.swift in Sources */,
+				7A82BE76210EFA98002F8094 /* Reusable.swift in Sources */,
+				7A82BE1E2105D8B4002F8094 /* UIViewExtensions.swift in Sources */,
+				7A82BE2021062C13002F8094 /* UILabelExtenstions.swift in Sources */,
+				7A82BE72210C9F6C002F8094 /* Vehicle.swift in Sources */,
+				7A82BE1A2105C5FC002F8094 /* UIColor+Palette.swift in Sources */,
+				7A82BE6C210C7DF2002F8094 /* CarsCollectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7A82BE042104CE19002F8094 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A82BE052104CE19002F8094 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7A82BE092104CE1D002F8094 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A82BE0A2104CE1D002F8094 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A82BE0D2104CE1D002F8094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7A82BE0E2104CE1D002F8094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A82BE102104CE1D002F8094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A36EF5E0069D366EB27E1AF /* Pods-Typeracer-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8S823VK5NA;
+				INFOPLIST_FILE = "$(SRCROOT)/Typeracer-iOS/Additional/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nurbekismagulov.Typeracer-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A82BE112104CE1D002F8094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2117082F1AB53BEB12184AE9 /* Pods-Typeracer-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8S823VK5NA;
+				INFOPLIST_FILE = "$(SRCROOT)/Typeracer-iOS/Additional/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nurbekismagulov.Typeracer-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A82BDF82104CE19002F8094 /* Build configuration list for PBXProject "Typeracer-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A82BE0D2104CE1D002F8094 /* Debug */,
+				7A82BE0E2104CE1D002F8094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A82BE0F2104CE1D002F8094 /* Build configuration list for PBXNativeTarget "Typeracer-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A82BE102104CE1D002F8094 /* Debug */,
+				7A82BE112104CE1D002F8094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A82BDF52104CE19002F8094 /* Project object */;
+}
