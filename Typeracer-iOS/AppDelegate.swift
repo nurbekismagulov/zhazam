@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func configureWindow(){
-        let viewController = UINavigationController(rootViewController: MainMenuViewController())
+        let viewController = UINavigationController(rootViewController: CarsCollectionViewController())
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()

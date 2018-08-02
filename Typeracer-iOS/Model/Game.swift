@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+protocol Game {
+    
+    var text: String { get set }
+    var textArray: [String] { get set }
+    var atWord: Int { get set }
+    var correctWords: Int { get set }
+    var timer: Timer { get set }
+    var seconds: Int { get set }
+    func calculateWPM() -> String
+    
+    func start()
+    func finish()
+}
+

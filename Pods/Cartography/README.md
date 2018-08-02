@@ -38,6 +38,24 @@ If you end up using Cartography in production, I'd love to hear from you. You ca
 
 If you need Swift 2.x support, then please use `0.7.0` and below.
 
+## Installation
+
+### CocoaPods
+
+To integrate Cartography into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+target '<Your Target Name>' do
+  pod 'Cartography', '~> 3.0'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
 ## Usage
 
 Call the `constrain` function with your `UIView` or `NSView` instances as well
@@ -98,7 +116,7 @@ constrain(view, replace: group) { view in
     view.right  == view.superview!.right
 }
 
-UIView.animateWithDuration(0.5, animations: view.layoutIfNeeded)
+UIView.animate(withDuration: 0.5, animations: view.layoutIfNeeded)
 ```
 
 For convenience, the `constrain` functions also returns `ConstraintGroup`
@@ -231,9 +249,9 @@ Read the documentation [here](http://robb.github.io/Cartography/). For more info
 
 ## Versioning
 
-For *Swift 3.x*: 1.1.0
+For *Swift 3.x*: Versions <= 1.1.0
 
-For *Swift 4.x*: 2.0.0
+For *Swift 4.x*: Versions >= 2.0.0
 
 ## Support
 

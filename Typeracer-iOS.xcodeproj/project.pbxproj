@@ -28,6 +28,10 @@
 		7A82BE78210F373E002F8094 /* UITextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE77210F373E002F8094 /* UITextfield.swift */; };
 		7A82BE7A210FAD4F002F8094 /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE79210FAD4F002F8094 /* ComingSoonViewController.swift */; };
 		7A9FF607BA740448A8EE677D /* Pods_Typeracer_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8806C0110A58CEB22A3FAD04 /* Pods_Typeracer_iOS.framework */; };
+		7AF967892111E0C0005391D3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF967882111E0C0005391D3 /* Game.swift */; };
+		7AF9678B21121980005391D3 /* GameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9678A21121980005391D3 /* GameDelegate.swift */; };
+		7AF9678D2112227C005391D3 /* ClassicGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9678C2112227C005391D3 /* ClassicGame.swift */; };
+		7AF9678F21124097005391D3 /* ClassicTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9678E21124097005391D3 /* ClassicTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,10 @@
 		7A82BE75210EFA98002F8094 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		7A82BE77210F373E002F8094 /* UITextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextfield.swift; sourceTree = "<group>"; };
 		7A82BE79210FAD4F002F8094 /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
+		7AF967882111E0C0005391D3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		7AF9678A21121980005391D3 /* GameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDelegate.swift; sourceTree = "<group>"; };
+		7AF9678C2112227C005391D3 /* ClassicGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicGame.swift; sourceTree = "<group>"; };
+		7AF9678E21124097005391D3 /* ClassicTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTextView.swift; sourceTree = "<group>"; };
 		8806C0110A58CEB22A3FAD04 /* Pods_Typeracer_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Typeracer_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -160,6 +168,7 @@
 				7A82BE1B2105D31E002F8094 /* MenuView.swift */,
 				7A82BE252107AA03002F8094 /* SwitchView.swift */,
 				7A82BE6D210C8621002F8094 /* CarCollectionViewCell.swift */,
+				7AF9678E21124097005391D3 /* ClassicTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,6 +178,9 @@
 			children = (
 				7A82BE71210C9F6C002F8094 /* Vehicle.swift */,
 				7A82BE75210EFA98002F8094 /* Reusable.swift */,
+				7AF967882111E0C0005391D3 /* Game.swift */,
+				7AF9678A21121980005391D3 /* GameDelegate.swift */,
+				7AF9678C2112227C005391D3 /* ClassicGame.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,11 +296,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Typeracer-iOS/Pods-Typeracer-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/CountdownLabel/CountdownLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountdownLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,8 +317,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AF9678F21124097005391D3 /* ClassicTextView.swift in Sources */,
+				7AF9678D2112227C005391D3 /* ClassicGame.swift in Sources */,
 				7A82BE74210ED865002F8094 /* ClassicModeViewController.swift in Sources */,
+				7AF967892111E0C0005391D3 /* Game.swift in Sources */,
 				7A82BE22210758A5002F8094 /* PlayViewController.swift in Sources */,
+				7AF9678B21121980005391D3 /* GameDelegate.swift in Sources */,
 				7A82BE1C2105D31E002F8094 /* MenuView.swift in Sources */,
 				7A82BE78210F373E002F8094 /* UITextfield.swift in Sources */,
 				7A82BE7A210FAD4F002F8094 /* ComingSoonViewController.swift in Sources */,

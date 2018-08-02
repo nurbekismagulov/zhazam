@@ -1,15 +1,18 @@
 PODS:
-  - Cartography (3.0.1)
+  - Cartography (3.0.2)
+  - CountdownLabel (3.0.0)
   - UPCarouselFlowLayout (1.1.1)
 
 DEPENDENCIES:
   - Cartography
+  - CountdownLabel
   - UPCarouselFlowLayout
 
 SPEC CHECKSUMS:
-  Cartography: f8c899bb0f5cf20758644a8eea59a75e98a03a5d
+  Cartography: 231190d7d0b3107ce8d67c54189f059a509b3760
+  CountdownLabel: 4534a68892b1deb73fda18702dfdc2c8444cec08
   UPCarouselFlowLayout: 02045c1505d63057fba3d9975be880a8d16bf17d
 
-PODFILE CHECKSUM: 59ec577f73d73ad1b9c88af6c7c4554ab0ef4da9
+PODFILE CHECKSUM: 6d5a0b6b37c27708feec8a087b066903628791d3
 
 COCOAPODS: 1.4.0

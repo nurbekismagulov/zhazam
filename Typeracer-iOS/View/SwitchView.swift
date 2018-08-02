@@ -11,6 +11,8 @@ import Cartography
 
 class SwitchView: UIView {
     
+   // weak var delegate: SWitchViewDelegate?
+    
     var atIndex = 0
     var initialTouchPoint:CGPoint = CGPoint(x: 0, y: 0)
     var images: [UIImage] = [#imageLiteral(resourceName: "singleplayerWhite"), #imageLiteral(resourceName: "multiplayerBlue"), #imageLiteral(resourceName: "singleplayerBlue"), #imageLiteral(resourceName: "multiplayerWhite")]
@@ -67,8 +69,6 @@ class SwitchView: UIView {
         createViews()
         setupConstraints()
         addGestures()
-       // self.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(swipe(_:))))
-
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -94,33 +94,53 @@ class SwitchView: UIView {
         swipeDownGesture.direction = .down
         self.addGestureRecognizer(swipeUpGesture)
         self.addGestureRecognizer(swipeDownGesture)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        self.addGestureRecognizer(tapGesture)
     }
     
     @objc func swipeUp(){
+       // delegate.didSwipeUp()
         if atIndex == 1 {
-            UIView.animate(withDuration: 0.2) {
-                self.choiceView.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.choiceView.frame.height)
-            }
-            atIndex = 0
-            firstImage.image = images[0]
-            firstLabel.textColor = .white
-            secondImage.image = images[1]
-            secondLabel.textColor = .catalinaBlue
+            animateAtIndexOne()
         }
     }
     @objc func swipeDown(){
         if atIndex == 0 {
-            UIView.animate(withDuration: 0.2) {
-                self.choiceView.frame = CGRect(x: 0, y: self.choiceView.frame.height, width: self.frame.size.width, height: self.choiceView.frame.height)
-            }
-            atIndex = 1
-            firstImage.image = images[2]
-            firstLabel.textColor = .catalinaBlue
-            secondImage.image = images[3]
-            secondLabel.textColor = .white
+            animateAtIndexZero()
         }
     }
     
+    @objc func viewTapped(_ sender: UITapGestureRecognizer) {
+        if !choiceView.frame.contains(sender.location(in: self)) {
+            if atIndex == 0 {
+                animateAtIndexZero()
+            }
+            else {
+                animateAtIndexOne()
+            }
+        }
+    }
+    func animateAtIndexZero() {
+        UIView.animate(withDuration: 0.2) {
+            self.choiceView.frame = CGRect(x: 0, y: self.choiceView.frame.height, width: self.frame.size.width, height: self.choiceView.frame.height)
+        }
+        atIndex = 1
+        firstImage.image = images[2]
+        firstLabel.textColor = .catalinaBlue
+        secondImage.image = images[3]
+        secondLabel.textColor = .white
+    }
+    func animateAtIndexOne() {
+        UIView.animate(withDuration: 0.2) {
+            self.choiceView.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.choiceView.frame.height)
+        }
+        atIndex = 0
+        firstImage.image = images[0]
+        firstLabel.textColor = .white
+        secondImage.image = images[1]
+        secondLabel.textColor = .catalinaBlue
+    }
     func setImages(arrayOfImages: [UIImage]){
         firstImage.image = arrayOfImages[0]
         secondImage.image = arrayOfImages[1]

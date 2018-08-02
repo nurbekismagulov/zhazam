@@ -8,17 +8,23 @@
 
 import UIKit
 import Cartography
+import CountdownLabel
 
 class ClassicModeViewController: UIViewController {
+    
+    var game = ClassicGame()
+    
 
     // MARK: - properties
-    var text = String()
-    var textArray: [String] = []
+    var correctText = ""
+    var wrongText = ""
     var icon = String()
+    var movePerWord: CGFloat = 0
     
     // MARK: - Views
     lazy var carIcon: UIImageView = {
-        let image = UIImageView(image: UIImage(named: icon))
+        let image = UIImageView(frame: CGRect(x: 15 / 667 * UIScreen.main.bounds.height, y: 22 / 375 * UIScreen.main.bounds.width, width: 60 / 375 * UIScreen.main.bounds.width, height: 20 / 667 * UIScreen.main.bounds.height))
+        image.image = UIImage(named: icon)
         return image
     }()
     
@@ -28,40 +34,25 @@ class ClassicModeViewController: UIViewController {
     }()
     lazy var speedLabel: UILabel = {
         let label = UILabel()
-        label.text = "26 wpm"
+        label.text = "0 wpm"
         label.textColor = .white
         label.font = .boldSystemFont(ofSize: 18)
         return label
     }()
-    lazy var textView: UITextView = {
-        let tv = UITextView()
-        tv.layer.cornerRadius = 12
-        tv.layer.borderWidth = 1
-        tv.layer.borderColor = UIColor.darkGray.cgColor
-        tv.font = .systemFont(ofSize: 17)
-        let string_to_color = "messag"
-        let range = (text as NSString).range(of: string_to_color)
-        let attribute = NSMutableAttributedString.init(string: text)
-        attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red , range: range)
-        tv.isEditable = false
-        tv.attributedText = attribute
-        //tv.text = text
+
+    lazy var classicTextView: ClassicTextView = {
+        let tv = ClassicTextView()
+        tv.textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        tv.textView.text = game.text
         return tv
     }()
-    lazy var textField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .white
-        tf.layer.cornerRadius = 6
-        tf.layer.borderWidth = 1
-        tf.layer.borderColor = UIColor.darkGray.cgColor
-        tf.font = .systemFont(ofSize: 17)
-        tf.setLeftPaddingPoints(10)
-        tf.setRightPaddingPoints(10)
-        return tf
-    }()
-    lazy var eraseImage: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "erase"))
-        return image
+    
+    lazy var countDownLabel: UILabel = {
+        let timer = UILabel()
+        timer.text = "3"
+        timer.textColor = .white
+        timer.font = .boldSystemFont(ofSize: 50)
+        return timer
     }()
     
     // MARK: - lifecycle
@@ -70,46 +61,106 @@ class ClassicModeViewController: UIViewController {
         configureView()
         createViews()
         configureConstraints()
+        movePerWord = (roadImage.frame.width - carIcon.frame.width) / CGFloat(game.textArray.count)
+        game.delegate = self
+        game.start()
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        game.timer.invalidate()
+    }
     func configureView() {
         view.backgroundColor = .catalinaBlue
         self.navigationController?.navigationBar.topItem?.title = ""
     }
 
     func createViews() {
-        [carIcon, roadImage, speedLabel, textView, textField, eraseImage].forEach { view.addSubview($0) }
+        [carIcon, roadImage, speedLabel, classicTextView, countDownLabel].forEach { view.addSubview($0) }
+    }
+    
+    @objc func calculateSeconds() {
+        var number = Int(countDownLabel.text!)!
+        if number > 0 {
+            number -= 1
+            countDownLabel.text = "\(number)"
+        }
+        else{
+            game.seconds += 1
+            classicTextView.textField.isUserInteractionEnabled = true
+            classicTextView.textField.becomeFirstResponder()
+            game.updateWPM()
+        }
+    }
+    
+    @objc func textFieldDidChange() {
+        game.updateText()
+    }
+    
+    func moveVehicle() {
+        UIView.animate(withDuration: 0.1) {
+            self.carIcon.frame.origin.x = self.carIcon.frame.origin.x + self.movePerWord
+        }
     }
     
     func configureConstraints() {
-        constrain(carIcon, roadImage, speedLabel, textView, textField, eraseImage, view) { ci, ri, sl, tv, tf, ei, v in
-            ci.top == v.top + 22
-            ci.left == v.left + 15
-            ci.width == 60
-            ci.height == 20
-            
+        constrain(carIcon, roadImage, speedLabel, classicTextView, countDownLabel, view) { ci, ri, sl, ctv, cdl, v in
             ri.top == ci.bottom
-            ri.left == v.left + 13
-            ri.height == 3
-            ri.width == 272
+            ri.left == v.left + (13 / 375 * UIScreen.main.bounds.width)
+            ri.height == 3 / 667 * UIScreen.main.bounds.height
+            ri.width == 272 / 375 * UIScreen.main.bounds.width
             
-            sl.top == v.top + 30
-            sl.right == v.right - 10
+            sl.top == v.top + (30 / 667 * UIScreen.main.bounds.height)
+            sl.right == v.right - (10 / 375 * UIScreen.main.bounds.width)
             
-            tv.top == ri.bottom + 20
-            tv.centerX == v.centerX
-            tv.height == 216
-            tv.width == 352
-            
-            tf.top == tv.bottom + 24
-            tf.left == v.left + 13
-            tf.height == 34
-            tf.width == 300
-            
-            ei.top == tv.bottom + 24
-            ei.left == tf.right + 10
-            ei.height == 33
-            ei.width == 33
+            ctv.top == ri.bottom + (20 / 667 * UIScreen.main.bounds.height)
+            ctv.left == v.left
+            ctv.right == v.right
+            ctv.height == 274
+
+            cdl.top == ctv.bottom + 100
+            cdl.centerX == v.centerX
         }
     }
+}
+
+extension ClassicModeViewController: GameDelegate {
+    
+    func gameDidStart() {
+        game.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(calculateSeconds), userInfo: nil, repeats: true)
+    }
+    
+    func gameWPMDidUpdate(){
+        speedLabel.text = game.calculateWPM()
+    }
+    
+    func textDidUpdate() {
+        if game.textArray[game.atWord].hasPrefix(classicTextView.textField.text!) {
+            paintCorrectText()
+        }
+        else if (classicTextView.textField.text?.count)! - 1 == game.textArray[game.atWord].count && (classicTextView.textField.text?.hasSuffix(" "))! && (classicTextView.textField.text?.hasPrefix(game.textArray[game.atWord]))! {
+            correctText += classicTextView.textField.text!
+            self.game.correctWords += game.textArray[game.atWord].count
+            self.game.atWord += 1
+            moveVehicle()
+            classicTextView.textField.text = ""
+        }
+        else {
+            paintWrongText()
+        }
+    }
+    
+    func gameDidFinish() {
+        
+    }
+    
+    func paintCorrectText() {
+            let stringToPaint = correctText + classicTextView.textField.text!
+            classicTextView.paintBlue(withStringToPaint: stringToPaint, withText: game.text)
+    }
+    
+    func paintWrongText() {
+            let stringToPaint = game.textArray[game.atWord]
+            classicTextView.paintRed(alreadyPaintedString: correctText, stringToPaint: stringToPaint, withText: game.text)
+    }
+    
 }

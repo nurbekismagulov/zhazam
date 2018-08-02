@@ -79,8 +79,8 @@ class CarsCollectionViewController: UIViewController, Reusable {
         vc.icon = random(array: arrayOfCars[atIndex].iconImages) as! String
         // Will be moved to realm or core date
         let someText = "Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile phones, tablets, desktops/laptops, or other devices. Text messages may be sent over a cellular network"
-        vc.text = someText
-        vc.textArray = someText.components(separatedBy: " ")
+        vc.game.text = someText
+        vc.game.textArray = someText.components(separatedBy: " ")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     func configureConstraints(){

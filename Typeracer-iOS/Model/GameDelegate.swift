@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+protocol GameDelegate: AnyObject {
+    
+    func gameDidStart()
+    func gameWPMDidUpdate()
+    func textDidUpdate()
+    func gameDidFinish()
+    
+}

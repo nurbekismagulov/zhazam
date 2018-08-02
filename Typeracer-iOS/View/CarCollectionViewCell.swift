@@ -46,7 +46,6 @@ class CarCollectionViewCell: UICollectionViewCell {
             cnl.centerX == cv.centerX
             
             ci.top == cnl.bottom + 93
-            //ci.left == cv.left - 17
             ci.centerX == cv.centerX
             ci.height == 130
             ci.width == 248

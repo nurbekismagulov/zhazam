@@ -9,8 +9,14 @@
 import UIKit
 import Cartography
 
-class ModesViewController: UIViewController {
+//protocol SwitchViewDelegate {
+//    func didSwipeUp()
+//    func didSwipeDown()
+//}
 
+//class ModesViewController: UIViewController, SwitchViewDelegate {
+class ModesViewController: UIViewController {
+    
     //MARK: - Views
     lazy var modeLabel: UILabel = {
         let label = UILabel()
