@@ -12,7 +12,9 @@ protocol GameDelegate: AnyObject {
     
     func gameDidStart()
     func gameWPMDidUpdate()
-    func textDidUpdate()
+    func textDidUpdateRightLetter()
+    func textDidUpdateWrongLetter()
+    func textDidUpdateRightWord()
     func gameDidFinish()
-    
+    func timerDidUpdate(with time: Int)
 }

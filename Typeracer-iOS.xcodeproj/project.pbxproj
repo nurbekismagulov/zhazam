@@ -32,6 +32,8 @@
 		7AF9678B21121980005391D3 /* GameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9678A21121980005391D3 /* GameDelegate.swift */; };
 		7AF9678D2112227C005391D3 /* ClassicGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9678C2112227C005391D3 /* ClassicGame.swift */; };
 		7AF9678F21124097005391D3 /* ClassicTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9678E21124097005391D3 /* ClassicTextView.swift */; };
+		7AF9679321138EE3005391D3 /* TimerModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9679221138EE3005391D3 /* TimerModeViewController.swift */; };
+		7AF967952113A63D005391D3 /* ErasableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF967942113A63D005391D3 /* ErasableTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		7AF9678A21121980005391D3 /* GameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDelegate.swift; sourceTree = "<group>"; };
 		7AF9678C2112227C005391D3 /* ClassicGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicGame.swift; sourceTree = "<group>"; };
 		7AF9678E21124097005391D3 /* ClassicTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTextView.swift; sourceTree = "<group>"; };
+		7AF9679221138EE3005391D3 /* TimerModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModeViewController.swift; sourceTree = "<group>"; };
+		7AF967942113A63D005391D3 /* ErasableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErasableTextField.swift; sourceTree = "<group>"; };
 		8806C0110A58CEB22A3FAD04 /* Pods_Typeracer_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Typeracer_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +150,7 @@
 				7A82BE6B210C7DF2002F8094 /* CarsCollectionViewController.swift */,
 				7A82BE73210ED865002F8094 /* ClassicModeViewController.swift */,
 				7A82BE79210FAD4F002F8094 /* ComingSoonViewController.swift */,
+				7AF9679221138EE3005391D3 /* TimerModeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 				7A82BE252107AA03002F8094 /* SwitchView.swift */,
 				7A82BE6D210C8621002F8094 /* CarCollectionViewCell.swift */,
 				7AF9678E21124097005391D3 /* ClassicTextView.swift */,
+				7AF967942113A63D005391D3 /* ErasableTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,6 +344,8 @@
 				7A82BE72210C9F6C002F8094 /* Vehicle.swift in Sources */,
 				7A82BE1A2105C5FC002F8094 /* UIColor+Palette.swift in Sources */,
 				7A82BE6C210C7DF2002F8094 /* CarsCollectionViewController.swift in Sources */,
+				7AF9679321138EE3005391D3 /* TimerModeViewController.swift in Sources */,
+				7AF967952113A63D005391D3 /* ErasableTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

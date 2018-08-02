@@ -82,9 +82,7 @@ class SwitchView: UIView {
         self.layer.cornerRadius = 20
     }
     func createViews(){
-        [choiceView, firstImage, firstLabel, secondImage, secondLabel, offlineIsEnableCircle, onlineIsEnableCircle].forEach { (elem) in
-            self.addSubview(elem)
-        }
+        [choiceView, firstImage, firstLabel, secondImage, secondLabel, offlineIsEnableCircle, onlineIsEnableCircle].forEach { self.addSubview($0) }
     }
     
     func addGestures() {

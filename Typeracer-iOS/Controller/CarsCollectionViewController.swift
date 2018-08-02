@@ -76,7 +76,7 @@ class CarsCollectionViewController: UIViewController, Reusable {
     
     @objc func startRaceButtonPressed(){
         let vc = ClassicModeViewController()
-        vc.icon = random(array: arrayOfCars[atIndex].iconImages) as! String
+        vc.game.carIcon = random(array: arrayOfCars[atIndex].iconImages) as! String
         // Will be moved to realm or core date
         let someText = "Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile phones, tablets, desktops/laptops, or other devices. Text messages may be sent over a cellular network"
         vc.game.text = someText

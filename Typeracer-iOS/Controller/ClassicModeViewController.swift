@@ -16,15 +16,13 @@ class ClassicModeViewController: UIViewController {
     
 
     // MARK: - properties
-    var correctText = ""
     var wrongText = ""
-    var icon = String()
     var movePerWord: CGFloat = 0
     
     // MARK: - Views
     lazy var carIcon: UIImageView = {
         let image = UIImageView(frame: CGRect(x: 15 / 667 * UIScreen.main.bounds.height, y: 22 / 375 * UIScreen.main.bounds.width, width: 60 / 375 * UIScreen.main.bounds.width, height: 20 / 667 * UIScreen.main.bounds.height))
-        image.image = UIImage(named: icon)
+        image.image = UIImage(named: game.carIcon)
         return image
     }()
     
@@ -78,22 +76,8 @@ class ClassicModeViewController: UIViewController {
         [carIcon, roadImage, speedLabel, classicTextView, countDownLabel].forEach { view.addSubview($0) }
     }
     
-    @objc func calculateSeconds() {
-        var number = Int(countDownLabel.text!)!
-        if number > 0 {
-            number -= 1
-            countDownLabel.text = "\(number)"
-        }
-        else{
-            game.seconds += 1
-            classicTextView.textField.isUserInteractionEnabled = true
-            classicTextView.textField.becomeFirstResponder()
-            game.updateWPM()
-        }
-    }
-    
     @objc func textFieldDidChange() {
-        game.updateText()
+        game.updateText(with: classicTextView.textField.text!)
     }
     
     func moveVehicle() {
@@ -125,42 +109,40 @@ class ClassicModeViewController: UIViewController {
 
 extension ClassicModeViewController: GameDelegate {
     
+    func timerDidUpdate(with time: Int) {
+        if time >= 0 {
+            countDownLabel.text = String(time)
+            if time == 0{
+                classicTextView.textField.isUserInteractionEnabled = true
+                classicTextView.textField.becomeFirstResponder()
+            }
+        }
+    }
     func gameDidStart() {
-        game.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(calculateSeconds), userInfo: nil, repeats: true)
+        print("game Started")
     }
     
     func gameWPMDidUpdate(){
-        speedLabel.text = game.calculateWPM()
+        speedLabel.text = "\(game.wpm) wpm"
     }
     
-    func textDidUpdate() {
-        if game.textArray[game.atWord].hasPrefix(classicTextView.textField.text!) {
-            paintCorrectText()
-        }
-        else if (classicTextView.textField.text?.count)! - 1 == game.textArray[game.atWord].count && (classicTextView.textField.text?.hasSuffix(" "))! && (classicTextView.textField.text?.hasPrefix(game.textArray[game.atWord]))! {
-            correctText += classicTextView.textField.text!
-            self.game.correctWords += game.textArray[game.atWord].count
-            self.game.atWord += 1
-            moveVehicle()
-            classicTextView.textField.text = ""
-        }
-        else {
-            paintWrongText()
-        }
+    func textDidUpdateRightLetter() {
+        let stringToPaint = game.correctText + classicTextView.textField.text!
+        classicTextView.paintBlue(withStringToPaint: stringToPaint, withText: game.text)
+    }
+    
+    func textDidUpdateWrongLetter() {
+        let stringToPaint = game.textArray[game.atWord]
+        classicTextView.paintRed(alreadyPaintedString: game.correctText, stringToPaint: stringToPaint, withText: game.text, with: classicTextView.textField.text!, andWith: game.wrongLetters)
+    }
+    
+    func textDidUpdateRightWord() {
+        moveVehicle()
+        classicTextView.textField.text = ""
     }
     
     func gameDidFinish() {
-        
-    }
-    
-    func paintCorrectText() {
-            let stringToPaint = correctText + classicTextView.textField.text!
-            classicTextView.paintBlue(withStringToPaint: stringToPaint, withText: game.text)
-    }
-    
-    func paintWrongText() {
-            let stringToPaint = game.textArray[game.atWord]
-            classicTextView.paintRed(alreadyPaintedString: correctText, stringToPaint: stringToPaint, withText: game.text)
+        print("Game finished")
     }
     
 }

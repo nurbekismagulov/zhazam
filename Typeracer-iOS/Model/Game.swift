@@ -14,9 +14,11 @@ protocol Game {
     var textArray: [String] { get set }
     var atWord: Int { get set }
     var correctWords: Int { get set }
+    var wrongLetters: Int {get set}
     var timer: Timer { get set }
     var seconds: Int { get set }
-    func calculateWPM() -> String
+    var wpm: Int {get set}
+    func calculateWPM()
     
     func start()
     func finish()
