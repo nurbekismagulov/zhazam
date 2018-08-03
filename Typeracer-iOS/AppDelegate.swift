@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import RealmSwift
+
+var realm: Realm?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,10 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        configureWindow()
-        configureNavigationBar()
+        Database.database.copyDatabase(completionHandler: {
+            config in realm = try! Realm(configuration: config)
+            self.configureWindow()
+            self.configureNavigationBar()
+        })
         return true
     }
+    
     func configureWindow(){
         UIApplication.shared.statusBarStyle = .lightContent
         let viewController = UINavigationController(rootViewController: CarsCollectionViewController())
@@ -26,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
+   
     func configureNavigationBar(){
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().tintColor = .white

@@ -34,6 +34,9 @@
 		7AF9678F21124097005391D3 /* ClassicTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9678E21124097005391D3 /* ClassicTextView.swift */; };
 		7AF9679321138EE3005391D3 /* TimerModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9679221138EE3005391D3 /* TimerModeViewController.swift */; };
 		7AF967952113A63D005391D3 /* ErasableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF967942113A63D005391D3 /* ErasableTextField.swift */; };
+		C4F4F31321146E9D00530DD0 /* db.realm in Resources */ = {isa = PBXBuildFile; fileRef = C4F4F31221146E9D00530DD0 /* db.realm */; };
+		C4F4F31521146EAE00530DD0 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4F31421146EAE00530DD0 /* Text.swift */; };
+		C4F4F3192114714600530DD0 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4F3182114714600530DD0 /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		7AF9679221138EE3005391D3 /* TimerModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModeViewController.swift; sourceTree = "<group>"; };
 		7AF967942113A63D005391D3 /* ErasableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErasableTextField.swift; sourceTree = "<group>"; };
 		8806C0110A58CEB22A3FAD04 /* Pods_Typeracer_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Typeracer_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4F4F31221146E9D00530DD0 /* db.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.realm; sourceTree = "<group>"; };
+		C4F4F31421146EAE00530DD0 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		C4F4F3182114714600530DD0 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				7A82BE042104CE19002F8094 /* Main.storyboard */,
+				C4F4F31221146E9D00530DD0 /* db.realm */,
 				7A82BE072104CE1D002F8094 /* Assets.xcassets */,
 				7A82BE092104CE1D002F8094 /* LaunchScreen.storyboard */,
 				7A82BE0C2104CE1D002F8094 /* Info.plist */,
@@ -187,6 +194,8 @@
 				7AF967882111E0C0005391D3 /* Game.swift */,
 				7AF9678A21121980005391D3 /* GameDelegate.swift */,
 				7AF9678C2112227C005391D3 /* ClassicGame.swift */,
+				C4F4F31421146EAE00530DD0 /* Text.swift */,
+				C4F4F3182114714600530DD0 /* Database.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A82BE0B2104CE1D002F8094 /* LaunchScreen.storyboard in Resources */,
+				C4F4F31321146E9D00530DD0 /* db.realm in Resources */,
 				7A82BE082104CE1D002F8094 /* Assets.xcassets in Resources */,
 				7A82BE062104CE19002F8094 /* Main.storyboard in Resources */,
 			);
@@ -302,11 +312,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Typeracer-iOS/Pods-Typeracer-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +338,7 @@
 				7AF9678F21124097005391D3 /* ClassicTextView.swift in Sources */,
 				7AF9678D2112227C005391D3 /* ClassicGame.swift in Sources */,
 				7A82BE74210ED865002F8094 /* ClassicModeViewController.swift in Sources */,
+				C4F4F3192114714600530DD0 /* Database.swift in Sources */,
 				7AF967892111E0C0005391D3 /* Game.swift in Sources */,
 				7A82BE22210758A5002F8094 /* PlayViewController.swift in Sources */,
 				7AF9678B21121980005391D3 /* GameDelegate.swift in Sources */,
@@ -331,6 +346,7 @@
 				7A82BE78210F373E002F8094 /* UITextfield.swift in Sources */,
 				7A82BE7A210FAD4F002F8094 /* ComingSoonViewController.swift in Sources */,
 				7A82BE262107AA03002F8094 /* SwitchView.swift in Sources */,
+				C4F4F31521146EAE00530DD0 /* Text.swift in Sources */,
 				7A82BE282109095C002F8094 /* ModesViewController.swift in Sources */,
 				7A82BE182105C5BA002F8094 /* String+TransformToColor.swift in Sources */,
 				7A82BE032104CE19002F8094 /* MainMenuViewController.swift in Sources */,
@@ -491,7 +507,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S823VK5NA;
 				INFOPLIST_FILE = "$(SRCROOT)/Typeracer-iOS/Additional/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nurbekismagulov.Typeracer-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -507,7 +526,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S823VK5NA;
 				INFOPLIST_FILE = "$(SRCROOT)/Typeracer-iOS/Additional/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nurbekismagulov.Typeracer-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
