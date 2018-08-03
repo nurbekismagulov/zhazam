@@ -7,81 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		033E20123508ACA1151479485BEC8D90 /* LayoutProxy+TypeErasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461DCB7B3E411D1DB4F157EF62D870C /* LayoutProxy+TypeErasure.swift */; };
-		0739B8BF39538E41B6C747EDE71114F3 /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C8ADE31CA78C6AA9E82268C751947 /* Constrain.swift */; };
-		078D75FC8795FA3EBD22377BC890520B /* Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3266273FB47E0665FDF2116CC5467 /* Distribute.swift */; };
-		0B46C87D7C9BBDC0F31A84A6E6720983 /* LTCharacterDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E12D7913616AEA284DBF8D3547E3 /* LTCharacterDiffResult.swift */; };
-		1C92A98E34D0E29E787071F0B75401E5 /* Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F7045460F611E59DB357BB378ACDA8 /* Cartography-dummy.m */; };
-		22C18133E55CC4E0633B633F3912F097 /* Cartography-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D86DA161EE0A7C5EB983BC9B1A7D4D20 /* Cartography-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26D9D26B1D4A7C48E1DFE6C4697A7EB3 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50B583D2B27285EC4EF22C24417AE6D /* Size.swift */; };
-		27BEB6D60B638B2F7E7086598B419CB3 /* LayoutGuideProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C1E43078CD206E4DC9133186F994F7 /* LayoutGuideProxy.swift */; };
-		33E91E78F43301F168B42DB67C04CDC4 /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67BFFEC9B43339F0715B9293B07CEB5 /* Coefficients.swift */; };
-		370EA4B00C3E1F71C87314271179D06D /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E259EECC5D855B7EDBA47F173F12DA /* Property.swift */; };
-		38F80E96539DDE5339A8426DC087758D /* LTMorphingLabel+Anvil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BE68AD8B9EAC62767074C6BAD9987 /* LTMorphingLabel+Anvil.swift */; };
-		411006EF91E1CAA30C6D619491990949 /* Pods-Typeracer-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9244387768336F7FC1A62BEAFBB04084 /* Pods-Typeracer-iOS-dummy.m */; };
-		44279488206961A71665C70FD3BD9FCD /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D14AC8731D9202378BB532880423AD9 /* Point.swift */; };
-		4A7A7D6B588AF21C02DAB605738A7A76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		52C3E8081BB80AA34FEF1659F24533C2 /* ViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C1A8CCF6915BD9A1C6A35AF7B30E0 /* ViewProxy.swift */; };
-		551EDA7C2AEF5DBDE54A1E04D3B66DEF /* ConstraintGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003AEFE122164F4C1DE127E943CB1DF2 /* ConstraintGroup.swift */; };
-		57FEC3575D668D3A78A4A7586FC1FEF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		5844B86F6F29F004C2670685131EB6C7 /* Pods-Typeracer-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F3F9E1D3C329BE8F3DB78E74CE896F5 /* Pods-Typeracer-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		58B00C7BCF27BE64587847CA77E9DD11 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DDA01DEF0CAA5E609EB0A40198CC01 /* Align.swift */; };
-		5B7F1D075B76798E5B25257815EE36CF /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CC7378585C9D02561E13FF218CC8A /* LTMorphingLabel+Sparkle.swift */; };
-		5C76EAC0C7DD314C24415C4F2215E3D6 /* LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47272721E03A1115D3E9352F13C4F26E /* LTMorphingLabel.swift */; };
-		6303953B4072C1B9B5BE9038CD1A5858 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D77BE6E37923324317107B873A828 /* LayoutProxy.swift */; };
-		64C1C1BBD53C2B17073E4473687A853A /* LayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212D71A4FF3513118B82EB82A866959 /* LayoutGuide.swift */; };
-		6F4FE3B61F3F4136F1C403AD21C331D7 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234DE66EC0597D3D580DCA5D041A1CDB /* Context.swift */; };
-		734B7AC8EAECFFA3C06D89229ACA3960 /* CountdownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C362E4272616C63A313A3000BE8CAC /* CountdownLabel.swift */; };
-		75A09744CB87DB237A3D3FA76FC9AB9A /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957E0DB2F28ACF7304BF77151150EE1A /* Edges.swift */; };
-		75F8B6C4BEEAAE367DFF9E36A4F21E2E /* UPCarouselFlowLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 791741E0920B62E7E439893709BE03D0 /* UPCarouselFlowLayout-dummy.m */; };
-		7BBAA7D5001ABB0D1516ACAF7F51F4B5 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CF11092E096CFDE823753BECC3F9B0 /* View.swift */; };
-		7D8B32C0288302700C7279F51794C25D /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 2E21C5CAF8F143EB8E95E06341AF3756 /* Info.plist */; };
-		869BF762B9D0699ABF4024F1DED0AD0E /* AutoresizingMaskLayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D42547895170244D6AAC9B9D136FFFB /* AutoresizingMaskLayoutProxy.swift */; };
-		8FA870156921760C688FBED5819B9BA5 /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF018F1F7AC324FD3F121B63A8361A5 /* LTMorphingLabel+Pixelate.swift */; };
-		91E56E34A99E791CF95D393752F334A5 /* LTMorphingLabel+Evaporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE09D6D8819114BC285BDEF2ADD982 /* LTMorphingLabel+Evaporate.swift */; };
-		935888C5D1F710989DC7203419E64920 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		94C7D2A64168F83FDD3F1FDD86309462 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BCB2E6BD16E8F59894540789129EE /* Edge.swift */; };
-		9639865A2ED46826C52A6995A5294096 /* CountdownLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD900CE573AA8E1A312FCCC0D5DFA827 /* CountdownLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C6E1370B7332CEA8408E407F24570B5 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C0609ACF3A2D4EBBC83D4EF5C45842 /* Expression.swift */; };
-		9DE7AC7E9424287CE00664C9EA68D2D2 /* LayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A92A21BC83FFEC9C060012768B3AE4D /* LayoutSupport.swift */; };
-		A26BA9F8E876A788CEE8623E08D72A9E /* CountdownLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2170E2A05D2EF25284B9BD24175453 /* CountdownLabel-dummy.m */; };
-		A37DED66695DC9C57FD67849B88A3B7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		ADF7EA52BC64FFB7F2C2A143505D9517 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE24CF533FA91A050F1F8AFA42D49A /* UPCarouselFlowLayout.swift */; };
-		B4DBC3F172AFEA9A0F86A1428D235BAB /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC0A3CB7C050F69D10C7B3D3DFB5BDA /* Dimension.swift */; };
-		B8E7F36176917E71F2E97A233C1FCCA4 /* LTCharacterLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FE85BE77E50CE77A59862E822D13A5 /* LTCharacterLimbo.swift */; };
-		BAA82517E186455BBE3B74D44E5EDD5D /* LayoutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272695CE5D0042D7814C46E85CBABDB3 /* LayoutItem.swift */; };
-		C0E7D15F27ECD51003CB899B9C096931 /* LTMorphingLabel+Burn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C2777652D3853F202E0419B09B1B88 /* LTMorphingLabel+Burn.swift */; };
-		C4D1D1EDBA79F0D39627DE5FF26272BC /* LTEmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D878E8B8DACD9F438B993DDE53F4A /* LTEmitterView.swift */; };
-		CE682D3A3A6CB00A16952975695706FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		D26B66606862EBD7C7C3C8578202012E /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989B797B0D6F1E193AA5C71A439D128 /* LTEasing.swift */; };
-		D560242116899637FC3EAFAAEB48FEDA /* LTStringDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD360D591169DB36661C22E7676C7A /* LTStringDiffResult.swift */; };
-		D62F906CDE703B7264213E7B059BEA1C /* UPCarouselFlowLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0774BC2207D3A5EA164ADACB2A1B0FD3 /* UPCarouselFlowLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB9F3857E166A3EAC8EC5646023E7B8E /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DAB57CDA64159161A1ADF25F1078AB /* Compound.swift */; };
-		E2F636932DC549ECAC060149AE2925A8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7445F86529B7290516928792F1B3B076 /* Extensions.swift */; };
-		E46559D5C2F89367FE61EA281FB31F2B /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D597492C4218BC3AAC5384BE1F214 /* LTMorphingLabel+Fall.swift */; };
-		E79C8C2851495884D91FEFFFC53FAB45 /* LayoutSupportProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A43452E149CC96A123601926B57842 /* LayoutSupportProxy.swift */; };
-		EA93C9D461422F6846DE6AFF3B63442C /* UPCarouselFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 615E4814B50F80119C6A2CA708B6B7D8 /* UPCarouselFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F14347E3AC3A254F7A424CCB7FCF512B /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A72115C2B774BA511C497CE689FD9A /* Priority.swift */; };
-		F3D690F6C4EF6CB02AAC682D74FC7615 /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC65272EC68FBB199B286DA69B72B3 /* LTMorphingEffect.swift */; };
-		F435B4C2D5E6E7B34471B69DAC6D5E51 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AA22AFF50F3337D8C45C259FA2BDEF /* Constraint.swift */; };
+		033E20123508ACA1151479485BEC8D90 /* LayoutProxy+TypeErasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50D79F58E37F2A7A121710E35B530AD /* LayoutProxy+TypeErasure.swift */; };
+		0739B8BF39538E41B6C747EDE71114F3 /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BD5F378AEAF036D5BD75C5603FB5E9 /* Constrain.swift */; };
+		078D75FC8795FA3EBD22377BC890520B /* Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0DDB6DF7D47A1145A29703C3057457 /* Distribute.swift */; };
+		1BAD1B246BE89DEA8128BB93E758441F /* UPCarouselFlowLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0857F2FD921BD75E58534A030F609036 /* UPCarouselFlowLayout-dummy.m */; };
+		1C92A98E34D0E29E787071F0B75401E5 /* Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE2A4AAB9EC65415B7F1761353CCBF3 /* Cartography-dummy.m */; };
+		22C18133E55CC4E0633B633F3912F097 /* Cartography-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A01C1E92A9C6AA659D4182EA207873B /* Cartography-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26D9D26B1D4A7C48E1DFE6C4697A7EB3 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B3C6BEAFA667C65E0D3ABEFD37278 /* Size.swift */; };
+		27BEB6D60B638B2F7E7086598B419CB3 /* LayoutGuideProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE507F685346487DE466CA7A5E2BFAA1 /* LayoutGuideProxy.swift */; };
+		33E91E78F43301F168B42DB67C04CDC4 /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F54483287BEE693622AEED01BE2B5 /* Coefficients.swift */; };
+		370EA4B00C3E1F71C87314271179D06D /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334AEC523E7BE34CD9BB382CCC5B5ABE /* Property.swift */; };
+		44279488206961A71665C70FD3BD9FCD /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E194303BD7E642833BB5B409F292DE1 /* Point.swift */; };
+		52C3E8081BB80AA34FEF1659F24533C2 /* ViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A1E9B1ED1D4FEC455EC8F4FC43C7C9 /* ViewProxy.swift */; };
+		551EDA7C2AEF5DBDE54A1E04D3B66DEF /* ConstraintGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606B3FB15E3212EE00E0978A2A2AB2D9 /* ConstraintGroup.swift */; };
+		58B00C7BCF27BE64587847CA77E9DD11 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6F8C262F60DC54891266F38FBB9AD2 /* Align.swift */; };
+		6303953B4072C1B9B5BE9038CD1A5858 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC31381A81FDD886AC86B00AE395517D /* LayoutProxy.swift */; };
+		64C1C1BBD53C2B17073E4473687A853A /* LayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C22575E09A54E417F62BF7F906BE88A /* LayoutGuide.swift */; };
+		6F4FE3B61F3F4136F1C403AD21C331D7 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D96F7F6841809570A5F8DB76F81E99 /* Context.swift */; };
+		75A09744CB87DB237A3D3FA76FC9AB9A /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257125354564BC8D4E856AE10AB7814 /* Edges.swift */; };
+		7BBAA7D5001ABB0D1516ACAF7F51F4B5 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814768BD57DED39A3948E94627157B4F /* View.swift */; };
+		869BF762B9D0699ABF4024F1DED0AD0E /* AutoresizingMaskLayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCEFA1B7421716A4FE35774C446A961 /* AutoresizingMaskLayoutProxy.swift */; };
+		8A0CFC7DA4A8BFB68DDBFD96B487B6EA /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2496870D157AFA1FA133C21461B0BF15 /* UPCarouselFlowLayout.swift */; };
+		94C7D2A64168F83FDD3F1FDD86309462 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6928405935E76A3E1169A1D1DF9355B6 /* Edge.swift */; };
+		9C6E1370B7332CEA8408E407F24570B5 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A2940933AF57EA10769058E6823DAB /* Expression.swift */; };
+		9DE7AC7E9424287CE00664C9EA68D2D2 /* LayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970BD302574DD5C2CD79C2CBF80D098 /* LayoutSupport.swift */; };
+		A3708D33CE83F9321530B3E4A81E7223 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A37DED66695DC9C57FD67849B88A3B7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B4DBC3F172AFEA9A0F86A1428D235BAB /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505EBC11C9250CFBF706C8DD2DD2F74 /* Dimension.swift */; };
+		BAA82517E186455BBE3B74D44E5EDD5D /* LayoutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE4B4BA9CE234A715C7269A8FC7A4F7 /* LayoutItem.swift */; };
+		D984AB93B4698DFFE8257273F01132D8 /* Pods-Typeracer-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9244387768336F7FC1A62BEAFBB04084 /* Pods-Typeracer-iOS-dummy.m */; };
+		DB9F3857E166A3EAC8EC5646023E7B8E /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F1631822C5BEA62A2D0689E5798399 /* Compound.swift */; };
+		E064976FA9BA5EB2E8303C04B3D544C2 /* UPCarouselFlowLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F476428C89CF159DF98307E991B455 /* UPCarouselFlowLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2F636932DC549ECAC060149AE2925A8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9926C3E5E0A2037C8FAD01DE3130A6BE /* Extensions.swift */; };
+		E41EAAFF7504F1D9D5EFD13792B262A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		E65CDD476D4FCF2DB1E0551A2DE7000F /* Pods-Typeracer-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F3F9E1D3C329BE8F3DB78E74CE896F5 /* Pods-Typeracer-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E79C8C2851495884D91FEFFFC53FAB45 /* LayoutSupportProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51639A54D2AC3FD3DA1E49E5519B341A /* LayoutSupportProxy.swift */; };
+		F14347E3AC3A254F7A424CCB7FCF512B /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A160EB0AB7177D35E10B1C700714D6B /* Priority.swift */; };
+		F2F31B31091365FE7FEC196CD867CF42 /* UPCarouselFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 693F7A1D88D723A915E2CD7251760034 /* UPCarouselFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F435B4C2D5E6E7B34471B69DAC6D5E51 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E5EF1683F8281AD25D57B833CF2CFF /* Constraint.swift */; };
+		FAC451A7DA21450B17D0D77F0CBBAF8B /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 672A1D2B016C5170852ACF85792690AB /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		25F60461F0AA7214A6FA16D7DF83189B /* PBXContainerItemProxy */ = {
+		548115B2C495091C9F301B4C3C56E9B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 342F83F5DBEEA510DB9C61BFB7E7BE29;
+			remoteGlobalIDString = 87583E26DF7A1C3A64C0B7C108435D12;
 			remoteInfo = UPCarouselFlowLayout;
 		};
-		3E515E0906708B4ECB2D0C2DE4864A43 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8F254C70EA7289F49F560FEF44F5E03E;
-			remoteInfo = CountdownLabel;
-		};
-		444428867C3FDC7BCCD648462543337E /* PBXContainerItemProxy */ = {
+		EA658ED3EAE680F8256371AFD90B8D18 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -91,105 +66,66 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		003AEFE122164F4C1DE127E943CB1DF2 /* ConstraintGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintGroup.swift; path = Cartography/ConstraintGroup.swift; sourceTree = "<group>"; };
-		041C8ADE31CA78C6AA9E82268C751947 /* Constrain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrain.swift; path = Cartography/Constrain.swift; sourceTree = "<group>"; };
-		04DC65272EC68FBB199B286DA69B72B3 /* LTMorphingEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTMorphingEffect.swift; path = CountdownLabel/LTMorphingLabel/LTMorphingEffect.swift; sourceTree = "<group>"; };
-		0774BC2207D3A5EA164ADACB2A1B0FD3 /* UPCarouselFlowLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UPCarouselFlowLayout-umbrella.h"; sourceTree = "<group>"; };
-		080D878E8B8DACD9F438B993DDE53F4A /* LTEmitterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTEmitterView.swift; path = CountdownLabel/LTMorphingLabel/LTEmitterView.swift; sourceTree = "<group>"; };
-		0D14AC8731D9202378BB532880423AD9 /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Cartography/Point.swift; sourceTree = "<group>"; };
-		19A43452E149CC96A123601926B57842 /* LayoutSupportProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutSupportProxy.swift; path = Cartography/LayoutSupportProxy.swift; sourceTree = "<group>"; };
-		1A92A21BC83FFEC9C060012768B3AE4D /* LayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutSupport.swift; path = Cartography/LayoutSupport.swift; sourceTree = "<group>"; };
-		1F4103CEB9263E22F4D8D1044C0979C1 /* UPCarouselFlowLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UPCarouselFlowLayout-prefix.pch"; sourceTree = "<group>"; };
-		234DE66EC0597D3D580DCA5D041A1CDB /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Cartography/Context.swift; sourceTree = "<group>"; };
-		272695CE5D0042D7814C46E85CBABDB3 /* LayoutItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutItem.swift; path = Cartography/LayoutItem.swift; sourceTree = "<group>"; };
-		27678D1A1B7D163A50787D6ABF88C6AA /* Pods_Typeracer_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Typeracer_iOS.framework; path = "Pods-Typeracer-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		288D597492C4218BC3AAC5384BE1F214 /* LTMorphingLabel+Fall.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Fall.swift"; path = "CountdownLabel/LTMorphingLabel/LTMorphingLabel+Fall.swift"; sourceTree = "<group>"; };
-		2E21C5CAF8F143EB8E95E06341AF3756 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = UPCarouselFlowLayout/Info.plist; sourceTree = "<group>"; };
-		3212D71A4FF3513118B82EB82A866959 /* LayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutGuide.swift; path = Cartography/LayoutGuide.swift; sourceTree = "<group>"; };
+		00F476428C89CF159DF98307E991B455 /* UPCarouselFlowLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UPCarouselFlowLayout-umbrella.h"; sourceTree = "<group>"; };
+		02A2940933AF57EA10769058E6823DAB /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Cartography/Expression.swift; sourceTree = "<group>"; };
+		0857F2FD921BD75E58534A030F609036 /* UPCarouselFlowLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UPCarouselFlowLayout-dummy.m"; sourceTree = "<group>"; };
+		0DCEFA1B7421716A4FE35774C446A961 /* AutoresizingMaskLayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoresizingMaskLayoutProxy.swift; path = Cartography/AutoresizingMaskLayoutProxy.swift; sourceTree = "<group>"; };
+		1B6F8C262F60DC54891266F38FBB9AD2 /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Align.swift; path = Cartography/Align.swift; sourceTree = "<group>"; };
+		1DD508321C5803D6E575A35E147D73DA /* Cartography-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-prefix.pch"; sourceTree = "<group>"; };
+		1DE4B4BA9CE234A715C7269A8FC7A4F7 /* LayoutItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutItem.swift; path = Cartography/LayoutItem.swift; sourceTree = "<group>"; };
+		2496870D157AFA1FA133C21461B0BF15 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UPCarouselFlowLayout.swift; path = UPCarouselFlowLayout/UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		2505EBC11C9250CFBF706C8DD2DD2F74 /* Dimension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dimension.swift; path = Cartography/Dimension.swift; sourceTree = "<group>"; };
+		2A8F54483287BEE693622AEED01BE2B5 /* Coefficients.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coefficients.swift; path = Cartography/Coefficients.swift; sourceTree = "<group>"; };
+		30D96F7F6841809570A5F8DB76F81E99 /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Cartography/Context.swift; sourceTree = "<group>"; };
+		334AEC523E7BE34CD9BB382CCC5B5ABE /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Cartography/Property.swift; sourceTree = "<group>"; };
 		372E38C39A2618886B977BD281F4FA1B /* Pods-Typeracer-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Typeracer-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		3A4A9DD2FC353B134959AA14EDA0579A /* CountdownLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CountdownLabel.modulemap; sourceTree = "<group>"; };
-		3D42547895170244D6AAC9B9D136FFFB /* AutoresizingMaskLayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoresizingMaskLayoutProxy.swift; path = Cartography/AutoresizingMaskLayoutProxy.swift; sourceTree = "<group>"; };
-		3E3BCB2E6BD16E8F59894540789129EE /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Cartography/Edge.swift; sourceTree = "<group>"; };
-		43DAB57CDA64159161A1ADF25F1078AB /* Compound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compound.swift; path = Cartography/Compound.swift; sourceTree = "<group>"; };
-		47272721E03A1115D3E9352F13C4F26E /* LTMorphingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTMorphingLabel.swift; path = CountdownLabel/LTMorphingLabel/LTMorphingLabel.swift; sourceTree = "<group>"; };
 		4D2A9B06CC1C0A984194192CD67D6706 /* Pods-Typeracer-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Typeracer-iOS-resources.sh"; sourceTree = "<group>"; };
-		4EF018F1F7AC324FD3F121B63A8361A5 /* LTMorphingLabel+Pixelate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Pixelate.swift"; path = "CountdownLabel/LTMorphingLabel/LTMorphingLabel+Pixelate.swift"; sourceTree = "<group>"; };
-		50AA22AFF50F3337D8C45C259FA2BDEF /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Cartography/Constraint.swift; sourceTree = "<group>"; };
-		50CF11092E096CFDE823753BECC3F9B0 /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Cartography/View.swift; sourceTree = "<group>"; };
-		583CC7378585C9D02561E13FF218CC8A /* LTMorphingLabel+Sparkle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Sparkle.swift"; path = "CountdownLabel/LTMorphingLabel/LTMorphingLabel+Sparkle.swift"; sourceTree = "<group>"; };
-		58F7045460F611E59DB357BB378ACDA8 /* Cartography-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cartography-dummy.m"; sourceTree = "<group>"; };
-		5A3BE68AD8B9EAC62767074C6BAD9987 /* LTMorphingLabel+Anvil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Anvil.swift"; path = "CountdownLabel/LTMorphingLabel/LTMorphingLabel+Anvil.swift"; sourceTree = "<group>"; };
-		5F26E12D7913616AEA284DBF8D3547E3 /* LTCharacterDiffResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTCharacterDiffResult.swift; path = CountdownLabel/LTMorphingLabel/LTCharacterDiffResult.swift; sourceTree = "<group>"; };
-		615E4814B50F80119C6A2CA708B6B7D8 /* UPCarouselFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UPCarouselFlowLayout.h; path = UPCarouselFlowLayout/UPCarouselFlowLayout.h; sourceTree = "<group>"; };
-		66E259EECC5D855B7EDBA47F173F12DA /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Cartography/Property.swift; sourceTree = "<group>"; };
+		50F7BF45F10CDB950692A625878292AA /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cartography.framework; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51639A54D2AC3FD3DA1E49E5519B341A /* LayoutSupportProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutSupportProxy.swift; path = Cartography/LayoutSupportProxy.swift; sourceTree = "<group>"; };
+		5257125354564BC8D4E856AE10AB7814 /* Edges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edges.swift; path = Cartography/Edges.swift; sourceTree = "<group>"; };
+		574A9D41C098028721381B5E1C1BA63B /* UPCarouselFlowLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UPCarouselFlowLayout.xcconfig; sourceTree = "<group>"; };
+		5BB94BB89694E310AA883C7FB44BA74D /* UPCarouselFlowLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UPCarouselFlowLayout.modulemap; sourceTree = "<group>"; };
+		5C22575E09A54E417F62BF7F906BE88A /* LayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutGuide.swift; path = Cartography/LayoutGuide.swift; sourceTree = "<group>"; };
+		5E194303BD7E642833BB5B409F292DE1 /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Cartography/Point.swift; sourceTree = "<group>"; };
+		606B3FB15E3212EE00E0978A2A2AB2D9 /* ConstraintGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintGroup.swift; path = Cartography/ConstraintGroup.swift; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		672A1D2B016C5170852ACF85792690AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = UPCarouselFlowLayout/Info.plist; sourceTree = "<group>"; };
 		68DDEAB8C6EB4C90F2F3925913EB8DBD /* Pods-Typeracer-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Typeracer-iOS-frameworks.sh"; sourceTree = "<group>"; };
-		6989B797B0D6F1E193AA5C71A439D128 /* LTEasing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTEasing.swift; path = CountdownLabel/LTMorphingLabel/LTEasing.swift; sourceTree = "<group>"; };
-		69C1E43078CD206E4DC9133186F994F7 /* LayoutGuideProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutGuideProxy.swift; path = Cartography/LayoutGuideProxy.swift; sourceTree = "<group>"; };
-		6C8782092CEFA3D47CD1ADB3C722FD65 /* CountdownLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CountdownLabel-prefix.pch"; sourceTree = "<group>"; };
-		70FE85BE77E50CE77A59862E822D13A5 /* LTCharacterLimbo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTCharacterLimbo.swift; path = CountdownLabel/LTMorphingLabel/LTCharacterLimbo.swift; sourceTree = "<group>"; };
-		7392B8709482773C4BF567E756D10EE2 /* Cartography.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cartography.xcconfig; sourceTree = "<group>"; };
-		7445F86529B7290516928792F1B3B076 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Cartography/Extensions.swift; sourceTree = "<group>"; };
-		791741E0920B62E7E439893709BE03D0 /* UPCarouselFlowLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UPCarouselFlowLayout-dummy.m"; sourceTree = "<group>"; };
-		7BAD6C8255E051CD508555ED9A331FF7 /* CountdownLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CountdownLabel.framework; path = CountdownLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C2170E2A05D2EF25284B9BD24175453 /* CountdownLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CountdownLabel-dummy.m"; sourceTree = "<group>"; };
+		6928405935E76A3E1169A1D1DF9355B6 /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Cartography/Edge.swift; sourceTree = "<group>"; };
+		693F7A1D88D723A915E2CD7251760034 /* UPCarouselFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UPCarouselFlowLayout.h; path = UPCarouselFlowLayout/UPCarouselFlowLayout.h; sourceTree = "<group>"; };
+		697D98544B9273B19B5CC93EFB46A616 /* UPCarouselFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UPCarouselFlowLayout.framework; path = UPCarouselFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A01C1E92A9C6AA659D4182EA207873B /* Cartography-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-umbrella.h"; sourceTree = "<group>"; };
+		732A6861C462A1ED9680D39D7AA4197D /* Cartography.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cartography.modulemap; sourceTree = "<group>"; };
+		7A160EB0AB7177D35E10B1C700714D6B /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Cartography/Priority.swift; sourceTree = "<group>"; };
+		7C40966CB94E9CE9EFA3214EC635A17E /* UPCarouselFlowLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UPCarouselFlowLayout-prefix.pch"; sourceTree = "<group>"; };
+		7CE2A4AAB9EC65415B7F1761353CCBF3 /* Cartography-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cartography-dummy.m"; sourceTree = "<group>"; };
 		7F3F9E1D3C329BE8F3DB78E74CE896F5 /* Pods-Typeracer-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Typeracer-iOS-umbrella.h"; sourceTree = "<group>"; };
-		836C1A8CCF6915BD9A1C6A35AF7B30E0 /* ViewProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewProxy.swift; path = Cartography/ViewProxy.swift; sourceTree = "<group>"; };
+		814768BD57DED39A3948E94627157B4F /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Cartography/View.swift; sourceTree = "<group>"; };
 		875BAE6BF0D1D21D9E434665DCE2AF41 /* Pods-Typeracer-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Typeracer-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		89F813156C2A59ED84D74F128768A1B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9244387768336F7FC1A62BEAFBB04084 /* Pods-Typeracer-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Typeracer-iOS-dummy.m"; sourceTree = "<group>"; };
-		92B48977E6F2C664BC2029FBB66020C7 /* CountdownLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CountdownLabel.xcconfig; sourceTree = "<group>"; };
+		92F1631822C5BEA62A2D0689E5798399 /* Compound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compound.swift; path = Cartography/Compound.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93BFE6D33D8B7082B23A058EDE54A71F /* UPCarouselFlowLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UPCarouselFlowLayout.modulemap; sourceTree = "<group>"; };
-		93F3266273FB47E0665FDF2116CC5467 /* Distribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Distribute.swift; path = Cartography/Distribute.swift; sourceTree = "<group>"; };
-		957E0DB2F28ACF7304BF77151150EE1A /* Edges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edges.swift; path = Cartography/Edges.swift; sourceTree = "<group>"; };
+		94E5EF1683F8281AD25D57B833CF2CFF /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Cartography/Constraint.swift; sourceTree = "<group>"; };
 		969F0649316EABD6E383D92B8FCFA88F /* Pods-Typeracer-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Typeracer-iOS.modulemap"; sourceTree = "<group>"; };
-		97DE24CF533FA91A050F1F8AFA42D49A /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UPCarouselFlowLayout.swift; path = UPCarouselFlowLayout/UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
-		9954A621BF040E8A63D38B4D950100E7 /* UPCarouselFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UPCarouselFlowLayout.framework; path = UPCarouselFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BC0A3CB7C050F69D10C7B3D3DFB5BDA /* Dimension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dimension.swift; path = Cartography/Dimension.swift; sourceTree = "<group>"; };
-		A115D5278537CBD2DD6C24BC02E835A2 /* Cartography.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cartography.modulemap; sourceTree = "<group>"; };
-		B0DDA01DEF0CAA5E609EB0A40198CC01 /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Align.swift; path = Cartography/Align.swift; sourceTree = "<group>"; };
-		B1C587A842AC6CABF36185DB90942F65 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B200A18DE7675DB66CE5B7F68701AB2E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		9926C3E5E0A2037C8FAD01DE3130A6BE /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Cartography/Extensions.swift; sourceTree = "<group>"; };
+		99BD5F378AEAF036D5BD75C5603FB5E9 /* Constrain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrain.swift; path = Cartography/Constrain.swift; sourceTree = "<group>"; };
+		A3B83C560FBD018DCEC38CAD60D03FAC /* Pods_Typeracer_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Typeracer_iOS.framework; path = "Pods-Typeracer-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A970BD302574DD5C2CD79C2CBF80D098 /* LayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutSupport.swift; path = Cartography/LayoutSupport.swift; sourceTree = "<group>"; };
 		BCA823CBEE48D64D0BDBEEB1B66B10F4 /* Pods-Typeracer-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Typeracer-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BEEE09D6D8819114BC285BDEF2ADD982 /* LTMorphingLabel+Evaporate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Evaporate.swift"; path = "CountdownLabel/LTMorphingLabel/LTMorphingLabel+Evaporate.swift"; sourceTree = "<group>"; };
-		C2C2777652D3853F202E0419B09B1B88 /* LTMorphingLabel+Burn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Burn.swift"; path = "CountdownLabel/LTMorphingLabel/LTMorphingLabel+Burn.swift"; sourceTree = "<group>"; };
-		C3C0609ACF3A2D4EBBC83D4EF5C45842 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Cartography/Expression.swift; sourceTree = "<group>"; };
+		BD2B3C6BEAFA667C65E0D3ABEFD37278 /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Cartography/Size.swift; sourceTree = "<group>"; };
+		BE507F685346487DE466CA7A5E2BFAA1 /* LayoutGuideProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutGuideProxy.swift; path = Cartography/LayoutGuideProxy.swift; sourceTree = "<group>"; };
 		C47D95BCB82D67CEEAE912E64B977DB3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9A72115C2B774BA511C497CE689FD9A /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Cartography/Priority.swift; sourceTree = "<group>"; };
-		CD2DD4DDE11C0924CA07D1D7318071D0 /* Cartography-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-prefix.pch"; sourceTree = "<group>"; };
 		CF3988EF654EE3E496AA35EF6F0001C3 /* Pods-Typeracer-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Typeracer-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		D461DCB7B3E411D1DB4F157EF62D870C /* LayoutProxy+TypeErasure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LayoutProxy+TypeErasure.swift"; path = "Cartography/LayoutProxy+TypeErasure.swift"; sourceTree = "<group>"; };
-		D4C362E4272616C63A313A3000BE8CAC /* CountdownLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountdownLabel.swift; path = CountdownLabel/CountdownLabel.swift; sourceTree = "<group>"; };
-		D50B583D2B27285EC4EF22C24417AE6D /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Cartography/Size.swift; sourceTree = "<group>"; };
-		D86DA161EE0A7C5EB983BC9B1A7D4D20 /* Cartography-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-umbrella.h"; sourceTree = "<group>"; };
-		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DBAD360D591169DB36661C22E7676C7A /* LTStringDiffResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTStringDiffResult.swift; path = CountdownLabel/LTMorphingLabel/LTStringDiffResult.swift; sourceTree = "<group>"; };
-		DC6CF413A76263B24E2D9099D5085FD7 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cartography.framework; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF0D77BE6E37923324317107B873A828 /* LayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutProxy.swift; path = Cartography/LayoutProxy.swift; sourceTree = "<group>"; };
-		F67BFFEC9B43339F0715B9293B07CEB5 /* Coefficients.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coefficients.swift; path = Cartography/Coefficients.swift; sourceTree = "<group>"; };
-		FA349783C52E885772637EDE7E0D8253 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA50410D7B2CEBB42EE43379B006C82C /* UPCarouselFlowLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UPCarouselFlowLayout.xcconfig; sourceTree = "<group>"; };
-		FD900CE573AA8E1A312FCCC0D5DFA827 /* CountdownLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CountdownLabel-umbrella.h"; sourceTree = "<group>"; };
+		D8A1E9B1ED1D4FEC455EC8F4FC43C7C9 /* ViewProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewProxy.swift; path = Cartography/ViewProxy.swift; sourceTree = "<group>"; };
+		DC31381A81FDD886AC86B00AE395517D /* LayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutProxy.swift; path = Cartography/LayoutProxy.swift; sourceTree = "<group>"; };
+		DD0DDB6DF7D47A1145A29703C3057457 /* Distribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Distribute.swift; path = Cartography/Distribute.swift; sourceTree = "<group>"; };
+		E50D79F58E37F2A7A121710E35B530AD /* LayoutProxy+TypeErasure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LayoutProxy+TypeErasure.swift"; path = "Cartography/LayoutProxy+TypeErasure.swift"; sourceTree = "<group>"; };
+		E69692F5B0E81543BB2C917E94D38BA5 /* Cartography.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cartography.xcconfig; sourceTree = "<group>"; };
+		E80B3A7D63961920835CE42F33AA7A13 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		06BB84603C1CB09162F0940A1DC099F0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				57FEC3575D668D3A78A4A7586FC1FEF6 /* Foundation.framework in Frameworks */,
-				CE682D3A3A6CB00A16952975695706FB /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14499520671870F72F9E05FEBEC9EBAA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4A7A7D6B588AF21C02DAB605738A7A76 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		66F11910B4682C55BD5811F333E55F89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,95 +134,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8666673409B7113765430421FEA9DC2E /* Frameworks */ = {
+		B62959C642B409BFB4B6400F472F8055 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935888C5D1F710989DC7203419E64920 /* Foundation.framework in Frameworks */,
+				A3708D33CE83F9321530B3E4A81E7223 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0E063E88D16655AFB098D6564D4BFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E41EAAFF7504F1D9D5EFD13792B262A7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07D635A13ADF33664BDFE1CFCE60D015 /* Support Files */ = {
+		1BAA549DCDB1CE6D947E8B90923AAE16 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A115D5278537CBD2DD6C24BC02E835A2 /* Cartography.modulemap */,
-				7392B8709482773C4BF567E756D10EE2 /* Cartography.xcconfig */,
-				58F7045460F611E59DB357BB378ACDA8 /* Cartography-dummy.m */,
-				CD2DD4DDE11C0924CA07D1D7318071D0 /* Cartography-prefix.pch */,
-				D86DA161EE0A7C5EB983BC9B1A7D4D20 /* Cartography-umbrella.h */,
-				FA349783C52E885772637EDE7E0D8253 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Cartography";
-			sourceTree = "<group>";
-		};
-		2AEE49C8A9EDB36AB01AB0940E39C851 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B200A18DE7675DB66CE5B7F68701AB2E /* Info.plist */,
-				93BFE6D33D8B7082B23A058EDE54A71F /* UPCarouselFlowLayout.modulemap */,
-				FA50410D7B2CEBB42EE43379B006C82C /* UPCarouselFlowLayout.xcconfig */,
-				791741E0920B62E7E439893709BE03D0 /* UPCarouselFlowLayout-dummy.m */,
-				1F4103CEB9263E22F4D8D1044C0979C1 /* UPCarouselFlowLayout-prefix.pch */,
-				0774BC2207D3A5EA164ADACB2A1B0FD3 /* UPCarouselFlowLayout-umbrella.h */,
+				E80B3A7D63961920835CE42F33AA7A13 /* Info.plist */,
+				5BB94BB89694E310AA883C7FB44BA74D /* UPCarouselFlowLayout.modulemap */,
+				574A9D41C098028721381B5E1C1BA63B /* UPCarouselFlowLayout.xcconfig */,
+				0857F2FD921BD75E58534A030F609036 /* UPCarouselFlowLayout-dummy.m */,
+				7C40966CB94E9CE9EFA3214EC635A17E /* UPCarouselFlowLayout-prefix.pch */,
+				00F476428C89CF159DF98307E991B455 /* UPCarouselFlowLayout-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/UPCarouselFlowLayout";
 			sourceTree = "<group>";
 		};
-		3FE76E3132866E1BD4CE6C3A1689B17C /* Support Files */ = {
+		3F8AE6F2F5DC215B89E603FEBA5EE7B4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3A4A9DD2FC353B134959AA14EDA0579A /* CountdownLabel.modulemap */,
-				92B48977E6F2C664BC2029FBB66020C7 /* CountdownLabel.xcconfig */,
-				7C2170E2A05D2EF25284B9BD24175453 /* CountdownLabel-dummy.m */,
-				6C8782092CEFA3D47CD1ADB3C722FD65 /* CountdownLabel-prefix.pch */,
-				FD900CE573AA8E1A312FCCC0D5DFA827 /* CountdownLabel-umbrella.h */,
-				B1C587A842AC6CABF36185DB90942F65 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CountdownLabel";
-			sourceTree = "<group>";
-		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				438B396F6B4147076630CAEFE34282C1 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
-				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		467F686852F9E7AA1641F09E1EF173A3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D24180810E238D968F7DE161E5C2F4F0 /* Cartography */,
-				B98D86FF109133718DB0014140D97751 /* CountdownLabel */,
-				BE9B4A409F82FD2E2B274CE9109D9F25 /* UPCarouselFlowLayout */,
+				D5972775B6A24E366ADC52D0CBFC5F82 /* Cartography */,
+				7C24196E62229922A4363C2B55C79D2F /* UPCarouselFlowLayout */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		62B6A2D1349F341D2E2FFCE82F03E983 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DC6CF413A76263B24E2D9099D5085FD7 /* Cartography.framework */,
-				7BAD6C8255E051CD508555ED9A331FF7 /* CountdownLabel.framework */,
-				27678D1A1B7D163A50787D6ABF88C6AA /* Pods_Typeracer_iOS.framework */,
-				9954A621BF040E8A63D38B4D950100E7 /* UPCarouselFlowLayout.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6C0D54083A8346BF25C18AC6223B990E /* Pods-Typeracer-iOS */ = {
@@ -307,13 +194,25 @@
 			path = "Target Support Files/Pods-Typeracer-iOS";
 			sourceTree = "<group>";
 		};
+		7C24196E62229922A4363C2B55C79D2F /* UPCarouselFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				672A1D2B016C5170852ACF85792690AB /* Info.plist */,
+				693F7A1D88D723A915E2CD7251760034 /* UPCarouselFlowLayout.h */,
+				2496870D157AFA1FA133C21461B0BF15 /* UPCarouselFlowLayout.swift */,
+				1BAA549DCDB1CE6D947E8B90923AAE16 /* Support Files */,
+			);
+			name = UPCarouselFlowLayout;
+			path = UPCarouselFlowLayout;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				467F686852F9E7AA1641F09E1EF173A3 /* Pods */,
-				62B6A2D1349F341D2E2FFCE82F03E983 /* Products */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				3F8AE6F2F5DC215B89E603FEBA5EE7B4 /* Pods */,
+				F9E08450554D2B585BC3B9652D017C25 /* Products */,
 				846CAB691A7012110D1283F1A7029A54 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -326,75 +225,80 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B98D86FF109133718DB0014140D97751 /* CountdownLabel */ = {
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D4C362E4272616C63A313A3000BE8CAC /* CountdownLabel.swift */,
-				5F26E12D7913616AEA284DBF8D3547E3 /* LTCharacterDiffResult.swift */,
-				70FE85BE77E50CE77A59862E822D13A5 /* LTCharacterLimbo.swift */,
-				6989B797B0D6F1E193AA5C71A439D128 /* LTEasing.swift */,
-				080D878E8B8DACD9F438B993DDE53F4A /* LTEmitterView.swift */,
-				04DC65272EC68FBB199B286DA69B72B3 /* LTMorphingEffect.swift */,
-				47272721E03A1115D3E9352F13C4F26E /* LTMorphingLabel.swift */,
-				5A3BE68AD8B9EAC62767074C6BAD9987 /* LTMorphingLabel+Anvil.swift */,
-				C2C2777652D3853F202E0419B09B1B88 /* LTMorphingLabel+Burn.swift */,
-				BEEE09D6D8819114BC285BDEF2ADD982 /* LTMorphingLabel+Evaporate.swift */,
-				288D597492C4218BC3AAC5384BE1F214 /* LTMorphingLabel+Fall.swift */,
-				4EF018F1F7AC324FD3F121B63A8361A5 /* LTMorphingLabel+Pixelate.swift */,
-				583CC7378585C9D02561E13FF218CC8A /* LTMorphingLabel+Sparkle.swift */,
-				DBAD360D591169DB36661C22E7676C7A /* LTStringDiffResult.swift */,
-				3FE76E3132866E1BD4CE6C3A1689B17C /* Support Files */,
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
-			name = CountdownLabel;
-			path = CountdownLabel;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BE9B4A409F82FD2E2B274CE9109D9F25 /* UPCarouselFlowLayout */ = {
+		C390B29515D65D53C3EF11CB1231A000 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2E21C5CAF8F143EB8E95E06341AF3756 /* Info.plist */,
-				615E4814B50F80119C6A2CA708B6B7D8 /* UPCarouselFlowLayout.h */,
-				97DE24CF533FA91A050F1F8AFA42D49A /* UPCarouselFlowLayout.swift */,
-				2AEE49C8A9EDB36AB01AB0940E39C851 /* Support Files */,
+				732A6861C462A1ED9680D39D7AA4197D /* Cartography.modulemap */,
+				E69692F5B0E81543BB2C917E94D38BA5 /* Cartography.xcconfig */,
+				7CE2A4AAB9EC65415B7F1761353CCBF3 /* Cartography-dummy.m */,
+				1DD508321C5803D6E575A35E147D73DA /* Cartography-prefix.pch */,
+				6A01C1E92A9C6AA659D4182EA207873B /* Cartography-umbrella.h */,
+				89F813156C2A59ED84D74F128768A1B4 /* Info.plist */,
 			);
-			name = UPCarouselFlowLayout;
-			path = UPCarouselFlowLayout;
+			name = "Support Files";
+			path = "../Target Support Files/Cartography";
 			sourceTree = "<group>";
 		};
-		D24180810E238D968F7DE161E5C2F4F0 /* Cartography */ = {
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B0DDA01DEF0CAA5E609EB0A40198CC01 /* Align.swift */,
-				3D42547895170244D6AAC9B9D136FFFB /* AutoresizingMaskLayoutProxy.swift */,
-				F67BFFEC9B43339F0715B9293B07CEB5 /* Coefficients.swift */,
-				43DAB57CDA64159161A1ADF25F1078AB /* Compound.swift */,
-				041C8ADE31CA78C6AA9E82268C751947 /* Constrain.swift */,
-				50AA22AFF50F3337D8C45C259FA2BDEF /* Constraint.swift */,
-				003AEFE122164F4C1DE127E943CB1DF2 /* ConstraintGroup.swift */,
-				234DE66EC0597D3D580DCA5D041A1CDB /* Context.swift */,
-				9BC0A3CB7C050F69D10C7B3D3DFB5BDA /* Dimension.swift */,
-				93F3266273FB47E0665FDF2116CC5467 /* Distribute.swift */,
-				3E3BCB2E6BD16E8F59894540789129EE /* Edge.swift */,
-				957E0DB2F28ACF7304BF77151150EE1A /* Edges.swift */,
-				C3C0609ACF3A2D4EBBC83D4EF5C45842 /* Expression.swift */,
-				7445F86529B7290516928792F1B3B076 /* Extensions.swift */,
-				3212D71A4FF3513118B82EB82A866959 /* LayoutGuide.swift */,
-				69C1E43078CD206E4DC9133186F994F7 /* LayoutGuideProxy.swift */,
-				272695CE5D0042D7814C46E85CBABDB3 /* LayoutItem.swift */,
-				EF0D77BE6E37923324317107B873A828 /* LayoutProxy.swift */,
-				D461DCB7B3E411D1DB4F157EF62D870C /* LayoutProxy+TypeErasure.swift */,
-				1A92A21BC83FFEC9C060012768B3AE4D /* LayoutSupport.swift */,
-				19A43452E149CC96A123601926B57842 /* LayoutSupportProxy.swift */,
-				0D14AC8731D9202378BB532880423AD9 /* Point.swift */,
-				C9A72115C2B774BA511C497CE689FD9A /* Priority.swift */,
-				66E259EECC5D855B7EDBA47F173F12DA /* Property.swift */,
-				D50B583D2B27285EC4EF22C24417AE6D /* Size.swift */,
-				50CF11092E096CFDE823753BECC3F9B0 /* View.swift */,
-				836C1A8CCF6915BD9A1C6A35AF7B30E0 /* ViewProxy.swift */,
-				07D635A13ADF33664BDFE1CFCE60D015 /* Support Files */,
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D5972775B6A24E366ADC52D0CBFC5F82 /* Cartography */ = {
+			isa = PBXGroup;
+			children = (
+				1B6F8C262F60DC54891266F38FBB9AD2 /* Align.swift */,
+				0DCEFA1B7421716A4FE35774C446A961 /* AutoresizingMaskLayoutProxy.swift */,
+				2A8F54483287BEE693622AEED01BE2B5 /* Coefficients.swift */,
+				92F1631822C5BEA62A2D0689E5798399 /* Compound.swift */,
+				99BD5F378AEAF036D5BD75C5603FB5E9 /* Constrain.swift */,
+				94E5EF1683F8281AD25D57B833CF2CFF /* Constraint.swift */,
+				606B3FB15E3212EE00E0978A2A2AB2D9 /* ConstraintGroup.swift */,
+				30D96F7F6841809570A5F8DB76F81E99 /* Context.swift */,
+				2505EBC11C9250CFBF706C8DD2DD2F74 /* Dimension.swift */,
+				DD0DDB6DF7D47A1145A29703C3057457 /* Distribute.swift */,
+				6928405935E76A3E1169A1D1DF9355B6 /* Edge.swift */,
+				5257125354564BC8D4E856AE10AB7814 /* Edges.swift */,
+				02A2940933AF57EA10769058E6823DAB /* Expression.swift */,
+				9926C3E5E0A2037C8FAD01DE3130A6BE /* Extensions.swift */,
+				5C22575E09A54E417F62BF7F906BE88A /* LayoutGuide.swift */,
+				BE507F685346487DE466CA7A5E2BFAA1 /* LayoutGuideProxy.swift */,
+				1DE4B4BA9CE234A715C7269A8FC7A4F7 /* LayoutItem.swift */,
+				DC31381A81FDD886AC86B00AE395517D /* LayoutProxy.swift */,
+				E50D79F58E37F2A7A121710E35B530AD /* LayoutProxy+TypeErasure.swift */,
+				A970BD302574DD5C2CD79C2CBF80D098 /* LayoutSupport.swift */,
+				51639A54D2AC3FD3DA1E49E5519B341A /* LayoutSupportProxy.swift */,
+				5E194303BD7E642833BB5B409F292DE1 /* Point.swift */,
+				7A160EB0AB7177D35E10B1C700714D6B /* Priority.swift */,
+				334AEC523E7BE34CD9BB382CCC5B5ABE /* Property.swift */,
+				BD2B3C6BEAFA667C65E0D3ABEFD37278 /* Size.swift */,
+				814768BD57DED39A3948E94627157B4F /* View.swift */,
+				D8A1E9B1ED1D4FEC455EC8F4FC43C7C9 /* ViewProxy.swift */,
+				C390B29515D65D53C3EF11CB1231A000 /* Support Files */,
 			);
 			name = Cartography;
 			path = Cartography;
+			sourceTree = "<group>";
+		};
+		F9E08450554D2B585BC3B9652D017C25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50F7BF45F10CDB950692A625878292AA /* Cartography.framework */,
+				A3B83C560FBD018DCEC38CAD60D03FAC /* Pods_Typeracer_iOS.framework */,
+				697D98544B9273B19B5CC93EFB46A616 /* UPCarouselFlowLayout.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,28 +312,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFF6D3FC9C2A5289B60FED07A6B5310B /* Headers */ = {
+		7FE798857BA617655E00617A5786EB06 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D62F906CDE703B7264213E7B059BEA1C /* UPCarouselFlowLayout-umbrella.h in Headers */,
-				EA93C9D461422F6846DE6AFF3B63442C /* UPCarouselFlowLayout.h in Headers */,
+				E064976FA9BA5EB2E8303C04B3D544C2 /* UPCarouselFlowLayout-umbrella.h in Headers */,
+				F2F31B31091365FE7FEC196CD867CF42 /* UPCarouselFlowLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D9D46631DF58F24E9B09B000935ACE65 /* Headers */ = {
+		95837D6E7644A7E5A6F3A221F520CC8D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9639865A2ED46826C52A6995A5294096 /* CountdownLabel-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB67A17C38E0DD61B2731E12B64F1C71 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5844B86F6F29F004C2670685131EB6C7 /* Pods-Typeracer-iOS-umbrella.h in Headers */,
+				E65CDD476D4FCF2DB1E0551A2DE7000F /* Pods-Typeracer-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,16 +346,35 @@
 			);
 			name = Cartography;
 			productName = Cartography;
-			productReference = DC6CF413A76263B24E2D9099D5085FD7 /* Cartography.framework */;
+			productReference = 50F7BF45F10CDB950692A625878292AA /* Cartography.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		342F83F5DBEEA510DB9C61BFB7E7BE29 /* UPCarouselFlowLayout */ = {
+		793B0AFBA3C955E9EC7911A03439B543 /* Pods-Typeracer-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7E7320C45FCAD8422BCB84DDF1A95C59 /* Build configuration list for PBXNativeTarget "UPCarouselFlowLayout" */;
+			buildConfigurationList = D377EEBD3231779E58965F7C5C693957 /* Build configuration list for PBXNativeTarget "Pods-Typeracer-iOS" */;
 			buildPhases = (
-				E7DE9491B961C1B2530F8B89B5523803 /* Sources */,
-				14499520671870F72F9E05FEBEC9EBAA /* Frameworks */,
-				BFF6D3FC9C2A5289B60FED07A6B5310B /* Headers */,
+				2B76FE8C0AE00058EDDBBC1AE159E265 /* Sources */,
+				ED0E063E88D16655AFB098D6564D4BFE /* Frameworks */,
+				95837D6E7644A7E5A6F3A221F520CC8D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C402D103FC91C0EF757C8D78DCF3A941 /* PBXTargetDependency */,
+				90A7BA14BA5527E72390621421F60698 /* PBXTargetDependency */,
+			);
+			name = "Pods-Typeracer-iOS";
+			productName = "Pods-Typeracer-iOS";
+			productReference = A3B83C560FBD018DCEC38CAD60D03FAC /* Pods_Typeracer_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		87583E26DF7A1C3A64C0B7C108435D12 /* UPCarouselFlowLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C64AE89803092E017EA998CF8F57D1 /* Build configuration list for PBXNativeTarget "UPCarouselFlowLayout" */;
+			buildPhases = (
+				4EC72D93F779C085CA3D614BD0CC2C96 /* Sources */,
+				B62959C642B409BFB4B6400F472F8055 /* Frameworks */,
+				7FE798857BA617655E00617A5786EB06 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -467,44 +382,7 @@
 			);
 			name = UPCarouselFlowLayout;
 			productName = UPCarouselFlowLayout;
-			productReference = 9954A621BF040E8A63D38B4D950100E7 /* UPCarouselFlowLayout.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		8F254C70EA7289F49F560FEF44F5E03E /* CountdownLabel */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DCD9278D904B88D5FAB37B348F99E96C /* Build configuration list for PBXNativeTarget "CountdownLabel" */;
-			buildPhases = (
-				A804DF45A8EE2379EE6DF42112FF477C /* Sources */,
-				06BB84603C1CB09162F0940A1DC099F0 /* Frameworks */,
-				D9D46631DF58F24E9B09B000935ACE65 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CountdownLabel;
-			productName = CountdownLabel;
-			productReference = 7BAD6C8255E051CD508555ED9A331FF7 /* CountdownLabel.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D9B0F6319C84FEA01BE76A823ED1FDFC /* Pods-Typeracer-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 475AB629C3963F6409C5B533AE1534C4 /* Build configuration list for PBXNativeTarget "Pods-Typeracer-iOS" */;
-			buildPhases = (
-				513CCCABF2192FF2C7C5451BC1DD6961 /* Sources */,
-				8666673409B7113765430421FEA9DC2E /* Frameworks */,
-				EB67A17C38E0DD61B2731E12B64F1C71 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F2F4EBC61D2EF6C417955684927B9775 /* PBXTargetDependency */,
-				DF37568ECCDC0D4905B2BC16FAA13D4E /* PBXTargetDependency */,
-				788AA9309E67BB41F981A1DC53CC7139 /* PBXTargetDependency */,
-			);
-			name = "Pods-Typeracer-iOS";
-			productName = "Pods-Typeracer-iOS";
-			productReference = 27678D1A1B7D163A50787D6ABF88C6AA /* Pods_Typeracer_iOS.framework */;
+			productReference = 697D98544B9273B19B5CC93EFB46A616 /* UPCarouselFlowLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -524,19 +402,26 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 62B6A2D1349F341D2E2FFCE82F03E983 /* Products */;
+			productRefGroup = F9E08450554D2B585BC3B9652D017C25 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				05B5E6B6BF53C2C31E616E4C5644E8BB /* Cartography */,
-				8F254C70EA7289F49F560FEF44F5E03E /* CountdownLabel */,
-				D9B0F6319C84FEA01BE76A823ED1FDFC /* Pods-Typeracer-iOS */,
-				342F83F5DBEEA510DB9C61BFB7E7BE29 /* UPCarouselFlowLayout */,
+				793B0AFBA3C955E9EC7911A03439B543 /* Pods-Typeracer-iOS */,
+				87583E26DF7A1C3A64C0B7C108435D12 /* UPCarouselFlowLayout */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2B76FE8C0AE00058EDDBBC1AE159E265 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D984AB93B4698DFFE8257273F01132D8 /* Pods-Typeracer-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43377B59D0D68F9FC09F2D7CA5D04AC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -572,73 +457,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		513CCCABF2192FF2C7C5451BC1DD6961 /* Sources */ = {
+		4EC72D93F779C085CA3D614BD0CC2C96 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				411006EF91E1CAA30C6D619491990949 /* Pods-Typeracer-iOS-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A804DF45A8EE2379EE6DF42112FF477C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A26BA9F8E876A788CEE8623E08D72A9E /* CountdownLabel-dummy.m in Sources */,
-				734B7AC8EAECFFA3C06D89229ACA3960 /* CountdownLabel.swift in Sources */,
-				0B46C87D7C9BBDC0F31A84A6E6720983 /* LTCharacterDiffResult.swift in Sources */,
-				B8E7F36176917E71F2E97A233C1FCCA4 /* LTCharacterLimbo.swift in Sources */,
-				D26B66606862EBD7C7C3C8578202012E /* LTEasing.swift in Sources */,
-				C4D1D1EDBA79F0D39627DE5FF26272BC /* LTEmitterView.swift in Sources */,
-				F3D690F6C4EF6CB02AAC682D74FC7615 /* LTMorphingEffect.swift in Sources */,
-				38F80E96539DDE5339A8426DC087758D /* LTMorphingLabel+Anvil.swift in Sources */,
-				C0E7D15F27ECD51003CB899B9C096931 /* LTMorphingLabel+Burn.swift in Sources */,
-				91E56E34A99E791CF95D393752F334A5 /* LTMorphingLabel+Evaporate.swift in Sources */,
-				E46559D5C2F89367FE61EA281FB31F2B /* LTMorphingLabel+Fall.swift in Sources */,
-				8FA870156921760C688FBED5819B9BA5 /* LTMorphingLabel+Pixelate.swift in Sources */,
-				5B7F1D075B76798E5B25257815EE36CF /* LTMorphingLabel+Sparkle.swift in Sources */,
-				5C76EAC0C7DD314C24415C4F2215E3D6 /* LTMorphingLabel.swift in Sources */,
-				D560242116899637FC3EAFAAEB48FEDA /* LTStringDiffResult.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7DE9491B961C1B2530F8B89B5523803 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D8B32C0288302700C7279F51794C25D /* Info.plist in Sources */,
-				75F8B6C4BEEAAE367DFF9E36A4F21E2E /* UPCarouselFlowLayout-dummy.m in Sources */,
-				ADF7EA52BC64FFB7F2C2A143505D9517 /* UPCarouselFlowLayout.swift in Sources */,
+				FAC451A7DA21450B17D0D77F0CBBAF8B /* Info.plist in Sources */,
+				1BAD1B246BE89DEA8128BB93E758441F /* UPCarouselFlowLayout-dummy.m in Sources */,
+				8A0CFC7DA4A8BFB68DDBFD96B487B6EA /* UPCarouselFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		788AA9309E67BB41F981A1DC53CC7139 /* PBXTargetDependency */ = {
+		90A7BA14BA5527E72390621421F60698 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = UPCarouselFlowLayout;
-			target = 342F83F5DBEEA510DB9C61BFB7E7BE29 /* UPCarouselFlowLayout */;
-			targetProxy = 25F60461F0AA7214A6FA16D7DF83189B /* PBXContainerItemProxy */;
+			target = 87583E26DF7A1C3A64C0B7C108435D12 /* UPCarouselFlowLayout */;
+			targetProxy = 548115B2C495091C9F301B4C3C56E9B7 /* PBXContainerItemProxy */;
 		};
-		DF37568ECCDC0D4905B2BC16FAA13D4E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CountdownLabel;
-			target = 8F254C70EA7289F49F560FEF44F5E03E /* CountdownLabel */;
-			targetProxy = 3E515E0906708B4ECB2D0C2DE4864A43 /* PBXContainerItemProxy */;
-		};
-		F2F4EBC61D2EF6C417955684927B9775 /* PBXTargetDependency */ = {
+		C402D103FC91C0EF757C8D78DCF3A941 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Cartography;
 			target = 05B5E6B6BF53C2C31E616E4C5644E8BB /* Cartography */;
-			targetProxy = 444428867C3FDC7BCCD648462543337E /* PBXContainerItemProxy */;
+			targetProxy = EA658ED3EAE680F8256371AFD90B8D18 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		09977D223EE372187D916BD9A842BA28 /* Debug */ = {
+		150744B3D1F8C633AC769064155F3519 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA50410D7B2CEBB42EE43379B006C82C /* UPCarouselFlowLayout.xcconfig */;
+			baseConfigurationReference = 574A9D41C098028721381B5E1C1BA63B /* UPCarouselFlowLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -659,37 +508,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		0A941E9C5473CE042B9121541C614C2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92B48977E6F2C664BC2029FBB66020C7 /* CountdownLabel.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CountdownLabel/CountdownLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CountdownLabel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CountdownLabel/CountdownLabel.modulemap";
-				PRODUCT_NAME = CountdownLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -699,40 +517,9 @@
 			};
 			name = Release;
 		};
-		203F25550F07ABB7FCBFCD4959368FDA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92B48977E6F2C664BC2029FBB66020C7 /* CountdownLabel.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CountdownLabel/CountdownLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CountdownLabel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CountdownLabel/CountdownLabel.modulemap";
-				PRODUCT_NAME = CountdownLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		36FF446DE0ED1E94C219D7F715DE13FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7392B8709482773C4BF567E756D10EE2 /* Cartography.xcconfig */;
+			baseConfigurationReference = E69692F5B0E81543BB2C917E94D38BA5 /* Cartography.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -761,9 +548,9 @@
 			};
 			name = Debug;
 		};
-		541773C35E6171FEDD13BE43EC310AC7 /* Release */ = {
+		41126F6FD8F43E2219968C884847EAC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA50410D7B2CEBB42EE43379B006C82C /* UPCarouselFlowLayout.xcconfig */;
+			baseConfigurationReference = 574A9D41C098028721381B5E1C1BA63B /* UPCarouselFlowLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -784,6 +571,37 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6234E30423B84368C3AD2A4834167B91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E69692F5B0E81543BB2C917E94D38BA5 /* Cartography.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cartography/Cartography-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cartography/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cartography/Cartography.modulemap";
+				PRODUCT_NAME = Cartography;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -793,7 +611,7 @@
 			};
 			name = Release;
 		};
-		5D313F4A7F1DD233C8418D7B5202E337 /* Release */ = {
+		A1DC5ACC816EAA242A49AEAF90E2AFEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CF3988EF654EE3E496AA35EF6F0001C3 /* Pods-Typeracer-iOS.release.xcconfig */;
 			buildSettings = {
@@ -827,73 +645,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		6234E30423B84368C3AD2A4834167B91 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7392B8709482773C4BF567E756D10EE2 /* Cartography.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Cartography/Cartography-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cartography/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cartography/Cartography.modulemap";
-				PRODUCT_NAME = Cartography;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8F522552CD63698D1C13C26FFD48C9CB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 875BAE6BF0D1D21D9E434665DCE2AF41 /* Pods-Typeracer-iOS.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Typeracer-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Typeracer-iOS/Pods-Typeracer-iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Typeracer_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		A20B0BDFC4838E55DCAD094ED2792393 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -952,6 +703,41 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		A3E67991B2729F3848CC68814D5EFA2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 875BAE6BF0D1D21D9E434665DCE2AF41 /* Pods-Typeracer-iOS.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Typeracer-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Typeracer-iOS/Pods-Typeracer-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Typeracer_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		B53EDD60891CA0A99618C4BA3DEEBB79 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1028,24 +814,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		475AB629C3963F6409C5B533AE1534C4 /* Build configuration list for PBXNativeTarget "Pods-Typeracer-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8F522552CD63698D1C13C26FFD48C9CB /* Debug */,
-				5D313F4A7F1DD233C8418D7B5202E337 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7E7320C45FCAD8422BCB84DDF1A95C59 /* Build configuration list for PBXNativeTarget "UPCarouselFlowLayout" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09977D223EE372187D916BD9A842BA28 /* Debug */,
-				541773C35E6171FEDD13BE43EC310AC7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A9BAA343D12FE6672E7011D9FB12285B /* Build configuration list for PBXNativeTarget "Cartography" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1055,11 +823,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DCD9278D904B88D5FAB37B348F99E96C /* Build configuration list for PBXNativeTarget "CountdownLabel" */ = {
+		D377EEBD3231779E58965F7C5C693957 /* Build configuration list for PBXNativeTarget "Pods-Typeracer-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				203F25550F07ABB7FCBFCD4959368FDA /* Debug */,
-				0A941E9C5473CE042B9121541C614C2B /* Release */,
+				A3E67991B2729F3848CC68814D5EFA2E /* Debug */,
+				A1DC5ACC816EAA242A49AEAF90E2AFEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8C64AE89803092E017EA998CF8F57D1 /* Build configuration list for PBXNativeTarget "UPCarouselFlowLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41126F6FD8F43E2219968C884847EAC0 /* Debug */,
+				150744B3D1F8C633AC769064155F3519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

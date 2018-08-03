@@ -1,6 +1,0 @@
-framework module CountdownLabel {
-  umbrella header "CountdownLabel-umbrella.h"
-
-  export *
-  module * { export * }
-}

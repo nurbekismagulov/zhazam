@@ -8,7 +8,6 @@
 
 import UIKit
 import Cartography
-import CountdownLabel
 
 class ClassicModeViewController: UIViewController {
     

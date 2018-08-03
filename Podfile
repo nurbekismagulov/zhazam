@@ -6,7 +6,6 @@ target 'Typeracer-iOS' do
   use_frameworks!
   pod 'Cartography'
   pod "UPCarouselFlowLayout"
-  pod 'CountdownLabel'  
   # Pods for Typeracer-iOS
 
 end
