@@ -41,6 +41,9 @@
 		C4F4F3212114873300530DD0 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4F3202114873300530DD0 /* AnimatedView.swift */; };
 		C4F4F323211488D000530DD0 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4F322211488D000530DD0 /* Random.swift */; };
 		C4F4F3252114898500530DD0 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4F3242114898500530DD0 /* CGPointExtension.swift */; };
+		C4F4F31321146E9D00530DD0 /* db.realm in Resources */ = {isa = PBXBuildFile; fileRef = C4F4F31221146E9D00530DD0 /* db.realm */; };
+		C4F4F31521146EAE00530DD0 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4F31421146EAE00530DD0 /* Text.swift */; };
+		C4F4F3192114714600530DD0 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4F3182114714600530DD0 /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +85,9 @@
 		C4F4F3202114873300530DD0 /* AnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
 		C4F4F322211488D000530DD0 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		C4F4F3242114898500530DD0 /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
+		C4F4F31221146E9D00530DD0 /* db.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.realm; sourceTree = "<group>"; };
+		C4F4F31421146EAE00530DD0 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		C4F4F3182114714600530DD0 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				7A82BE042104CE19002F8094 /* Main.storyboard */,
+				C4F4F31221146E9D00530DD0 /* db.realm */,
 				7A82BE072104CE1D002F8094 /* Assets.xcassets */,
 				7A82BE092104CE1D002F8094 /* LaunchScreen.storyboard */,
 				7A82BE0C2104CE1D002F8094 /* Info.plist */,
@@ -208,6 +215,8 @@
 				7AF9678C2112227C005391D3 /* ClassicGame.swift */,
 				C4F4F31A2114860A00530DD0 /* Animatable.swift */,
 				C4F4F322211488D000530DD0 /* Random.swift */,
+				C4F4F31421146EAE00530DD0 /* Text.swift */,
+				C4F4F3182114714600530DD0 /* Database.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A82BE0B2104CE1D002F8094 /* LaunchScreen.storyboard in Resources */,
+				C4F4F31321146E9D00530DD0 /* db.realm in Resources */,
 				7A82BE082104CE1D002F8094 /* Assets.xcassets in Resources */,
 				7A82BE062104CE19002F8094 /* Main.storyboard in Resources */,
 			);
@@ -323,11 +333,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Typeracer-iOS/Pods-Typeracer-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +361,7 @@
 				7AF9678D2112227C005391D3 /* ClassicGame.swift in Sources */,
 				C4F4F3212114873300530DD0 /* AnimatedView.swift in Sources */,
 				7A82BE74210ED865002F8094 /* ClassicModeViewController.swift in Sources */,
+				C4F4F3192114714600530DD0 /* Database.swift in Sources */,
 				7AF967892111E0C0005391D3 /* Game.swift in Sources */,
 				C4F4F3252114898500530DD0 /* CGPointExtension.swift in Sources */,
 				7A82BE22210758A5002F8094 /* PlayViewController.swift in Sources */,
@@ -357,6 +372,7 @@
 				7A82BE7A210FAD4F002F8094 /* ComingSoonViewController.swift in Sources */,
 				7A82BE262107AA03002F8094 /* SwitchView.swift in Sources */,
 				C460B2FE211602A60075FC30 /* CGFloatExtension.swift in Sources */,
+				C4F4F31521146EAE00530DD0 /* Text.swift in Sources */,
 				7A82BE282109095C002F8094 /* ModesViewController.swift in Sources */,
 				7A82BE182105C5BA002F8094 /* String+TransformToColor.swift in Sources */,
 				7A82BE032104CE19002F8094 /* MainMenuViewController.swift in Sources */,
