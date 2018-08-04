@@ -73,24 +73,12 @@ class ClassicTextView: UIView {
         }
     }
     
-    func paintBlue(withStringToPaint string: String, withText text: String) {
-        
-        let range = (text as NSString).range(of: string)
+    func paint(with numberOfCorrectLetters: Int, and numberOfWrongLetters: Int, with text: String) {
+        let correctLettersRange = NSRange(location: 0, length: numberOfCorrectLetters)
+        let wrongLettersRange = NSRange(location: numberOfCorrectLetters, length: numberOfWrongLetters)
         let attribute = NSMutableAttributedString.init(string: text)
-        attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.deepSkyBlue , range: range)
-        let rangeOfText = NSRange(location: 0, length: text.count)
-        attribute.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 17), range: rangeOfText)
-        textView.attributedText = attribute
-    }
-    
-    func paintRed(alreadyPaintedString paintedString: String, stringToPaint string: String, withText text: String, with correctText: String, andWith wrongLetters: Int) {
-        
-        let range = (text as NSString).range(of: paintedString)
-        let redRange = (text as NSString).range(of: string)
-       // let red = NSRange(location: correctText.count + wrongLetters, length: wrongLetters)
-        let attribute = NSMutableAttributedString.init(string: text)
-        attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red , range: redRange)
-        attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.deepSkyBlue , range: range)
+        attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red , range: wrongLettersRange)
+        attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.deepSkyBlue , range: correctLettersRange)
         let rangeOfText = NSRange(location: 0, length: text.count)
         attribute.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 17), range: rangeOfText)
         textView.attributedText = attribute

@@ -125,14 +125,8 @@ extension ClassicModeViewController: GameDelegate {
         speedLabel.text = "\(game.wpm) wpm"
     }
     
-    func textDidUpdateRightLetter() {
-        let stringToPaint = game.correctText + classicTextView.textField.text!
-        classicTextView.paintBlue(withStringToPaint: stringToPaint, withText: game.text)
-    }
-    
-    func textDidUpdateWrongLetter() {
-        let stringToPaint = game.textArray[game.atWord]
-        classicTextView.paintRed(alreadyPaintedString: game.correctText, stringToPaint: stringToPaint, withText: game.text, with: classicTextView.textField.text!, andWith: game.wrongLetters)
+    func textDidUpdateLetter() {
+        classicTextView.paint(with: game.correctLetters, and: game.wrongLetters, with: game.text)
     }
     
     func textDidUpdateRightWord() {
