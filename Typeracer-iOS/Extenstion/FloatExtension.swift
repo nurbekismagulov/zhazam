@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import UIKit
+
+
+extension Float {
+    
+    static var random: Float {
+        return Float(arc4random()) / 0xFFFFFFFF
+    }
+    
+    static func random(min: Float, max: Float) -> Float {
+        return Float.random * (max - min) + min
+    }
+}
+
