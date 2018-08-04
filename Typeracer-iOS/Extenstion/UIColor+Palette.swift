@@ -16,5 +16,12 @@ extension UIColor {
     static let deepSkyBlue = "79CFFF".hexColor
     static let silverGray = "BEBEBE".hexColor
     
+    static func random() -> UIColor {
+        return UIColor(red:   .randomColor(),
+                       green: .randomColor(),
+                       blue:  .randomColor(),
+                       alpha: 1.0)
+    }
+    
 }
 

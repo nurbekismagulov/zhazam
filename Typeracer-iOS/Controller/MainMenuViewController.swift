@@ -27,6 +27,11 @@ class MainMenuViewController: UIViewController {
         return button
     }()
     
+    lazy var animatedConteinerView: AnimatedView = {
+        let anim = AnimatedView(frame: .zero)
+        return anim
+    }()
+    
     lazy var playImage = UIImageView(image: UIImage(named: "play"))
     
     lazy var menuView = MenuView()
@@ -43,12 +48,20 @@ class MainMenuViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         playButton.setGradientBackground()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        animatedConteinerView.animateBubbles()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        animatedConteinerView.animateBubbles()
+    }
+    
     // MARK : - creating Views
     func createViews(){
-        [nameLabel, playButton, menuView].forEach { view.addSubview($0) }
+        [animatedConteinerView, nameLabel, playButton, menuView].forEach { view.addSubview($0) }
         playButton.addSubview(playImage)
     }
     func addTargetsToMenuView(){
