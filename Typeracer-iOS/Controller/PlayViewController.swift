@@ -16,7 +16,8 @@ class PlayViewController: UIViewController {
         let label = UILabel()
         label.text = "Choose mode"
         label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 32)
+       // label.font = .boldSystemFont(ofSize: 32)
+        label.font = .setCabinSketch(ofSize: 35)
         return label
     }()
     

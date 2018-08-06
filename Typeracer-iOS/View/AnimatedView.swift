@@ -12,7 +12,7 @@ class AnimatedView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        generateBubbles(15)
+        generateBubbles(8)
         animateBubbles()
     }
     
@@ -22,10 +22,10 @@ class AnimatedView: UIView {
     
     func generateBubbles(_ number:Int){
         var i = 0
-        let x = self.frame.origin.x - 200
-        let y = self.frame.origin.y - 200
-        let w = self.frame.width - 200
-        let h = self.frame.height - 200
+        let x = self.frame.origin.x 
+        let y = self.frame.origin.y
+        let w = self.frame.width
+        let h = self.frame.height
         
         while self.subviews.count != number {
             let origin = Random.generatePoint(min: CGPoint(x: x, y: y), max: CGPoint(x: w, y: h))
@@ -73,7 +73,7 @@ extension AnimatedView: Animatable {
         anim.path = path.cgPath
         anim.rotationMode = nil
         anim.repeatCount = Float.infinity
-        anim.duration = 50
+        anim.duration = 45
         anim.speed = 0.7
         view.layer.add(anim, forKey: "animate position along path")
     }
