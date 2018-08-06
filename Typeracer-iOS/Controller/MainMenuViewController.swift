@@ -10,13 +10,14 @@ import UIKit
 import Cartography
 
 class MainMenuViewController: UIViewController {
-
+    
     // MARK: - views
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.setTextWithTypeAnimation(typedText: " TYPERACER")
-        label.font = .systemFont(ofSize: 55)
+        label.setTextWithTypeAnimation(typedText: " ZHAZAM")
+      //  label.font = .systemFont(ofSize: 70)
+        label.font = .setCabinSketch(ofSize: 70)
         return label
     }()
     lazy var playButton: UIButton = {
@@ -34,14 +35,17 @@ class MainMenuViewController: UIViewController {
     
     lazy var playImage = UIImageView(image: UIImage(named: "play"))
     
-    lazy var menuView = MenuView()
+    lazy var menuView: MenuView = {
+        let menuView = MenuView()
+        menuView.profileButton.addTarget(self, action: #selector(profilePressed), for: .touchUpInside)
+        return menuView
+    }()
     
     // MARK: - lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .catalinaBlue
         createViews()
-        addTargetsToMenuView()
         configureConstraints()
     }
     
@@ -64,15 +68,13 @@ class MainMenuViewController: UIViewController {
         [animatedConteinerView, nameLabel, playButton, menuView].forEach { view.addSubview($0) }
         playButton.addSubview(playImage)
     }
-    func addTargetsToMenuView(){
-        [menuView.graphButton, menuView.soundButton, menuView.profileButton, menuView.settingsButton].forEach{ $0.addTarget(self, action: #selector(otherButtonsPressed), for: .touchUpInside) }
-    }
+   
     func configureConstraints(){
         
         constrain(nameLabel, view){ nl, v in
             nl.top == v.top + 150
             nl.centerX == v.centerX
-            nl.width == 330
+            nl.width == 300
         }
         
         constrain(menuView, playButton, view) { mv, pb, v in
@@ -98,10 +100,14 @@ class MainMenuViewController: UIViewController {
         let vc = PlayViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    @objc func otherButtonsPressed() {
-        let vc = ComingSoonViewController()
+    
+    @objc func profilePressed(){
+        let vc = ProfileViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+   
+    
+  
 }
 /*
  KANBAN

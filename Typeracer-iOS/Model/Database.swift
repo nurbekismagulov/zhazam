@@ -37,5 +37,13 @@ class Database {
         }
     }
     
+    func fetchRealmData() -> Text {
+        var texts: Text = Text()
+        if let object = realm?.objects(Text.self){
+            let random = Int(arc4random_uniform(UInt32(object.count)))
+            texts = (realm?.objects(Text.self)[random])!
+        }
+        return texts
+    }
     
 }
