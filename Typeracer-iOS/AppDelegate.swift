@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func configureWindow(){
         UIApplication.shared.statusBarStyle = .lightContent
-        let viewController = UINavigationController(rootViewController: MainMenuViewController())
+        let viewController = UINavigationController(rootViewController: ModesViewController())
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()

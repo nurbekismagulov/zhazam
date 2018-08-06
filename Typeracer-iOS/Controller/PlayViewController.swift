@@ -69,10 +69,21 @@ class PlayViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case 1:
+            showAlert()
             break
         default:
             break
         }
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Sorry", message: "Coming soon.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     //MARK: - Layouts

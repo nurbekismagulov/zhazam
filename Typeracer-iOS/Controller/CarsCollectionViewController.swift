@@ -33,6 +33,8 @@ class CarsCollectionViewController: UIViewController, Reusable {
         let layout = UPCarouselFlowLayout()
         layout.itemSize = CGSize(width: 249, height: 337)
         layout.scrollDirection = .horizontal
+//        layout.spacingMode = .overlap(visibleOffset: 1)
+        
         return layout
     }()
     lazy var collectionView: UICollectionView = {
@@ -78,7 +80,7 @@ class CarsCollectionViewController: UIViewController, Reusable {
         let vc = ClassicModeViewController()
         vc.game.carIcon = random(array: arrayOfCars[atIndex].iconImages) as! String
         // Will be moved to realm or core date
-        let someText = "Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile phones, tablets, desktops/laptops, or other devices. Text messages may be sent over a cellular network"
+        let someText = "Text messaging, or texting, is the act of composing and sending" /*"Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile phones, tablets, desktops/laptops, or other devices. Text messages may be sent over a cellular network"*/
         vc.game.text = someText
         vc.game.textArray = someText.components(separatedBy: " ")
         self.navigationController?.pushViewController(vc, animated: true)

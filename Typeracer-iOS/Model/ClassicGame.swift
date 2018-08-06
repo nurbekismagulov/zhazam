@@ -72,31 +72,44 @@ class ClassicGame: Game {
         delegate?.gameWPMDidUpdate()
     }
     func updateText(with typedString: String) {
-        if textArray[atWord].hasPrefix(typedString) && textBeforeTyping.count < typedString.count{
-            correctLetters += 1
-            wrongLetters = 0
-            delegate?.textDidUpdateLetter()
+        if correctLetters == text.count {
+            timer.invalidate()
+            delegate?.gameDidFinish()
         }
-        else if typedString.hasSuffix(" ") && textBeforeTyping == textArray[atWord]{
+        if typedString.hasSuffix(" ") && textBeforeTyping == textArray[atWord] { //space
             atWord += 1
-            correctLetters += 2
-            wrongLetters = 0
+            correctLetters += 1
             delegate?.textDidUpdateRightWord()
+            textBeforeTyping = ""
         }
-        else if textBeforeTyping.count > typedString.count && !textBeforeTyping.hasSuffix(" "){
-            if textArray[atWord].hasPrefix(textBeforeTyping) {
-                correctLetters -= 1
+        else if textArray[atWord].hasPrefix(typedString){ //right letter
+            wrongLetters = 0
+            if textBeforeTyping.count > typedString.count { //backspace
+                if textArray[atWord].hasPrefix(textBeforeTyping) {
+                    correctLetters -= 1
+                }
+                else {
+                    wrongLetters = 0
+                }
             }
             else {
-                wrongLetters -= 1
+                
+                correctLetters += 1 // typ_
             }
             delegate?.textDidUpdateLetter()
         }
-        else {
-            wrongLetters += 1
+        else if !textArray[atWord].hasPrefix(typedString){
+            if textBeforeTyping.count > typedString.count {
+                wrongLetters -= 1
+            }
+            else{
+                wrongLetters += 1
+            }
             delegate?.textDidUpdateLetter()
         }
-        textBeforeTyping = typedString
+        if !typedString.hasSuffix(" ") && textBeforeTyping != textArray[atWord] {
+            textBeforeTyping = typedString
+        }
     }
     
     @objc func calculateSeconds() {

@@ -52,6 +52,12 @@ class ClassicModeViewController: UIViewController {
         return timer
     }()
     
+    lazy var resultView: ResultView = {
+        let view = ResultView()
+        view.alpha = 0
+        return view
+    }()
+    
     // MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,16 +69,16 @@ class ClassicModeViewController: UIViewController {
         game.start()
     }
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
         game.timer.invalidate()
     }
+    
     func configureView() {
         view.backgroundColor = .catalinaBlue
         self.navigationController?.navigationBar.topItem?.title = ""
     }
 
     func createViews() {
-        [carIcon, roadImage, speedLabel, classicTextView, countDownLabel].forEach { view.addSubview($0) }
+        [carIcon, roadImage, speedLabel, classicTextView, countDownLabel, resultView].forEach { view.addSubview($0) }
     }
     
     @objc func textFieldDidChange() {
@@ -102,6 +108,9 @@ class ClassicModeViewController: UIViewController {
 
             cdl.top == ctv.bottom + 100
             cdl.centerX == v.centerX
+        }
+        constrain(resultView, view) { rv, v in
+            rv.edges == v.edges
         }
     }
 }
@@ -136,6 +145,11 @@ extension ClassicModeViewController: GameDelegate {
     
     func gameDidFinish() {
         print("Game finished")
+        resultView.scoreLabel.text = speedLabel.text
+        classicTextView.textField.isUserInteractionEnabled = false
+        UIView.animate(withDuration: 0.5) {
+            self.resultView.alpha = 1
+        }
     }
     
 }

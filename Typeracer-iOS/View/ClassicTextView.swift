@@ -75,6 +75,14 @@ class ClassicTextView: UIView {
     
     func paint(with numberOfCorrectLetters: Int, and numberOfWrongLetters: Int, with text: String) {
         let correctLettersRange = NSRange(location: 0, length: numberOfCorrectLetters)
+        if numberOfWrongLetters > 0 {
+            textField.backgroundColor = .candyAppleRed
+            textField.textColor = .white
+        }
+        else {
+            textField.backgroundColor = .white
+            textField.textColor = .deepSkyBlue
+        }
         let wrongLettersRange = NSRange(location: numberOfCorrectLetters, length: numberOfWrongLetters)
         let attribute = NSMutableAttributedString.init(string: text)
         attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red , range: wrongLettersRange)
