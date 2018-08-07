@@ -40,8 +40,14 @@
 		7AF9679321138EE3005391D3 /* TimerModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9679221138EE3005391D3 /* TimerModeViewController.swift */; };
 		7AF967952113A63D005391D3 /* ErasableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF967942113A63D005391D3 /* ErasableTextField.swift */; };
 		7AF967972116F27F005391D3 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF967962116F27F005391D3 /* ResultView.swift */; };
+		C42F052D211A1D72007453A2 /* ResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F052C211A1D72007453A2 /* ResultCollectionViewCell.swift */; };
+		C42F052F211A3A5C007453A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F052E211A3A5C007453A2 /* SettingsViewController.swift */; };
 		C460B2FE211602A60075FC30 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460B2FD211602A60075FC30 /* CGFloatExtension.swift */; };
 		C460B300211602C70075FC30 /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460B2FF211602C70075FC30 /* FloatExtension.swift */; };
+		C496741A2118ED66005D5298 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49674192118ED66005D5298 /* Result.swift */; };
+		C496741E2119C779005D5298 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C496741D2119C779005D5298 /* sound.mp3 */; };
+		C49674202119C831005D5298 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496741F2119C831005D5298 /* Music.swift */; };
+		C49674222119D224005D5298 /* GraphViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49674212119D224005D5298 /* GraphViewExtensions.swift */; };
 		C4F4F31321146E9D00530DD0 /* db.realm in Resources */ = {isa = PBXBuildFile; fileRef = C4F4F31221146E9D00530DD0 /* db.realm */; };
 		C4F4F31521146EAE00530DD0 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4F31421146EAE00530DD0 /* Text.swift */; };
 		C4F4F3192114714600530DD0 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4F3182114714600530DD0 /* Database.swift */; };
@@ -90,8 +96,14 @@
 		7AF967942113A63D005391D3 /* ErasableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErasableTextField.swift; sourceTree = "<group>"; };
 		7AF967962116F27F005391D3 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		8806C0110A58CEB22A3FAD04 /* Pods_Typeracer_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Typeracer_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42F052C211A1D72007453A2 /* ResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCollectionViewCell.swift; sourceTree = "<group>"; };
+		C42F052E211A3A5C007453A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C460B2FD211602A60075FC30 /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		C460B2FF211602C70075FC30 /* FloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
+		C49674192118ED66005D5298 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		C496741D2119C779005D5298 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
+		C496741F2119C831005D5298 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		C49674212119D224005D5298 /* GraphViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewExtensions.swift; sourceTree = "<group>"; };
 		C4F4F31221146E9D00530DD0 /* db.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.realm; sourceTree = "<group>"; };
 		C4F4F31421146EAE00530DD0 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		C4F4F3182114714600530DD0 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -165,6 +177,7 @@
 		7A82BE122104CE34002F8094 /* Additional */ = {
 			isa = PBXGroup;
 			children = (
+				C496741C2119C76B005D5298 /* Sounds */,
 				C496740C21185783005D5298 /* Font */,
 				7A82BE042104CE19002F8094 /* Main.storyboard */,
 				C4F4F31221146E9D00530DD0 /* db.realm */,
@@ -186,6 +199,7 @@
 				7A82BE79210FAD4F002F8094 /* ComingSoonViewController.swift */,
 				7AF9679221138EE3005391D3 /* TimerModeViewController.swift */,
 				7A476FAD2118E656007EA6BD /* ProfileViewController.swift */,
+				C42F052E211A3A5C007453A2 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +216,7 @@
 				C4F4F3242114898500530DD0 /* CGPointExtension.swift */,
 				C460B2FD211602A60075FC30 /* CGFloatExtension.swift */,
 				C460B2FF211602C70075FC30 /* FloatExtension.swift */,
+				C49674212119D224005D5298 /* GraphViewExtensions.swift */,
 			);
 			path = Extenstion;
 			sourceTree = "<group>";
@@ -218,6 +233,7 @@
 				C4F4F3202114873300530DD0 /* AnimatedView.swift */,
 				7AF967962116F27F005391D3 /* ResultView.swift */,
 				7A476FA12118BDC7007EA6BD /* TimerModeTableViewCell.swift */,
+				C42F052C211A1D72007453A2 /* ResultCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +251,8 @@
 				C4F4F31421146EAE00530DD0 /* Text.swift */,
 				C4F4F3182114714600530DD0 /* Database.swift */,
 				7A476F9B21178BE7007EA6BD /* TimerGame.swift */,
+				C49674192118ED66005D5298 /* Result.swift */,
+				C496741F2119C831005D5298 /* Music.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +263,14 @@
 				7A476FAB2118E64D007EA6BD /* CabinSketch-Bold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		C496741C2119C76B005D5298 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C496741D2119C779005D5298 /* sound.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +337,7 @@
 				7A82BE0B2104CE1D002F8094 /* LaunchScreen.storyboard in Resources */,
 				C4F4F31321146E9D00530DD0 /* db.realm in Resources */,
 				7A82BE082104CE1D002F8094 /* Assets.xcassets in Resources */,
+				C496741E2119C779005D5298 /* sound.mp3 in Resources */,
 				7A82BE062104CE19002F8094 /* Main.storyboard in Resources */,
 				7A476FAC2118E64D007EA6BD /* CabinSketch-Bold.ttf in Resources */,
 			);
@@ -362,6 +389,7 @@
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
 				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -369,6 +397,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,23 +414,28 @@
 			files = (
 				7AF9678F21124097005391D3 /* ClassicTextView.swift in Sources */,
 				C4F4F31B2114860A00530DD0 /* Animatable.swift in Sources */,
+				C496741A2118ED66005D5298 /* Result.swift in Sources */,
 				7AF967972116F27F005391D3 /* ResultView.swift in Sources */,
 				7AF9678D2112227C005391D3 /* ClassicGame.swift in Sources */,
 				C4F4F3212114873300530DD0 /* AnimatedView.swift in Sources */,
 				7A82BE74210ED865002F8094 /* ClassicModeViewController.swift in Sources */,
 				C4F4F3192114714600530DD0 /* Database.swift in Sources */,
 				7AF967892111E0C0005391D3 /* Game.swift in Sources */,
+				C49674222119D224005D5298 /* GraphViewExtensions.swift in Sources */,
 				C4F4F3252114898500530DD0 /* CGPointExtension.swift in Sources */,
 				7A82BE22210758A5002F8094 /* PlayViewController.swift in Sources */,
 				7A476FAA2118E637007EA6BD /* UIFontExtension.swift in Sources */,
 				C460B300211602C70075FC30 /* FloatExtension.swift in Sources */,
 				7AF9678B21121980005391D3 /* GameDelegate.swift in Sources */,
+				C49674202119C831005D5298 /* Music.swift in Sources */,
 				7A82BE1C2105D31E002F8094 /* MenuView.swift in Sources */,
 				7A82BE78210F373E002F8094 /* UITextfield.swift in Sources */,
 				7A82BE7A210FAD4F002F8094 /* ComingSoonViewController.swift in Sources */,
 				7A476F9C21178BE7007EA6BD /* TimerGame.swift in Sources */,
 				7A82BE262107AA03002F8094 /* SwitchView.swift in Sources */,
+				C42F052D211A1D72007453A2 /* ResultCollectionViewCell.swift in Sources */,
 				7A476FA22118BDC7007EA6BD /* TimerModeTableViewCell.swift in Sources */,
+				C42F052F211A3A5C007453A2 /* SettingsViewController.swift in Sources */,
 				C460B2FE211602A60075FC30 /* CGFloatExtension.swift in Sources */,
 				C4F4F31521146EAE00530DD0 /* Text.swift in Sources */,
 				7A82BE282109095C002F8094 /* ModesViewController.swift in Sources */,
