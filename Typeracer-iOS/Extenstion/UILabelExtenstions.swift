@@ -28,6 +28,17 @@ extension UILabel {
         }
     }
     
+    func setStyle(){
+        self.layer.shadowColor = UIColor.darkGray.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 1)
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowRadius = 2
+        self.layer.cornerRadius = 60
+        self.layer.borderWidth = 3
+        self.textAlignment = .center
+        self.backgroundColor = .clear
+        self.layer.masksToBounds = true
+    }
 
 }
 

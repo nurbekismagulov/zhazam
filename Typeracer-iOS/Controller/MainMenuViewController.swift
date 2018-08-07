@@ -11,12 +11,15 @@ import Cartography
 
 class MainMenuViewController: UIViewController {
     
+    //MARK: Properties
+    var isPressed = true
+    
+    
     // MARK: - views
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.setTextWithTypeAnimation(typedText: " ZHAZAM")
-      //  label.font = .systemFont(ofSize: 70)
         label.font = .setCabinSketch(ofSize: 70)
         return label
     }()
@@ -37,7 +40,9 @@ class MainMenuViewController: UIViewController {
     
     lazy var menuView: MenuView = {
         let menuView = MenuView()
-        menuView.profileButton.addTarget(self, action: #selector(profilePressed), for: .touchUpInside)
+        menuView.graphButton.addTarget(self, action: #selector(graphPressed), for: .touchUpInside)
+        menuView.soundButton.addTarget(self, action: #selector(soundPressed), for: .touchUpInside)
+        menuView.settingsButton.addTarget(self, action: #selector(settingsPressed), for: .touchUpInside)
         return menuView
     }()
     
@@ -47,25 +52,23 @@ class MainMenuViewController: UIViewController {
         view.backgroundColor = .catalinaBlue
         createViews()
         configureConstraints()
+        Music.share.playBackgroundMusic(filename: "sound")
     }
     
     override func viewDidLayoutSubviews() {
-        playButton.setGradientBackground()
+        self.playButton.setGradientBackground()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+        super.viewDidAppear(animated)
         animatedConteinerView.animateBubbles()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        animatedConteinerView.animateBubbles()
-    }
+  
     
     // MARK : - creating Views
     func createViews(){
-        [animatedConteinerView, nameLabel, playButton, menuView].forEach { view.addSubview($0) }
+        [animatedConteinerView,nameLabel, playButton, menuView].forEach { view.addSubview($0) }
         playButton.addSubview(playImage)
     }
    
@@ -96,16 +99,33 @@ class MainMenuViewController: UIViewController {
         }
     }
     
+    //MARK: Helper methods
     @objc func playPressed(){
         let vc = PlayViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc func profilePressed(){
+    @objc func graphPressed(){
         let vc = ProfileViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @objc func soundPressed(){
+        if isPressed {
+            Music.share.backgroundMusicPlayer.volume = 0
+            menuView.soundImageView.image = #imageLiteral(resourceName: "soundOff")
+            isPressed = false
+        } else {
+            Music.share.backgroundMusicPlayer.volume = 1
+            menuView.soundImageView.image = #imageLiteral(resourceName: "settings")
+            isPressed = true
+        }
+    }
    
+    @objc func settingsPressed(){
+        let vc = SettingsViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
   
 }

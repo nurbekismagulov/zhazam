@@ -9,4 +9,5 @@ target 'Typeracer-iOS' do
   # Pods for Typeracer-iOS
 
   pod 'RealmSwift'
+  pod 'ScrollableGraphView'
 end

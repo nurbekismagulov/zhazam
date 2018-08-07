@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import RealmSwift
+
+class Result: Object {
+    @objc dynamic var result = 0
+}
