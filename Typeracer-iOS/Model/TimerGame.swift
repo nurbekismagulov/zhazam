@@ -29,6 +29,7 @@ class TimerGame: Game {
     var time = 3
     
     weak var delegate: GameDelegate?
+    var correctWords = 0
     
     var textBeforeTyping: String
     
@@ -45,20 +46,28 @@ class TimerGame: Game {
     }
     
     func calculateWPM() {
-        wpm = Int(Double(correctLetters) / 5 / 60)
-        updateWPM()
-        print(correctLetters)
     }
     
     func start() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(calculateSeconds), userInfo: nil, repeats: true)
+        text = Database.database.fetchRealmData().text
+        textArray = text.components(separatedBy: " ")
     }
-    
+    func restart() {
+        time = 4
+        seconds = 60
+        correctWords = 0
+        wrongLetters = 0
+        atWord = 0
+        start()
+        delegate?.gameDidRestart()
+    }
     func updateWPM() {
         delegate?.gameWPMDidUpdate()
     }
     
     func finish() {
+        timer.invalidate()
         delegate?.gameDidFinish()
     }
     
@@ -72,72 +81,28 @@ class TimerGame: Game {
             seconds -= 1
             if seconds == 0 {
                 calculateWPM()
-                timer.invalidate()
-                delegate?.gameDidFinish()
+                finish()
             }
             delegate?.gameDidStart()
         }
     }
     func updateText(with typedString: String) {
-        
-//        if typedString == textArray[atWord] {
-//            atWord = 0
-//            correctLetters = 0
-//            textBeforeTyping = ""
-//            delegate?.textDidUpdateRightWord()
-//        }
-//        else if textArray[atWord].hasPrefix(typedString) {
-//            if textBeforeTyping.count > typedString.count {
-//                if textArray[atWord].hasPrefix(textBeforeTyping) {
-//                    correctLetters -= 1
-//                }
-//                else {
-//                    wrongLetters -= 1
-//                }
-//            }
-//            else if typedString.count > textBeforeTyping.count{
-//                correctLetters += 1
-//            }
-//            delegate?.textDidUpdateLetter()
-//        }
-//        else if !textArray[atWord].hasPrefix(typedString) {
-//            wrongLetters += 1
-//            delegate?.textDidUpdateLetter()
-//        }
-//        textBeforeTyping = typedString
-        if typedString == textArray[atWord] {
-            delegate?.textDidUpdateRightWord()
-            correctLetters = 0
+        if typedString.count <= textArray[atWord].count {
+        if textArray[atWord].hasPrefix(typedString){
             wrongLetters = 0
-            atWord += 1
-        }
-        else if textArray[atWord].hasPrefix(typedString){ //right letter
-            wrongLetters = 0
-            if textBeforeTyping.count > typedString.count { //backspace
-                if textArray[atWord].hasPrefix(textBeforeTyping) {
-                    correctLetters -= 1
-                }
-                else {
-                    wrongLetters = 0
+            if typedString == textArray[atWord] {
+                if textArray[atWord] == typedString {
+                    atWord += 1
+                    correctWords += 1
+                    delegate?.textDidUpdateRightWord()
                 }
             }
-            else {
-                
-                correctLetters += 1 // typ_
-            }
+        }
+        else {
+            wrongLetters = textArray[atWord].count
+        }
             delegate?.textDidUpdateLetter()
         }
-        else if !textArray[atWord].hasPrefix(typedString){
-            if textBeforeTyping.count > typedString.count {
-                wrongLetters -= 1
-            }
-            else{
-                wrongLetters += 1
-            }
-            delegate?.textDidUpdateLetter()
-        }
-        textBeforeTyping = typedString
-        delegate?.textDidUpdateLetter()
     }
     
 }

@@ -16,8 +16,7 @@ class PlayViewController: UIViewController {
         let label = UILabel()
         label.text = "Choose mode"
         label.textColor = .white
-       // label.font = .boldSystemFont(ofSize: 32)
-        label.font = .setCabinSketch(ofSize: 35)
+        label.font = .boldSystemFont(ofSize: 32)
         return label
     }()
     
@@ -79,11 +78,7 @@ class PlayViewController: UIViewController {
     
     func showAlert() {
         let alert = UIAlertController(title: "Sorry", message: "Coming soon.", preferredStyle: UIAlertControllerStyle.alert)
-        
-        // add an action (button)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        // show the alert
         self.present(alert, animated: true, completion: nil)
     }
     

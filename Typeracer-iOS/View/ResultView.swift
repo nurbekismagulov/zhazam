@@ -21,7 +21,7 @@ class ResultView: UIView {
     lazy var resultLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.font = .systemFont(ofSize: 30)
+        label.font = .setCabinSketch(ofSize: 45)
         label.text = "YOUR RESULT"
         return label
     }()
@@ -29,20 +29,22 @@ class ResultView: UIView {
     lazy var scoreLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.font = .systemFont(ofSize: 45)
+        label.font = .setCabinSketch(ofSize: 50)
         return label
     }()
-    lazy var homeButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .white
-        button.layer.cornerRadius = 35
-        return button
-    }()
-    
     lazy var shareButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
+        button.layer.cornerRadius = 35
+        button.setImage(#imageLiteral(resourceName: "share"), for: .normal)
+        return button
+    }()
+    
+    lazy var homeButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .white
         button.layer.cornerRadius = 50
+        button.setImage(#imageLiteral(resourceName: "home"), for: .normal)
         return button
     }()
     
@@ -50,8 +52,10 @@ class ResultView: UIView {
         let button = UIButton()
         button.backgroundColor = .white
         button.layer.cornerRadius = 35
+        button.setImage(#imageLiteral(resourceName: "replay"), for: .normal)
         return button
     }()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -65,10 +69,10 @@ class ResultView: UIView {
     }
     
     func createViews(){
-        [backgroundView, resultLabel, scoreLabel, homeButton, shareButton, replayButton].forEach { self.addSubview($0) }
+        [backgroundView, resultLabel, scoreLabel, shareButton, homeButton, replayButton].forEach { self.addSubview($0) }
     }
     func configureConstraints() {
-        constrain(backgroundView, resultLabel, scoreLabel, homeButton, shareButton, replayButton, self) { bv, rl, sl, hb, sb, rb, v in
+        constrain(backgroundView, resultLabel, scoreLabel, shareButton, homeButton, replayButton, self) { bv, rl, sl, hb, sb, rb, v in
             bv.edges == v.edges
             
             rl.top == v.top + 150

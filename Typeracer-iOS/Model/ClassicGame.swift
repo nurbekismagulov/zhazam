@@ -26,6 +26,7 @@ class ClassicGame: Game {
     var seconds: Int
     
     var wpm: Int
+    var correctWords: Int
     
     // MARK: - Classic game properties
     
@@ -34,6 +35,7 @@ class ClassicGame: Game {
     var carIcon: String
     var textBeforeTyping: String
     var time = 3
+    var textToHighlight = 0
     
     // MARK: - Init
     init() {
@@ -47,6 +49,7 @@ class ClassicGame: Game {
         self.carIcon = ""
         self.textBeforeTyping = ""
         self.wpm = 0
+        self.correctWords = 0
     }
     
     // MARK: - Logic
@@ -56,12 +59,29 @@ class ClassicGame: Game {
         if seconds > 0 {
             wpm = Int(Double(correctLetters) / 5 / minute)
             updateWPM()
-            print(correctLetters)
-            print(minute)
         }
     }
     func start() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(calculateSeconds), userInfo: nil, repeats: true)
+        text = Database.database.fetchRealmData().text
+        textArray = text.components(separatedBy: " ")
+        textToHighlight = textArray[0].count
+        delegate?.textDidUpdateLetter()
+    }
+    
+    func restart() {
+        time = 4
+        seconds = 0
+        correctLetters = 0
+        wrongLetters = 0
+        correctWords = 0
+        wpm = 0
+        delegate?.textDidUpdateLetter()
+        delegate?.textDidUpdateRightWord()
+        atWord = 0
+        textBeforeTyping = ""
+        start()
+        delegate?.gameDidRestart()
     }
     
     func finish() {
@@ -72,44 +92,32 @@ class ClassicGame: Game {
         delegate?.gameWPMDidUpdate()
     }
     func updateText(with typedString: String) {
-        if correctLetters == text.count {
-            timer.invalidate()
-            delegate?.gameDidFinish()
-        }
-        if typedString.hasSuffix(" ") && textBeforeTyping == textArray[atWord] { //space
-            atWord += 1
-            correctLetters += 1
-            delegate?.textDidUpdateRightWord()
-            textBeforeTyping = ""
-        }
-        else if textArray[atWord].hasPrefix(typedString){ //right letter
+        if textArray[atWord].hasPrefix(typedString) || (textBeforeTyping == textArray[atWord] && typedString.hasSuffix(" ")){
             wrongLetters = 0
-            if textBeforeTyping.count > typedString.count { //backspace
-                if textArray[atWord].hasPrefix(textBeforeTyping) {
-                    correctLetters -= 1
+            if typedString == textArray.last! && typedString.count + correctLetters == text.count {
+                timer.invalidate()
+                correctLetters = text.count
+                delegate?.textDidUpdateLetter()
+                delegate?.gameDidFinish()
+            }
+            else if textBeforeTyping == textArray[atWord] && typedString.hasSuffix(" ") {
+                correctLetters += typedString.count
+                atWord += 1
+                if textArray[atWord] != textArray.last! {
+                    textToHighlight = textArray[atWord].count
                 }
                 else {
-                    wrongLetters = 0
+                    textToHighlight = 0
                 }
-            }
-            else {
-                
-                correctLetters += 1 // typ_
+                delegate?.textDidUpdateRightWord()
             }
             delegate?.textDidUpdateLetter()
         }
-        else if !textArray[atWord].hasPrefix(typedString){
-            if textBeforeTyping.count > typedString.count {
-                wrongLetters -= 1
-            }
-            else{
-                wrongLetters += 1
-            }
+        else {
+            wrongLetters = textArray[atWord].count
             delegate?.textDidUpdateLetter()
         }
-        if !typedString.hasSuffix(" ") && textBeforeTyping != textArray[atWord] {
-            textBeforeTyping = typedString
-        }
+        textBeforeTyping = typedString
     }
     
     @objc func calculateSeconds() {

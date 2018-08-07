@@ -2,7 +2,7 @@
 //  ErasableTextField.swift
 //  Typeracer-iOS
 //
-//  Created by Nurbek Ismagulov on 03.08.2018.
+//  Created by Nurbek Ismagulov on 08.08.2018.
 //  Copyright © 2018 theSmartest. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import Cartography
 
 class ErasableTextField: UIView {
-
+    
     lazy var textField: UITextField = {
         let tf = UITextField()
         tf.backgroundColor = .white
@@ -25,42 +25,39 @@ class ErasableTextField: UIView {
         tf.isUserInteractionEnabled = false
         return tf
     }()
-    
-    lazy var eraseImage: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "erase"))
-        return image
+    lazy var eraseButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .clear
+        button.setImage(UIImage(named: "erase"), for: .normal)
+        button.addTarget(self, action: #selector(eraseButtonPressed), for: .touchUpInside)
+        return button
     }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureView()
-        createViews()
-        configureConstraints()
+        self.addSubview(textField)
+        self.addSubview(eraseButton)
+        setupConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func configureView() {
-        self.backgroundColor = .clear
+    @objc func eraseButtonPressed() {
+        textField.text = ""
     }
-    func createViews() {
-        self.addSubview(textField)
-        self.addSubview(eraseImage)
-    }
-    func configureConstraints() {
-        constrain(textField, eraseImage, self){ tf, ei, v in
+    func setupConstraints() {
+        constrain(textField, eraseButton, self) { tf, eb, v in
             tf.top == v.top
-            tf.left == v.left + 13
-            tf.height == 34
+            tf.left == v.left
+            tf.bottom == v.bottom
             tf.width == 300
             
-            ei.top == v.top
-            ei.left == tf.right + 10
-            ei.height == 33
-            ei.width == 33
+            eb.top == v.top
+            eb.bottom == v.bottom
+            eb.left == tf.right + 10
+            eb.right == v.right
+            
         }
     }
-    
+
 }
