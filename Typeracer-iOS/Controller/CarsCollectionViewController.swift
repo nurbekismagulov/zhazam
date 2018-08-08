@@ -14,10 +14,10 @@ class CarsCollectionViewController: UIViewController, Reusable {
     
     var arrayOfCars: [Vehicle] = [
         Vehicle(fullImage: "Ferrari", iconImages: ["ferrariGreen", "ferrariYellow", "ferrariRed"], name: "Ferrari"),
-        Vehicle(fullImage: "bike", iconImages: ["bikeGreen", "bikeYellow", "bikeRed"], name: "Harley Davidson"),
-        Vehicle(fullImage: "Ferrari", iconImages: ["ferrariGreen", "ferrariYellow", "ferrariRed"], name: "Ferrari"),
-        Vehicle(fullImage: "bike", iconImages: ["bikeGreen", "bikeYellow", "bikeRed"], name: "Harley Davidson"),
-        Vehicle(fullImage: "Ferrari", iconImages: ["ferrariGreen", "ferrariYellow", "ferrariRed"], name: "Ferrari")
+        Vehicle(fullImage: "k100", iconImages: ["k100Red", "k100Green", "k100Yellow"], name: "BMW K75"),
+        Vehicle(fullImage: "Gelik", iconImages: ["gelikRed", "gelikGreen", "gelikYellow"], name: "Gelenvagen"),
+        Vehicle(fullImage: "HarleyDavidson", iconImages: ["bikeGreen", "bikeYellow", "bikeRed"], name: "Harley"),
+        Vehicle(fullImage: "Maserati", iconImages: ["maseratiRed", "maseratiGreen", "maseratiYellow"], name: "Maserati")
     ]
     var atIndex = 0
     

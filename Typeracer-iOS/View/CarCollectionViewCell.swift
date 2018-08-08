@@ -14,12 +14,15 @@ class CarCollectionViewCell: UICollectionViewCell {
     lazy var carNameLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 32)
+        label.numberOfLines = 2
         label.textColor = .catalinaBlue
+        label.textAlignment = .center
         return label
     }()
     
     lazy var carImage: UIImageView = {
         let image = UIImageView()
+        image.contentMode = .scaleAspectFill
         return image
     }()
     
@@ -43,7 +46,8 @@ class CarCollectionViewCell: UICollectionViewCell {
     func configureConstraints(){
         constrain(carNameLabel, carImage, contentView) { cnl, ci, cv in
             cnl.top == cv.top + 16
-            cnl.centerX == cv.centerX
+            cnl.left == cv.left + 29
+            cnl.right == cv.right - 29
             
             ci.top == cnl.bottom + 93
             ci.centerX == cv.centerX
