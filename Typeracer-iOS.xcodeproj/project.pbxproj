@@ -12,7 +12,6 @@
 		7A476FAA2118E637007EA6BD /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A476FA92118E637007EA6BD /* UIFontExtension.swift */; };
 		7A476FAC2118E64D007EA6BD /* CabinSketch-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A476FAB2118E64D007EA6BD /* CabinSketch-Bold.ttf */; };
 		7A476FAE2118E656007EA6BD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A476FAD2118E656007EA6BD /* ProfileViewController.swift */; };
-		7A69CDBC211A49A1005D49DC /* ErasableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69CDBB211A49A1005D49DC /* ErasableTextField.swift */; };
 		7A82BE012104CE19002F8094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE002104CE19002F8094 /* AppDelegate.swift */; };
 		7A82BE032104CE19002F8094 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE022104CE19002F8094 /* MainMenuViewController.swift */; };
 		7A82BE062104CE19002F8094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A82BE042104CE19002F8094 /* Main.storyboard */; };
@@ -59,7 +58,6 @@
 		7A476FA92118E637007EA6BD /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		7A476FAB2118E64D007EA6BD /* CabinSketch-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CabinSketch-Bold.ttf"; sourceTree = "<group>"; };
 		7A476FAD2118E656007EA6BD /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		7A69CDBB211A49A1005D49DC /* ErasableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErasableTextField.swift; sourceTree = "<group>"; };
 		7A82BDFD2104CE19002F8094 /* Typeracer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Typeracer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A82BE002104CE19002F8094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A82BE022104CE19002F8094 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 				C4F4F3202114873300530DD0 /* AnimatedView.swift */,
 				7AF967962116F27F005391D3 /* ResultView.swift */,
 				7A476FA12118BDC7007EA6BD /* TimerModeTableViewCell.swift */,
-				7A69CDBB211A49A1005D49DC /* ErasableTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -414,7 +411,6 @@
 				7A82BE6C210C7DF2002F8094 /* CarsCollectionViewController.swift in Sources */,
 				7AF9679321138EE3005391D3 /* TimerModeViewController.swift in Sources */,
 				7A476FAE2118E656007EA6BD /* ProfileViewController.swift in Sources */,
-				7A69CDBC211A49A1005D49DC /* ErasableTextField.swift in Sources */,
 				C4F4F323211488D000530DD0 /* Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
