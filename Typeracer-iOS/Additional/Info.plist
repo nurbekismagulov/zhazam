@@ -47,5 +47,15 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Gallery usage</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Gallery usage</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>instagram</string>
+		<string>facebook</string>
+	</array>
 </dict>
 </plist>
