@@ -24,7 +24,7 @@ class CarsCollectionViewController: UIViewController, Reusable {
     //MARK: - Views
     lazy var carLabel: UILabel = {
         let label = UILabel()
-        label.text = "Choose mode"
+        label.text = "Choose car"
         label.textColor = .white
         label.font = .boldSystemFont(ofSize: 32)
         return label

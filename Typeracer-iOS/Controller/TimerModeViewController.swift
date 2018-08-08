@@ -8,10 +8,12 @@
 
 import UIKit
 import Cartography
+import RealmSwift
 
 class TimerModeViewController: UIViewController, Reusable, UICollectionViewDelegateFlowLayout {
     
     var game = TimerGame()
+    var realm: Realm!
     
     lazy var timeLabel: UILabel = {
         let label = UILabel()
@@ -76,6 +78,7 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
         let view = ResultView()
         view.homeButton.addTarget(self, action: #selector(homeButtonPressed), for: .touchUpInside)
         view.replayButton.addTarget(self, action: #selector(replayButtonPressed), for: .touchUpInside)
+        view.shareButton.addTarget(self, action: #selector(shareButtonPressed), for: .touchUpInside)
         view.alpha = 0
         return view
     }()
@@ -87,6 +90,7 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
         configureConstraints()
         game.delegate = self
         game.start()
+        realm = try? Realm()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -100,6 +104,10 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
     @objc func eraseButtonPressed() {
         textField.text = ""
         game.updateText(with: textField.text!)
+    }
+    
+    @objc func shareButtonPressed(){
+        ShareManager.share.instagramShare(at: self, image: ShareManager.share.takeScreenshot()!)
     }
     
     func configureView() {
@@ -239,6 +247,7 @@ extension TimerModeViewController: GameDelegate {
         resultView.scoreLabel.text = "\(game.correctWords) words"
         textField.isUserInteractionEnabled = false
         textField.isEnabled = false
+        store()
         UIView.animate(withDuration: 0.5) {
             self.resultView.alpha = 1
         }
@@ -246,5 +255,14 @@ extension TimerModeViewController: GameDelegate {
     
     func timerDidUpdate(with time: Int) {
         countDownLabel.text = String(time)
+    }
+    
+    func store(){
+        let item = TimerResult()
+        item.result = game.correctWords
+        try? self.realm.write {
+            self.realm.add(item)
+        }
+        
     }
 }
