@@ -14,21 +14,21 @@ class ResultCollectionViewCell: UICollectionViewCell {
     //MARK: UI init
     lazy var timerLabel: UILabel = {
         let label = UILabel()
-        label.text = "500"
+        label.text = "0"
         label.textColor = "#16aafc".hexColor
         label.setStyle()
-        label.font = .systemFont(ofSize: 20)
+        label.font = .systemFont(ofSize: 23)
         label.layer.borderColor = "#16aafc".hexColor.cgColor
         return label
     }()
     
     lazy var classicLabel: UILabel = {
         let label = UILabel()
-        label.text = "500"
-        label.textColor = .red
-        label.font = .systemFont(ofSize: 20)
+        label.text = "0"
+        label.textColor = .candyAppleRed
+        label.font = .systemFont(ofSize: 23)
         label.setStyle()
-        label.layer.borderColor = UIColor.red.cgColor
+        label.layer.borderColor = UIColor.candyAppleRed.cgColor
         return label
     }()
     
@@ -36,7 +36,7 @@ class ResultCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = .white
-        label.font = .systemFont(ofSize: 20)
+        label.font = .boldSystemFont(ofSize: 30)
         return label
     }()
  

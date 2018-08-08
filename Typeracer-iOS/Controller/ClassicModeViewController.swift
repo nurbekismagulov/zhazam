@@ -8,6 +8,7 @@
 
 import UIKit
 import Cartography
+import RealmSwift
 import AudioToolbox
 
 class ClassicModeViewController: UIViewController {
@@ -18,6 +19,7 @@ class ClassicModeViewController: UIViewController {
     // MARK: - properties
     var wrongText = ""
     var movePerWord: CGFloat = 0
+    var realm: Realm!
     
     // MARK: - Views
     lazy var carIcon: UIImageView = {
@@ -58,6 +60,7 @@ class ClassicModeViewController: UIViewController {
         let view = ResultView()
         view.homeButton.addTarget(self, action: #selector(homeButtonPressed), for: .touchUpInside)
         view.replayButton.addTarget(self, action: #selector(replayButtonPressed), for: .touchUpInside)
+        view.shareButton.addTarget(self, action: #selector(shareButtonPressed), for: .touchUpInside)
         view.alpha = 0
         return view
     }()
@@ -70,6 +73,7 @@ class ClassicModeViewController: UIViewController {
         configureConstraints()
         game.delegate = self
         game.start()
+        realm = try? Realm()
         movePerWord = (roadImage.frame.width - carIcon.frame.width) / CGFloat(game.textArray.count)
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -104,6 +108,11 @@ class ClassicModeViewController: UIViewController {
     @objc func replayButtonPressed() {
         game.restart()
     }
+    
+    @objc func shareButtonPressed(){
+        ShareManager.share.instagramShare(at: self, image: ShareManager.share.takeScreenshot()!)
+    }
+    
     func configureConstraints() {
         constrain(carIcon, roadImage, speedLabel, classicTextView, countDownLabel, view) { ci, ri, sl, ctv, cdl, v in
             ri.top == ci.bottom
@@ -169,8 +178,17 @@ extension ClassicModeViewController: GameDelegate {
         print("Game finished")
         resultView.scoreLabel.text = speedLabel.text
         classicTextView.textField.isUserInteractionEnabled = false
+        store()
         UIView.animate(withDuration: 0.5) {
             self.resultView.alpha = 1
+        }
+    }
+    
+    func store(){
+        let item = ClassicResult()
+        item.result = game.wpm
+        try? self.realm.write {
+            self.realm.add(item)
         }
     }
     
