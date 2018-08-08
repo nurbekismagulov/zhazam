@@ -22,5 +22,6 @@ protocol Game {
     
     func start()
     func finish()
+    func restart()
 }
 

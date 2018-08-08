@@ -9,12 +9,6 @@
 import UIKit
 import Cartography
 
-//protocol SwitchViewDelegate {
-//    func didSwipeUp()
-//    func didSwipeDown()
-//}
-
-//class ModesViewController: UIViewController, SwitchViewDelegate {
 class ModesViewController: UIViewController {
     
     //MARK: - Views
@@ -78,9 +72,6 @@ class ModesViewController: UIViewController {
             break
         case 1:
             let vc = TimerModeViewController()
-            let someText =  "Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile phones, tablets, desktops/laptops, or other devices. Text messages may be sent over a cellular network"
-            
-            vc.game.textArray = someText.components(separatedBy: " ")
             self.navigationController?.pushViewController(vc, animated: true)
             break
         default:

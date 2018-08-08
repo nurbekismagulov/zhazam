@@ -34,7 +34,7 @@ class SwitchView: UIView {
         let label = UILabel()
         label.textColor = .white
         label.text = "Single Player"
-        label.font = .boldSystemFont(ofSize: 14)
+        label.font = .boldSystemFont(ofSize: 17)
         return label
     }()
     
@@ -46,19 +46,19 @@ class SwitchView: UIView {
         let label = UILabel()
         label.textColor = .catalinaBlue
         label.text = "Multiplayer"
-        label.font = .boldSystemFont(ofSize: 14)
+        label.font = .boldSystemFont(ofSize: 17)
         return label
     }()
     lazy var offlineIsEnableCircle: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 7.5
-        view.backgroundColor = .green
+        view.backgroundColor = .appleGreen
         return view
     }()
     lazy var onlineIsEnableCircle: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 7.5
-        view.backgroundColor = .red
+        view.backgroundColor = .candyAppleRed
         return view
     }()
     
@@ -98,7 +98,6 @@ class SwitchView: UIView {
     }
     
     @objc func swipeUp(){
-       // delegate.didSwipeUp()
         if atIndex == 1 {
             animateAtIndexOne()
         }
@@ -157,7 +156,7 @@ class SwitchView: UIView {
             si.height == 51
             si.width == 42
             
-            sl.top == si.bottom + 24
+            sl.top == si.bottom + 26
             sl.centerX == v.centerX
             
             ml.bottom == v.bottom - 35

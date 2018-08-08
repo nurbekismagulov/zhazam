@@ -8,9 +8,11 @@
 
 import UIKit
 import Cartography
+import AudioToolbox
 
 class ClassicTextView: UIView {
     
+    let generanor = UISelectionFeedbackGenerator()
     lazy var textView: UITextView = {
         let tv = UITextView()
         tv.layer.cornerRadius = 12
@@ -34,11 +36,13 @@ class ClassicTextView: UIView {
         tf.isUserInteractionEnabled = false
         return tf
     }()
-    lazy var eraseImage: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "erase"))
-        return image
+    lazy var eraseButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .clear
+        button.setImage(UIImage(named: "erase"), for: .normal)
+        return button
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .clear
@@ -51,10 +55,11 @@ class ClassicTextView: UIView {
     }
     
     func createViews() {
-        [textView, textField, eraseImage].forEach { self.addSubview($0) }
+        [textView, textField, eraseButton].forEach { self.addSubview($0) }
     }
+    
     func configureConstraints() {
-        constrain(textView, textField, eraseImage, self) { tv, tf, ei, v in
+        constrain(textView, textField, eraseButton, self) { tv, tf, ei, v in
             
             tv.top == v.top
             tv.centerX == v.centerX
@@ -67,29 +72,32 @@ class ClassicTextView: UIView {
             tf.width == 300 / 375 * UIScreen.main.bounds.width
             
             ei.top == tv.bottom + (24 / 667 * UIScreen.main.bounds.height)
-            ei.left == tf.right + (10 / 375 * UIScreen.main.bounds.width)
+            ei.left == tf.right + 10
             ei.height == 33 / 667 * UIScreen.main.bounds.height
             ei.width == 33 / 375 * UIScreen.main.bounds.width
         }
     }
-    
-    func paint(with numberOfCorrectLetters: Int, and numberOfWrongLetters: Int, with text: String) {
-        let correctLettersRange = NSRange(location: 0, length: numberOfCorrectLetters)
+    func paint(with numberOfCorrectLetters: Int, and numberOfWrongLetters: Int, with text: String, at word: Int) {
         if numberOfWrongLetters > 0 {
             textField.backgroundColor = .candyAppleRed
             textField.textColor = .white
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         else {
             textField.backgroundColor = .white
-            textField.textColor = .deepSkyBlue
+            textField.textColor = .black
         }
+        let correctLettersRange = NSRange(location: 0, length: numberOfCorrectLetters)
         let wrongLettersRange = NSRange(location: numberOfCorrectLetters, length: numberOfWrongLetters)
+        let atWordRange = NSRange(location: numberOfCorrectLetters, length: word)
         let attribute = NSMutableAttributedString.init(string: text)
+        attribute.addAttribute(NSAttributedStringKey.underlineStyle, value: NSUnderlineStyle.styleSingle.rawValue, range: atWordRange)
         attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red , range: wrongLettersRange)
         attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.deepSkyBlue , range: correctLettersRange)
         let rangeOfText = NSRange(location: 0, length: text.count)
         attribute.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 17), range: rangeOfText)
         textView.attributedText = attribute
+        
     }
     
 }

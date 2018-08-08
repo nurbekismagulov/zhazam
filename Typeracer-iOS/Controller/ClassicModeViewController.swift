@@ -8,6 +8,7 @@
 
 import UIKit
 import Cartography
+import AudioToolbox
 
 class ClassicModeViewController: UIViewController {
     
@@ -40,6 +41,7 @@ class ClassicModeViewController: UIViewController {
     lazy var classicTextView: ClassicTextView = {
         let tv = ClassicTextView()
         tv.textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        tv.eraseButton.addTarget(self, action: #selector(eraseButtonPressed), for: .touchUpInside)
         tv.textView.text = game.text
         return tv
     }()
@@ -54,6 +56,8 @@ class ClassicModeViewController: UIViewController {
     
     lazy var resultView: ResultView = {
         let view = ResultView()
+        view.homeButton.addTarget(self, action: #selector(homeButtonPressed), for: .touchUpInside)
+        view.replayButton.addTarget(self, action: #selector(replayButtonPressed), for: .touchUpInside)
         view.alpha = 0
         return view
     }()
@@ -64,9 +68,9 @@ class ClassicModeViewController: UIViewController {
         configureView()
         createViews()
         configureConstraints()
-        movePerWord = (roadImage.frame.width - carIcon.frame.width) / CGFloat(game.textArray.count)
         game.delegate = self
         game.start()
+        movePerWord = (roadImage.frame.width - carIcon.frame.width) / CGFloat(game.textArray.count)
     }
     override func viewWillDisappear(_ animated: Bool) {
         game.timer.invalidate()
@@ -84,13 +88,22 @@ class ClassicModeViewController: UIViewController {
     @objc func textFieldDidChange() {
         game.updateText(with: classicTextView.textField.text!)
     }
-    
+    @objc func eraseButtonPressed() {
+        classicTextView.textField.text = ""
+        game.updateText(with: classicTextView.textField.text!)
+    }
     func moveVehicle() {
         UIView.animate(withDuration: 0.1) {
             self.carIcon.frame.origin.x = self.carIcon.frame.origin.x + self.movePerWord
         }
     }
     
+    @objc func homeButtonPressed() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    @objc func replayButtonPressed() {
+        game.restart()
+    }
     func configureConstraints() {
         constrain(carIcon, roadImage, speedLabel, classicTextView, countDownLabel, view) { ci, ri, sl, ctv, cdl, v in
             ri.top == ci.bottom
@@ -129,13 +142,22 @@ extension ClassicModeViewController: GameDelegate {
     func gameDidStart() {
         print("game Started")
     }
-    
+    func gameDidRestart() {
+        print("Game RESTARTED")
+        carIcon.frame = CGRect(x: 15 / 667 * UIScreen.main.bounds.height, y: 22 / 375 * UIScreen.main.bounds.width, width: 60 / 375 * UIScreen.main.bounds.width, height: 20 / 667 * UIScreen.main.bounds.height)
+        speedLabel.text = "\(game.wpm) wpm"
+        classicTextView.textField.isUserInteractionEnabled = false
+        UIView.animate(withDuration: 0.5) {
+            self.resultView.alpha = 0
+        }
+        movePerWord = (roadImage.frame.width - carIcon.frame.width) / CGFloat(game.textArray.count)
+    }
     func gameWPMDidUpdate(){
         speedLabel.text = "\(game.wpm) wpm"
     }
     
     func textDidUpdateLetter() {
-        classicTextView.paint(with: game.correctLetters, and: game.wrongLetters, with: game.text)
+        classicTextView.paint(with: game.correctLetters, and: game.wrongLetters, with: game.text, at: game.textToHighlight)
     }
     
     func textDidUpdateRightWord() {

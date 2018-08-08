@@ -16,7 +16,7 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
     lazy var timeLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.text = "0:58"
+        label.text = "1:00"
         label.font = .systemFont(ofSize: 40)
         return label
     }()
@@ -47,16 +47,37 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
         return timer
     }()
     
-    lazy var erasableTextField: ErasableTextField = {
-        let tf = ErasableTextField()
-        tf.textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    lazy var textField: UITextField = {
+        let tf = UITextField()
+        tf.backgroundColor = .white
+        tf.layer.cornerRadius = 6
+        tf.layer.borderWidth = 1
+        tf.layer.borderColor = UIColor.darkGray.cgColor
+        tf.font = .systemFont(ofSize: 17)
+        tf.setLeftPaddingPoints(10)
+        tf.setRightPaddingPoints(10)
+        //        tf.keyboardType = .emailAddress
+        tf.autocorrectionType = .no
+        tf.autocapitalizationType = .none
+        tf.isUserInteractionEnabled = false
+        tf.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         return tf
     }()
-    lazy var button: UIButton = {
-        let button = UIButton(frame: CGRect(x: 100, y: 450, width: 200, height: 60))
-        button.backgroundColor = .white
-        button.addTarget(self, action: #selector(testButtonPressed), for: .touchUpInside)
+    
+    lazy var eraseButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .clear
+        button.setImage(UIImage(named: "erase"), for: .normal)
+        button.addTarget(self, action: #selector(eraseButtonPressed), for: .touchUpInside)
         return button
+    }()
+    
+    lazy var resultView: ResultView = {
+        let view = ResultView()
+        view.homeButton.addTarget(self, action: #selector(homeButtonPressed), for: .touchUpInside)
+        view.replayButton.addTarget(self, action: #selector(replayButtonPressed), for: .touchUpInside)
+        view.alpha = 0
+        return view
     }()
     
     override func viewDidLoad() {
@@ -68,8 +89,17 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
         game.start()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        game.timer.invalidate()
+    }
+    
     @objc func textFieldDidChange() {
-        game.updateText(with: erasableTextField.textField.text!)
+        game.updateText(with: textField.text!)
+        
+    }
+    @objc func eraseButtonPressed() {
+        textField.text = ""
+        game.updateText(with: textField.text!)
     }
     
     func configureView() {
@@ -78,10 +108,10 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
     }
     
     func createViews() {
-        [timeLabel, tableView, erasableTextField, countDownLabel, button].forEach { view.addSubview($0) }
+        [timeLabel, tableView, textField, eraseButton, countDownLabel, resultView].forEach { view.addSubview($0) }
     }
     func configureConstraints() {
-        constrain(timeLabel, tableView, erasableTextField, countDownLabel, view) { tl, tv, et, cdl, v in
+        constrain(timeLabel, tableView, textField, eraseButton, countDownLabel, view) { tl, tv, et, eb, cdl, v in
             tl.top == v.top + 20
             tl.centerX == v.centerX
             
@@ -91,40 +121,37 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
             tv.height == 135
             
             et.top == tv.bottom + 65
-            et.left == v.left
-            et.right == v.right
+            et.height == 34
+            et.left == v.left + 13
+            et.width == 300
+            
+            eb.top == tv.bottom + 65
+            eb.left == et.right + 10
+            eb.height == 33
+            eb.width == 33
             
             cdl.top == et.bottom + 100
             cdl.centerX == v.centerX
         }
-    }
-    
-    @objc func testButtonPressed() {
-        UIView.animate(withDuration: 0.5) {
-            let cell = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord, section: 0)) as! TimerModeTableViewCell
-            self.tableView.scrollToRow(at: IndexPath(row: self.game.atWord, section: 0), at: .top, animated: true)
-            cell.label.font = UIFont.systemFont(ofSize: 40)
-            cell.label.alpha = 1
-            let cell2 = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord+1, section: 0)) as! TimerModeTableViewCell
-            cell2.label.font = UIFont.systemFont(ofSize: 30)
-            cell2.label.alpha = 0.7
-            let cell3 = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord+2, section: 0)) as! TimerModeTableViewCell
-            cell3.label.font = UIFont.systemFont(ofSize: 25)
-            cell3.label.alpha = 0.5
-            self.game.atWord += 1
+        constrain(resultView, view) { rv, v in
+            rv.edges == v.edges
         }
     }
+    
     func paint(with numberOfCorrectLetters: Int, and numberOfWrongLetters: Int, with text: String) {
         let correctLettersRange = NSRange(location: 0, length: numberOfCorrectLetters)
         let wrongLettersRange = NSRange(location: numberOfCorrectLetters, length: numberOfWrongLetters)
         let attribute = NSMutableAttributedString.init(string: text)
-        attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red , range: wrongLettersRange)
+        attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.candyAppleRed , range: wrongLettersRange)
         attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.deepSkyBlue , range: correctLettersRange)
-//        let rangeOfText = NSRange(location: 0, length: text.count)
-//        attribute.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 17), range: rangeOfText)
-//        erasableTextField.textField.attributedText = attribute
         let cell = tableView.cellForRow(at: IndexPath(row: game.atWord, section: 0)) as! TimerModeTableViewCell
         cell.label.attributedText = attribute
+    }
+    @objc func homeButtonPressed() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    @objc func replayButtonPressed() {
+        game.restart()
     }
     
 }
@@ -139,14 +166,17 @@ extension TimerModeViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! TimerModeTableViewCell
         if indexPath.row == game.atWord {
             cell.label.font = UIFont.systemFont(ofSize: 40)
+            cell.label.textColor = .deepSkyBlue
         }
         else if indexPath.row == game.atWord + 1 {
             cell.label.font = UIFont.systemFont(ofSize: 30)
-            cell.label.alpha = 0.7
+            cell.label.textColor = .white
+            cell.label.alpha = 0.85
         }
         else if indexPath.row == game.atWord + 2 {
             cell.label.font = UIFont.systemFont(ofSize: 25)
-            cell.label.alpha = 0.5
+            cell.label.textColor = .white
+            cell.label.alpha = 0.65
         }
         cell.label.text = game.textArray[indexPath.row]
         return cell
@@ -157,9 +187,23 @@ extension TimerModeViewController: GameDelegate {
     
     func gameDidStart() {
 //        print("Game Started")
-        timeLabel.text = String(game.seconds)
-        erasableTextField.textField.isUserInteractionEnabled = true
-        erasableTextField.textField.becomeFirstResponder()
+        let minutes = Int(game.seconds) / 60 % 60
+        let seconds = Int(game.seconds) % 60
+        let time = String(format:"%2i:%02i", minutes, seconds)
+        timeLabel.text = time
+        textField.isUserInteractionEnabled = true
+        textField.becomeFirstResponder()
+    }
+    
+    func gameDidRestart() {
+        timeLabel.text = "1:00"
+        UIView.animate(withDuration: 0.5) {
+            self.resultView.alpha = 0
+            self.textField.isEnabled = true
+        }
+        textField.text = ""
+        tableView.reloadData()
+        self.tableView.scrollToRow(at: IndexPath(row: self.game.atWord, section: 0), at: .top, animated: true)
     }
     
     func gameWPMDidUpdate() {
@@ -167,33 +211,37 @@ extension TimerModeViewController: GameDelegate {
     }
     
     func textDidUpdateLetter() {
-       // paint(with: game.correctLetters, and: game.wrongLetters, with: game.textArray[game.atWord])
         print(game.textArray[game.atWord])
-//        print(erasableTextField.textField.text )
         paint(with: game.correctLetters, and: game.wrongLetters, with: game.textArray[game.atWord])
     }
     
     func textDidUpdateRightWord() {
-        erasableTextField.textField.text = ""
-        //game.textArray.remove(at: 0)
-        //collectionView.reloadData()
+        textField.text = ""
         UIView.animate(withDuration: 0.5) {
-            let cell = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord, section: 0)) as! TimerModeTableViewCell
             self.tableView.scrollToRow(at: IndexPath(row: self.game.atWord, section: 0), at: .top, animated: true)
+            let cell = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord, section: 0)) as! TimerModeTableViewCell
             cell.label.font = UIFont.systemFont(ofSize: 40)
+            cell.label.textColor = .deepSkyBlue
             cell.label.alpha = 1
-            let cell2 = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord+1, section: 0)) as! TimerModeTableViewCell
+            let cell2 = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord + 1, section: 0)) as! TimerModeTableViewCell
             cell2.label.font = UIFont.systemFont(ofSize: 30)
-            cell2.label.alpha = 0.7
-            let cell3 = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord+2, section: 0)) as! TimerModeTableViewCell
+            cell2.label.textColor = .white
+            cell2.label.alpha = 0.85
+            let cell3 = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord + 2, section: 0)) as! TimerModeTableViewCell
             cell3.label.font = UIFont.systemFont(ofSize: 25)
-            cell3.label.alpha = 0.5
-//            self.game.atWord += 1
+            cell3.label.textColor = .white
+            cell3.label.alpha = 0.65
         }
     }
     
     func gameDidFinish() {
         print("Game Finished")
+        resultView.scoreLabel.text = "\(game.correctWords) words"
+        textField.isUserInteractionEnabled = false
+        textField.isEnabled = false
+        UIView.animate(withDuration: 0.5) {
+            self.resultView.alpha = 1
+        }
     }
     
     func timerDidUpdate(with time: Int) {

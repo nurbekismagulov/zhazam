@@ -31,14 +31,12 @@
 		7A82BE74210ED865002F8094 /* ClassicModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE73210ED865002F8094 /* ClassicModeViewController.swift */; };
 		7A82BE76210EFA98002F8094 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE75210EFA98002F8094 /* Reusable.swift */; };
 		7A82BE78210F373E002F8094 /* UITextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE77210F373E002F8094 /* UITextfield.swift */; };
-		7A82BE7A210FAD4F002F8094 /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82BE79210FAD4F002F8094 /* ComingSoonViewController.swift */; };
 		7A9FF607BA740448A8EE677D /* Pods_Typeracer_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8806C0110A58CEB22A3FAD04 /* Pods_Typeracer_iOS.framework */; };
 		7AF967892111E0C0005391D3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF967882111E0C0005391D3 /* Game.swift */; };
 		7AF9678B21121980005391D3 /* GameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9678A21121980005391D3 /* GameDelegate.swift */; };
 		7AF9678D2112227C005391D3 /* ClassicGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9678C2112227C005391D3 /* ClassicGame.swift */; };
 		7AF9678F21124097005391D3 /* ClassicTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9678E21124097005391D3 /* ClassicTextView.swift */; };
 		7AF9679321138EE3005391D3 /* TimerModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9679221138EE3005391D3 /* TimerModeViewController.swift */; };
-		7AF967952113A63D005391D3 /* ErasableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF967942113A63D005391D3 /* ErasableTextField.swift */; };
 		7AF967972116F27F005391D3 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF967962116F27F005391D3 /* ResultView.swift */; };
 		C42F052D211A1D72007453A2 /* ResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F052C211A1D72007453A2 /* ResultCollectionViewCell.swift */; };
 		C42F052F211A3A5C007453A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F052E211A3A5C007453A2 /* SettingsViewController.swift */; };
@@ -90,13 +88,11 @@
 		7A82BE73210ED865002F8094 /* ClassicModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicModeViewController.swift; sourceTree = "<group>"; };
 		7A82BE75210EFA98002F8094 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		7A82BE77210F373E002F8094 /* UITextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextfield.swift; sourceTree = "<group>"; };
-		7A82BE79210FAD4F002F8094 /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
 		7AF967882111E0C0005391D3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		7AF9678A21121980005391D3 /* GameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDelegate.swift; sourceTree = "<group>"; };
 		7AF9678C2112227C005391D3 /* ClassicGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicGame.swift; sourceTree = "<group>"; };
 		7AF9678E21124097005391D3 /* ClassicTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTextView.swift; sourceTree = "<group>"; };
 		7AF9679221138EE3005391D3 /* TimerModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModeViewController.swift; sourceTree = "<group>"; };
-		7AF967942113A63D005391D3 /* ErasableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErasableTextField.swift; sourceTree = "<group>"; };
 		7AF967962116F27F005391D3 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		8806C0110A58CEB22A3FAD04 /* Pods_Typeracer_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Typeracer_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42F052C211A1D72007453A2 /* ResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -202,7 +198,6 @@
 				7A82BE272109095C002F8094 /* ModesViewController.swift */,
 				7A82BE6B210C7DF2002F8094 /* CarsCollectionViewController.swift */,
 				7A82BE73210ED865002F8094 /* ClassicModeViewController.swift */,
-				7A82BE79210FAD4F002F8094 /* ComingSoonViewController.swift */,
 				7AF9679221138EE3005391D3 /* TimerModeViewController.swift */,
 				7A476FAD2118E656007EA6BD /* ProfileViewController.swift */,
 				C42F052E211A3A5C007453A2 /* SettingsViewController.swift */,
@@ -234,7 +229,6 @@
 				7A82BE252107AA03002F8094 /* SwitchView.swift */,
 				7A82BE6D210C8621002F8094 /* CarCollectionViewCell.swift */,
 				7AF9678E21124097005391D3 /* ClassicTextView.swift */,
-				7AF967942113A63D005391D3 /* ErasableTextField.swift */,
 				C4F4F31C2114867F00530DD0 /* LabelView.swift */,
 				C4F4F3202114873300530DD0 /* AnimatedView.swift */,
 				7AF967962116F27F005391D3 /* ResultView.swift */,
@@ -440,7 +434,6 @@
 				C49674202119C831005D5298 /* Music.swift in Sources */,
 				7A82BE1C2105D31E002F8094 /* MenuView.swift in Sources */,
 				7A82BE78210F373E002F8094 /* UITextfield.swift in Sources */,
-				7A82BE7A210FAD4F002F8094 /* ComingSoonViewController.swift in Sources */,
 				7A476F9C21178BE7007EA6BD /* TimerGame.swift in Sources */,
 				7A82BE262107AA03002F8094 /* SwitchView.swift in Sources */,
 				C42F052D211A1D72007453A2 /* ResultCollectionViewCell.swift in Sources */,
@@ -464,7 +457,6 @@
 				7AF9679321138EE3005391D3 /* TimerModeViewController.swift in Sources */,
 				C42F0531211A4BC2007453A2 /* SettingsTableViewCell.swift in Sources */,
 				7A476FAE2118E656007EA6BD /* ProfileViewController.swift in Sources */,
-				7AF967952113A63D005391D3 /* ErasableTextField.swift in Sources */,
 				C4F4F323211488D000530DD0 /* Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
