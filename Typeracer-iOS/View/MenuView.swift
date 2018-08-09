@@ -19,6 +19,7 @@ class MenuView: UIView {
     }()
     lazy var soundImageView: UIImageView = {
         let image = UIImageView(image: #imageLiteral(resourceName: "musicOn"))
+        image.contentMode = .scaleAspectFill
         return image
     }()
     

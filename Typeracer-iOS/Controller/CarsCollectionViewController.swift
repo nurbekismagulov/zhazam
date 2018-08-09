@@ -64,6 +64,12 @@ class CarsCollectionViewController: UIViewController, Reusable {
         configureConstraints()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Music.share.backgroundMusicPlayer.volume = 1
+    }
+
+    
     func configureView(){
         view.backgroundColor = .catalinaBlue
         self.navigationController?.navigationBar.topItem?.title = ""
@@ -105,7 +111,6 @@ class CarsCollectionViewController: UIViewController, Reusable {
     }
     func random(array: [Any]) -> Any {
         return array[Int(arc4random_uniform(UInt32(array.count)))]
-        
     }
 }
 
