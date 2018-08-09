@@ -54,9 +54,7 @@ class SettingsViewController: UIViewController, Reusable {
     func configureConstraints(){
         constrain(titleLabel, tableView, view){tl, tv, v in
             tl.top == v.top + Constant.multiplyToHeight(number: 20)
-            tl.left == v.left + Constant.multiplyToWidth(number: 40)
-            tl.width == Constant.multiplyToWidth(number: 150)
-            tl.height == Constant.multiplyToHeight(number: 50)
+            tl.centerX == v.centerX
             
             tv.top == tl.top + Constant.multiplyToHeight(number: 40)
             tv.right == v.right
@@ -88,10 +86,14 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 1:
-            return "Additional information"
-        default:
             return "Share"
+        default:
+            return "Additional"
         }
+    }
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        (view as! UITableViewHeaderFooterView).textLabel?.textColor = .deepSkyBlue
+        (view as! UITableViewHeaderFooterView).textLabel?.font = UIFont.systemFont(ofSize: Constant.multiplyToWidth(number: 15))
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
