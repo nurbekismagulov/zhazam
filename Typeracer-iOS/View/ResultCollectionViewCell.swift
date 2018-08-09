@@ -14,17 +14,17 @@ class ResultCollectionViewCell: UICollectionViewCell {
     //MARK: UI init
     lazy var timerLabel: UILabel = {
         let label = UILabel()
-        label.text = "0"
-        label.textColor = "#16aafc".hexColor
+        label.text = "0 wpm"
+        label.textColor = .deepSkyBlue
         label.setStyle()
         label.font = .systemFont(ofSize: Constant.multiplyToWidth(number: 23))
-        label.layer.borderColor = "#16aafc".hexColor.cgColor
+        label.layer.borderColor = UIColor.deepSkyBlue.cgColor
         return label
     }()
     
     lazy var classicLabel: UILabel = {
         let label = UILabel()
-        label.text = "0"
+        label.text = "0 wpm"
         label.textColor = .candyAppleRed
         label.font = .systemFont(ofSize: Constant.multiplyToWidth(number: 23))
         label.setStyle()

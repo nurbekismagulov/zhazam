@@ -69,11 +69,11 @@ class ProfileViewController: UIViewController, Reusable {
     lazy var graphView: ScrollableGraphView = {
         let graph = ScrollableGraphView()
         let linePlot2 = LinePlot(identifier: "line2")
-        linePlot2.lineColor = "#16aafc".hexColor
+        linePlot2.lineColor = .deepSkyBlue
         linePlot2.setLineStyle()
         let linePlotDot2 = DotPlot(identifier: "lineColor2")
         linePlotDot2.setDotStyle()
-        linePlotDot2.dataPointFillColor = "#16aafc".hexColor
+        linePlotDot2.dataPointFillColor = .deepSkyBlue//"#16aafc".hexColor
         let referenceLines = ReferenceLines()
         referenceLines.setReferenceStyle()
         graph.setGraphStyle()
@@ -111,15 +111,17 @@ class ProfileViewController: UIViewController, Reusable {
     
     lazy var fView: UIView = {
         let view = UIView()
-        view.backgroundColor = "#16aafc".hexColor
-        view.layer.cornerRadius = 3
+        view.backgroundColor = .deepSkyBlue
+        view.layer.cornerRadius = Constant.multiplyToWidth(number: 3)
+        view.alpha = 0
         return view
     }()
     
     lazy var sView: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 3
+        view.layer.cornerRadius = Constant.multiplyToWidth(number: 3)
         view.backgroundColor = .candyAppleRed
+        view.alpha = 0
         return view
     }()
     
@@ -127,17 +129,19 @@ class ProfileViewController: UIViewController, Reusable {
         let label = UILabel()
         label.text = "timer"
         label.textColor = .white
-        label.font = .systemFont(ofSize: 12)
+        label.font = .systemFont(ofSize: Constant.multiplyToWidth(number: 12))
         label.textAlignment = .center
+        label.alpha = 0
         return label
     }()
     
     lazy var sLabel: UILabel = {
         let label = UILabel()
         label.text = "classic"
-        label.font = .systemFont(ofSize: 8)
+        label.font = .systemFont(ofSize: Constant.multiplyToWidth(number: 12))
         label.textColor = .white
         label.textAlignment = .center
+        label.alpha = 0
         return label
     }()
     
@@ -150,9 +154,8 @@ class ProfileViewController: UIViewController, Reusable {
         print(classicModeResults)
         print(timerModeResults)
         if classicModeResults.count >= 9 || timerModeResults.count >= 9 {
-            self.graphView.alpha = 1
-            self.descriptionLabel.alpha = 1
             self.infoLabel.alpha = 0
+            [graphView, descriptionLabel, fView, fLabel, sView, sLabel].forEach { $0.alpha = 1 }
             self.loadViewIfNeeded()
         }
     }
@@ -187,15 +190,25 @@ class ProfileViewController: UIViewController, Reusable {
             }
         }
         constrain(fView, sView, descriptionLabel, fLabel, sLabel, view){fv, sv, dl, fl, sl, v in
-            fv.left == dl.right + 100
-            fv.top == dl.top + 4
-            fv.height == 12
-            fv.width == 12
+            fv.left == dl.right + Constant.multiplyToWidth(number: 100)
+            fv.top == dl.top + Constant.multiplyToHeight(number: 4)
+            fv.height == Constant.multiplyToHeight(number: 12)
+            fv.width == Constant.multiplyToWidth(number: 12)
             
             fl.top == fv.top
-            fl.left == fv.right + 4
-            fl.height == 12
-            fl.width == 30
+            fl.left == fv.right + Constant.multiplyToWidth(number: 4)
+            fl.height == Constant.multiplyToHeight(number: 12)
+            fl.width == Constant.multiplyToWidth(number: 30)
+            
+            sv.top == fv.top + Constant.multiplyToHeight(number: 1)
+            sv.left == fl.right + Constant.multiplyToWidth(number: 4)
+            sv.height == Constant.multiplyToHeight(number: 12)
+            sv.width == Constant.multiplyToWidth(number: 12)
+            
+            sl.top == fl.top
+            sl.left == sv.right + Constant.multiplyToWidth(number: 4)
+            fl.height == Constant.multiplyToHeight(number: 12)
+            fl.width == Constant.multiplyToWidth(number: 30)
         }
     }
     
@@ -262,8 +275,8 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             }
         case 1:
             cell.titleLabel.text = "Average of last 10"
-            cell.timerLabel.text = "\(data1)"
-            cell.classicLabel.text = "\(data)"
+            cell.timerLabel.text = "\(data1) wpm"
+            cell.classicLabel.text = "\(data) wpm"
         case 2:
             cell.titleLabel.text = "Average of all results"
         default:

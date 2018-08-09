@@ -17,7 +17,7 @@ class SettingsTableViewCell: UITableViewCell {
         titleLabel.font = UIFont(name: "Avenir-Next", size: Constant.multiplyToWidth(number: 16))
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
-        titleLabel.textColor = "#16aafc".hexColor
+        titleLabel.textColor = .white
         return titleLabel
     }()
     
@@ -27,6 +27,7 @@ class SettingsTableViewCell: UITableViewCell {
         cellIcon.layer.shadowOpacity = 0.07
         cellIcon.layer.shadowOffset = CGSize(width: Constant.multiplyToHeight(number: 1), height: Constant.multiplyToHeight(number: 1))
         cellIcon.layer.shadowRadius = Constant.multiplyToHeight(number: 3)
+        cellIcon.contentMode = .scaleAspectFill
         return cellIcon
     }()
     
@@ -49,6 +50,8 @@ class SettingsTableViewCell: UITableViewCell {
     func configureConstraints(){
         constrain(titleLabel, cellIcon, contentView) { tl, ci, sf in
             ci.centerY == sf.centerY
+            ci.width == Constant.multiplyToWidth(number: 24)
+            ci.height == Constant.multiplyToHeight(number: 24)
             ci.left == sf.left + Constant.multiplyToWidth(number: 15)
             
             tl.centerY == sf.centerY
