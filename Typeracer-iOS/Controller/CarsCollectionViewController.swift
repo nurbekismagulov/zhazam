@@ -14,10 +14,10 @@ class CarsCollectionViewController: UIViewController, Reusable {
     
     var arrayOfCars: [Vehicle] = [
         Vehicle(fullImage: "Ferrari", iconImages: ["ferrariGreen", "ferrariYellow", "ferrariRed"], name: "Ferrari"),
-        Vehicle(fullImage: "k100", iconImages: ["k100Red", "k100Green", "k100Yellow"], name: "BMW K75"),
-        Vehicle(fullImage: "Gelik", iconImages: ["gelikRed", "gelikGreen", "gelikYellow"], name: "Gelenvagen"),
-        Vehicle(fullImage: "HarleyDavidson", iconImages: ["bikeGreen", "bikeYellow", "bikeRed"], name: "Harley"),
-        Vehicle(fullImage: "Maserati", iconImages: ["maseratiRed", "maseratiGreen", "maseratiYellow"], name: "Maserati")
+        Vehicle(fullImage: "kawasaki", iconImages: ["k100Red", "k100Green", "k100Yellow"], name: "Kawasaki"),
+        Vehicle(fullImage: "range", iconImages: ["gelikRed", "gelikGreen", "gelikYellow"], name: "Range Rover"),
+        Vehicle(fullImage: "bike", iconImages: ["bikeGreen", "bikeYellow", "bikeRed"], name: "Harley"),
+        Vehicle(fullImage: "Maserati", iconImages: ["maseratiRed", "maseratiGreen", "maseratiYellow"], name: "Maseratti")
     ]
     var atIndex = 0
     
@@ -26,12 +26,12 @@ class CarsCollectionViewController: UIViewController, Reusable {
         let label = UILabel()
         label.text = "Choose car"
         label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 32)
+        label.font = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 32))
         return label
     }()
     lazy var carouselLayout: UPCarouselFlowLayout = {
         let layout = UPCarouselFlowLayout()
-        layout.itemSize = CGSize(width: 249, height: 337)
+        layout.itemSize = CGSize(width: Constant.multiplyToHeight(number: 249), height: Constant.multiplyToHeight(number: 337))
         layout.scrollDirection = .horizontal
         return layout
     }()
@@ -50,9 +50,9 @@ class CarsCollectionViewController: UIViewController, Reusable {
         button.backgroundColor = .white
         button.setTitle("Start Race", for: .normal)
         button.setTitleColor(.catalinaBlue, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: Constant.multiplyToWidth(number: 19))
         button.addTarget(self, action: #selector(startRaceButtonPressed), for: .touchUpInside)
-        button.layer.cornerRadius = 7
+        button.layer.cornerRadius = Constant.multiplyToHeight(number: 7)
         return button
     }()
     
@@ -67,6 +67,7 @@ class CarsCollectionViewController: UIViewController, Reusable {
     func configureView(){
         view.backgroundColor = .catalinaBlue
         self.navigationController?.navigationBar.topItem?.title = ""
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     func createViews(){
         view.addSubview(carLabel)
@@ -81,18 +82,25 @@ class CarsCollectionViewController: UIViewController, Reusable {
     }
     func configureConstraints(){
         constrain(carLabel, collectionView, startRaceButton, view){ cl, cv, srb, v in
-            cl.top == v.top + 25
+            cl.top == v.top + Constant.multiplyToHeight(number: 25)
             cl.centerX == v.centerX
             
-            cv.top == cl.bottom + 50
+            cv.top == cl.bottom + Constant.multiplyToHeight(number: 50)
             cv.left == v.left
             cv.right == v.right
-            cv.height == 337
+            cv.height == Constant.multiplyToHeight(number: 337)
             
-            srb.top == cv.bottom + 50
+            srb.top == cv.bottom + Constant.multiplyToHeight(number: 50)
             srb.centerX == v.centerX
-            srb.height == 58
-            srb.width == 183
+            srb.height == Constant.multiplyToHeight(number: 58)
+            srb.width == Constant.multiplyToWidth(number: 183)
+            
+            if UIScreen.main.bounds.height == 812 {
+                srb.top == cv.bottom + 50
+                srb.centerX == v.centerX
+                srb.height == 58
+                srb.width == 183
+            }
         }
     }
     func random(array: [Any]) -> Any {

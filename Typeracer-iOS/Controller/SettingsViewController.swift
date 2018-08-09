@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController, Reusable {
         label.text = "Settings"
         label.textColor = .white
         label.textAlignment = .left
-        label.font = .systemFont(ofSize: 30)
+        label.font = .systemFont(ofSize: Constant.multiplyToWidth(number: 30))
         return label
     }()
     
@@ -31,7 +31,7 @@ class SettingsViewController: UIViewController, Reusable {
         tableView.dataSource = self
         tableView.isScrollEnabled = false
         tableView.backgroundColor = .clear
-        tableView.rowHeight = 60
+        tableView.rowHeight = Constant.multiplyToHeight(number: 60)
         tableView.separatorStyle = .none
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: identifier)
         return tableView
@@ -53,12 +53,12 @@ class SettingsViewController: UIViewController, Reusable {
     
     func configureConstraints(){
         constrain(titleLabel, tableView, view){tl, tv, v in
-            tl.top == v.top + 20
-            tl.left == v.left + 40
-            tl.width == 150
-            tl.height == 50
+            tl.top == v.top + Constant.multiplyToHeight(number: 20)
+            tl.left == v.left + Constant.multiplyToWidth(number: 40)
+            tl.width == Constant.multiplyToWidth(number: 150)
+            tl.height == Constant.multiplyToHeight(number: 50)
             
-            tv.top == tl.top + 40
+            tv.top == tl.top + Constant.multiplyToHeight(number: 40)
             tv.right == v.right
             tv.left == v.left
             tv.bottom == v.bottom

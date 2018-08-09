@@ -21,7 +21,7 @@ class TimerModeTableViewCell: UITableViewCell {
     func configure(){
         label.textColor = .white
         self.backgroundColor = .catalinaBlue
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: Constant.multiplyToWidth(number: 15))
         self.addSubview(label)
         constrain(label, self) { l, cv in
             l.center == cv.center

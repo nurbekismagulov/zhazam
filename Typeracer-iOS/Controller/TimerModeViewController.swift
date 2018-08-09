@@ -19,13 +19,13 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
         let label = UILabel()
         label.textColor = .white
         label.text = "1:00"
-        label.font = .systemFont(ofSize: 40)
+        label.font = .systemFont(ofSize: Constant.multiplyToWidth(number: 40))
         return label
     }()
     lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 50)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: Constant.multiplyToHeight(number: 50))
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         layout.scrollDirection = .vertical
@@ -45,19 +45,19 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
         let timer = UILabel()
         timer.text = "3"
         timer.textColor = .white
-        timer.font = .boldSystemFont(ofSize: 50)
+        timer.font = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 50))
         return timer
     }()
     
     lazy var textField: UITextField = {
         let tf = UITextField()
         tf.backgroundColor = .white
-        tf.layer.cornerRadius = 6
+        tf.layer.cornerRadius = Constant.multiplyToHeight(number: 6)
         tf.layer.borderWidth = 1
         tf.layer.borderColor = UIColor.darkGray.cgColor
-        tf.font = .systemFont(ofSize: 17)
-        tf.setLeftPaddingPoints(10)
-        tf.setRightPaddingPoints(10)
+        tf.font = .systemFont(ofSize: Constant.multiplyToWidth(number: 17))
+        tf.setLeftPaddingPoints(Constant.multiplyToWidth(number: 10))
+        tf.setRightPaddingPoints(Constant.multiplyToWidth(number: 10))
         //        tf.keyboardType = .emailAddress
         tf.autocorrectionType = .no
         tf.autocapitalizationType = .none
@@ -97,6 +97,11 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
         game.timer.invalidate()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    }
+    
     @objc func textFieldDidChange() {
         game.updateText(with: textField.text!)
         
@@ -120,26 +125,34 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
     }
     func configureConstraints() {
         constrain(timeLabel, tableView, textField, eraseButton, countDownLabel, view) { tl, tv, et, eb, cdl, v in
-            tl.top == v.top + 20
+            tl.top == v.top + Constant.multiplyToHeight(number: 20)
             tl.centerX == v.centerX
             
-            tv.top == tl.bottom + 15
             tv.left == v.left
             tv.right == v.right
-            tv.height == 135
+            tv.height == Constant.multiplyToHeight(number: 135)
             
-            et.top == tv.bottom + 65
-            et.height == 34
-            et.left == v.left + 13
-            et.width == 300
+            et.height == Constant.multiplyToHeight(number: 34)
+            et.left == v.left + Constant.multiplyToWidth(number: 13)
+            et.width == Constant.multiplyToWidth(number: 300)
             
-            eb.top == tv.bottom + 65
-            eb.left == et.right + 10
-            eb.height == 33
-            eb.width == 33
+            eb.left == et.right + Constant.multiplyToWidth(number: 10)
+            eb.height == Constant.multiplyToHeight(number: 33)
+            eb.width == Constant.multiplyToWidth(number: 33)
             
-            cdl.top == et.bottom + 100
             cdl.centerX == v.centerX
+            
+            if UIScreen.main.bounds.height == 812 {
+                cdl.top == et.bottom + 180
+                eb.top == tv.bottom + 90
+                et.top == tv.bottom + 90
+                tv.top == tl.bottom + 40
+            } else {
+                cdl.top == et.bottom + Constant.multiplyToHeight(number: 100)
+                eb.top == tv.bottom + Constant.multiplyToHeight(number: 65)
+                et.top == tv.bottom + Constant.multiplyToHeight(number: 65)
+                tv.top == tl.bottom + Constant.multiplyToHeight(number: 15)
+            }
         }
         constrain(resultView, view) { rv, v in
             rv.edges == v.edges
@@ -147,6 +160,14 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
     }
     
     func paint(with numberOfCorrectLetters: Int, and numberOfWrongLetters: Int, with text: String) {
+        if numberOfWrongLetters > 0 {
+            textField.backgroundColor = .candyAppleRed
+            textField.textColor = .white
+        }
+        else {
+            textField.backgroundColor = .white
+            textField.textColor = .black
+        }
         let correctLettersRange = NSRange(location: 0, length: numberOfCorrectLetters)
         let wrongLettersRange = NSRange(location: numberOfCorrectLetters, length: numberOfWrongLetters)
         let attribute = NSMutableAttributedString.init(string: text)
@@ -173,16 +194,16 @@ extension TimerModeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! TimerModeTableViewCell
         if indexPath.row == game.atWord {
-            cell.label.font = UIFont.systemFont(ofSize: 40)
+            cell.label.font = UIFont.systemFont(ofSize: Constant.multiplyToWidth(number: 40))
             cell.label.textColor = .deepSkyBlue
         }
         else if indexPath.row == game.atWord + 1 {
-            cell.label.font = UIFont.systemFont(ofSize: 30)
+            cell.label.font = UIFont.systemFont(ofSize: Constant.multiplyToWidth(number: 30))
             cell.label.textColor = .white
             cell.label.alpha = 0.85
         }
         else if indexPath.row == game.atWord + 2 {
-            cell.label.font = UIFont.systemFont(ofSize: 25)
+            cell.label.font = UIFont.systemFont(ofSize: Constant.multiplyToWidth(number: 25))
             cell.label.textColor = .white
             cell.label.alpha = 0.65
         }
@@ -225,21 +246,27 @@ extension TimerModeViewController: GameDelegate {
     
     func textDidUpdateRightWord() {
         textField.text = ""
-        UIView.animate(withDuration: 0.5) {
-            self.tableView.scrollToRow(at: IndexPath(row: self.game.atWord, section: 0), at: .top, animated: true)
-            let cell = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord, section: 0)) as! TimerModeTableViewCell
-            cell.label.font = UIFont.systemFont(ofSize: 40)
+//        UIView.animate(withDuration: 0.5) {
+        self.tableView.scrollToRow(at: IndexPath(row: self.game.atWord, section: 0), at: .top, animated: true)
+        let cell = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord, section: 0)) as? TimerModeTableViewCell
+        if let cell = cell {
+            cell.label.font = UIFont.systemFont(ofSize: Constant.multiplyToWidth(number: 40))
             cell.label.textColor = .deepSkyBlue
             cell.label.alpha = 1
-            let cell2 = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord + 1, section: 0)) as! TimerModeTableViewCell
-            cell2.label.font = UIFont.systemFont(ofSize: 30)
+        }
+        let cell2 = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord + 1, section: 0)) as? TimerModeTableViewCell
+        if let cell2 = cell2{
+            cell2.label.font = UIFont.systemFont(ofSize: Constant.multiplyToWidth(number: 30))
             cell2.label.textColor = .white
             cell2.label.alpha = 0.85
-            let cell3 = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord + 2, section: 0)) as! TimerModeTableViewCell
-            cell3.label.font = UIFont.systemFont(ofSize: 25)
+        }
+        let cell3 = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord + 2, section: 0)) as? TimerModeTableViewCell
+        if let cell3 = cell3 {
+            cell3.label.font = UIFont.systemFont(ofSize: Constant.multiplyToWidth(number: 25))
             cell3.label.textColor = .white
             cell3.label.alpha = 0.65
         }
+        
     }
     
     func gameDidFinish() {

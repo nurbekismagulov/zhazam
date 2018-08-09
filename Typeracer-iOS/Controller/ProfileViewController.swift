@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController, Reusable {
     
     lazy var layout: UPCarouselFlowLayout = {
         let layout = UPCarouselFlowLayout()
-        layout.itemSize = CGSize(width: 260, height: 230)
+        layout.itemSize = CGSize(width: Constant.multiplyToHeight(number: 260), height: Constant.multiplyToHeight(number: 230))
         layout.scrollDirection = .horizontal
         return layout
     }()
@@ -53,9 +53,8 @@ class ProfileViewController: UIViewController, Reusable {
     
     lazy var plot: LinePlot = {
         let linePlot = LinePlot(identifier: "line")
-        linePlot.lineColor = "#16aafc".hexColor
+        linePlot.lineColor = .candyAppleRed
         linePlot.setLineStyle()
-   
         return linePlot
     }()
     
@@ -63,18 +62,18 @@ class ProfileViewController: UIViewController, Reusable {
     lazy var dot: DotPlot = {
         let linePlotDot = DotPlot(identifier: "lineColor")
         linePlotDot.setDotStyle()
-        linePlotDot.dataPointFillColor = "#16aafc".hexColor
+        linePlotDot.dataPointFillColor = .candyAppleRed
         return linePlotDot
     }()
     
     lazy var graphView: ScrollableGraphView = {
         let graph = ScrollableGraphView()
         let linePlot2 = LinePlot(identifier: "line2")
-        linePlot2.lineColor = .candyAppleRed
+        linePlot2.lineColor = "#16aafc".hexColor
         linePlot2.setLineStyle()
         let linePlotDot2 = DotPlot(identifier: "lineColor2")
         linePlotDot2.setDotStyle()
-        linePlotDot2.dataPointFillColor = .candyAppleRed
+        linePlotDot2.dataPointFillColor = "#16aafc".hexColor
         let referenceLines = ReferenceLines()
         referenceLines.setReferenceStyle()
         graph.setGraphStyle()
@@ -90,12 +89,55 @@ class ProfileViewController: UIViewController, Reusable {
     
     lazy var infoLabel: UILabel = {
         let label = UILabel()
-        label.text = "You need to ..."
-        label.font = .systemFont(ofSize: 40)
+        label.text = "Play at least 10 games\nto see statistics"
+        label.font = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 30))
         label.textAlignment = .center
         label.textColor = .white
         label.alpha = 1
         label.numberOfLines = 0
+        return label
+    }()
+    
+    lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Average of last 10 results"
+        label.font = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 12))
+        label.textAlignment = .center
+        label.textColor = .white
+        label.alpha = 0
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    lazy var fView: UIView = {
+        let view = UIView()
+        view.backgroundColor = "#16aafc".hexColor
+        view.layer.cornerRadius = 3
+        return view
+    }()
+    
+    lazy var sView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 3
+        view.backgroundColor = .candyAppleRed
+        return view
+    }()
+    
+    lazy var fLabel: UILabel = {
+        let label = UILabel()
+        label.text = "timer"
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 12)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    lazy var sLabel: UILabel = {
+        let label = UILabel()
+        label.text = "classic"
+        label.font = .systemFont(ofSize: 8)
+        label.textColor = .white
+        label.textAlignment = .center
         return label
     }()
     
@@ -109,36 +151,54 @@ class ProfileViewController: UIViewController, Reusable {
         print(timerModeResults)
         if classicModeResults.count >= 9 || timerModeResults.count >= 9 {
             self.graphView.alpha = 1
+            self.descriptionLabel.alpha = 1
             self.infoLabel.alpha = 0
             self.loadViewIfNeeded()
         }
     }
- 
     
     //MARK: Set views
     func configureViews(){
         view.backgroundColor = .catalinaBlue
         self.navigationController?.navigationBar.topItem?.title = ""
-        [graphView, collectionView, infoLabel ].forEach( {view.addSubview($0)} )
+        [graphView, collectionView, infoLabel, descriptionLabel, fView, sView, fLabel, sLabel].forEach( {view.addSubview($0)} )
     }
     
     func configureConstraints(){
-        constrain(graphView, collectionView, infoLabel, view){gv, cv, il, v in
-            gv.bottom == v.bottom - 5
+        constrain(graphView, collectionView, infoLabel, descriptionLabel, view){gv, cv, il, dl, v in
+            gv.bottom == v.bottom - Constant.multiplyToHeight(number: 5)
             gv.width == v.width
-            gv.height == 250
+            gv.height == Constant.multiplyToHeight(number: 250)
             
             cv.top == v.top
             cv.left == v.left
             cv.right == v.right
-            cv.height == 300
+            cv.height == Constant.multiplyToHeight(number: 300)
             
-            il.bottom == v.bottom - 5
-            il.width == v.width
-            il.height == 250
+            dl.bottom == gv.top
+            dl.left == v.left + Constant.multiplyToWidth(number: 20)
             
+            il.centerX == v.centerX
+
+            if UIScreen.main.bounds.height == 812 {
+                il.bottom == v.bottom - 200
+            } else {
+                il.bottom == v.bottom - Constant.multiplyToHeight(number: 150)
+            }
+        }
+        constrain(fView, sView, descriptionLabel, fLabel, sLabel, view){fv, sv, dl, fl, sl, v in
+            fv.left == dl.right + 100
+            fv.top == dl.top + 4
+            fv.height == 12
+            fv.width == 12
+            
+            fl.top == fv.top
+            fl.left == fv.right + 4
+            fl.height == 12
+            fl.width == 30
         }
     }
+    
     
 }
 

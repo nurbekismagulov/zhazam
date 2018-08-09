@@ -45,6 +45,7 @@
 		C42F0535211A56AC007453A2 /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F0534211A56AC007453A2 /* ShareManager.swift */; };
 		C460B2FE211602A60075FC30 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460B2FD211602A60075FC30 /* CGFloatExtension.swift */; };
 		C460B300211602C70075FC30 /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460B2FF211602C70075FC30 /* FloatExtension.swift */; };
+		C46ED8D3211B1B7E00002138 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ED8D2211B1B7E00002138 /* Constant.swift */; };
 		C496741A2118ED66005D5298 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49674192118ED66005D5298 /* Result.swift */; };
 		C496741E2119C779005D5298 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C496741D2119C779005D5298 /* sound.mp3 */; };
 		C49674202119C831005D5298 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496741F2119C831005D5298 /* Music.swift */; };
@@ -102,6 +103,7 @@
 		C42F0534211A56AC007453A2 /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 		C460B2FD211602A60075FC30 /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		C460B2FF211602C70075FC30 /* FloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
+		C46ED8D2211B1B7E00002138 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C49674192118ED66005D5298 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		C496741D2119C779005D5298 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 		C496741F2119C831005D5298 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				C496741F2119C831005D5298 /* Music.swift */,
 				C42F0532211A5685007453A2 /* SettingItem.swift */,
 				C42F0534211A56AC007453A2 /* ShareManager.swift */,
+				C46ED8D2211B1B7E00002138 /* Constant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				C49674202119C831005D5298 /* Music.swift in Sources */,
 				7A82BE1C2105D31E002F8094 /* MenuView.swift in Sources */,
 				7A82BE78210F373E002F8094 /* UITextfield.swift in Sources */,
+				C46ED8D3211B1B7E00002138 /* Constant.swift in Sources */,
 				7A476F9C21178BE7007EA6BD /* TimerGame.swift in Sources */,
 				7A82BE262107AA03002F8094 /* SwitchView.swift in Sources */,
 				C42F052D211A1D72007453A2 /* ResultCollectionViewCell.swift in Sources */,
@@ -606,6 +610,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CF6PK4MED5;
 				INFOPLIST_FILE = "$(SRCROOT)/Typeracer-iOS/Additional/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,7 +619,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -627,6 +632,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CF6PK4MED5;
 				INFOPLIST_FILE = "$(SRCROOT)/Typeracer-iOS/Additional/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,7 +641,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
