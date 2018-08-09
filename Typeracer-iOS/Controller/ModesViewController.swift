@@ -54,6 +54,11 @@ class ModesViewController: UIViewController {
         switchView.choiceView.setGradientBackground()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Music.share.backgroundMusicPlayer.volume = 1
+    }
+    
     //MARK: - Creating views
     func configureView(){
         view.backgroundColor = .catalinaBlue

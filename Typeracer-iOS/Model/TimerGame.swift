@@ -50,8 +50,8 @@ class TimerGame: Game {
     
     func start() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(calculateSeconds), userInfo: nil, repeats: true)
-        text = Database.database.fetchRealmData().text
-        textArray = text.components(separatedBy: " ")
+        text = Constant.text
+        textArray = text.components(separatedBy: " ").shuffled()
     }
     func restart() {
         time = 4
@@ -106,3 +106,4 @@ class TimerGame: Game {
     }
     
 }
+

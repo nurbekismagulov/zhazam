@@ -95,11 +95,13 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
     
     override func viewWillDisappear(_ animated: Bool) {
         game.timer.invalidate()
+        Music.share.backgroundMusicPlayer.volume = 1
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        Music.share.backgroundMusicPlayer.volume = 0
     }
     
     @objc func textFieldDidChange() {

@@ -112,12 +112,12 @@ class MainMenuViewController: UIViewController {
     
     @objc func soundPressed(){
         if isPressed {
-            Music.share.backgroundMusicPlayer.volume = 0
+            Music.share.backgroundMusicPlayer.pause()
             menuView.soundImageView.image = #imageLiteral(resourceName: "soundOff")
             isPressed = false
         } else {
-            Music.share.backgroundMusicPlayer.volume = 1
-            menuView.soundImageView.image = #imageLiteral(resourceName: "settings")
+            Music.share.backgroundMusicPlayer.play()
+            menuView.soundImageView.image = #imageLiteral(resourceName: "on")
             isPressed = true
         }
     }
