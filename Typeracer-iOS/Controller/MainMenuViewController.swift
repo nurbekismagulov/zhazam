@@ -20,12 +20,12 @@ class MainMenuViewController: UIViewController {
         let label = UILabel()
         label.textColor = .white
         label.setTextWithTypeAnimation(typedText: " ZHAZAM")
-        label.font = .setCabinSketch(ofSize: 70)
+        label.font = .setCabinSketch(ofSize: Constant.multiplyToWidth(number: 70))
         return label
     }()
     lazy var playButton: UIButton = {
         let button = UIButton()
-        button.layer.cornerRadius = 8
+        button.layer.cornerRadius = Constant.multiplyToHeight(number: 8)
         button.layer.masksToBounds = true
         button.addTarget(self, action: #selector(playPressed), for: .touchUpInside)
         return button
@@ -75,27 +75,27 @@ class MainMenuViewController: UIViewController {
     func configureConstraints(){
         
         constrain(nameLabel, view){ nl, v in
-            nl.top == v.top + 150
+            nl.top == v.top + Constant.multiplyToHeight(number: 150)
             nl.centerX == v.centerX
-            nl.width == 300
+            nl.width == Constant.multiplyToWidth(number: 300)
         }
         
         constrain(menuView, playButton, view) { mv, pb, v in
             mv.bottom == v.bottom - 65
             mv.centerX == v.centerX
-            mv.height == 66
-            mv.width == 335
+            mv.height == Constant.multiplyToHeight(number: 66)
+            mv.width == Constant.multiplyToWidth(number: 335)
             
-            pb.bottom == mv.top - 20
+            pb.bottom == mv.top - Constant.multiplyToHeight(number: 20)
             pb.centerX == v.centerX
-            pb.height == 66
-            pb.width == 335
+            pb.height == Constant.multiplyToHeight(number: 66)
+            pb.width == Constant.multiplyToWidth(number: 335)
         }
         
         constrain(playImage, playButton) { pi, pb in
             pi.center == pb.center
-            pi.height == 30
-            pi.width == 20
+            pi.height == Constant.multiplyToHeight(number: 30)
+            pi.width == Constant.multiplyToWidth(number: 20)
         }
     }
     

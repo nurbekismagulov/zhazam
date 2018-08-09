@@ -16,7 +16,7 @@ class ModesViewController: UIViewController {
         let label = UILabel()
         label.text = "Choose mode"
         label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 32)
+        label.font = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 32))
         return label
     }()
     
@@ -36,9 +36,9 @@ class ModesViewController: UIViewController {
         button.backgroundColor = .white
         button.setTitle("OK", for: .normal)
         button.setTitleColor(.catalinaBlue, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: Constant.multiplyToWidth(number: 19))
         button.addTarget(self, action: #selector(okButtonPressed), for: .touchUpInside)
-        button.layer.cornerRadius = 37
+        button.layer.cornerRadius = Constant.multiplyToHeight(number: 37)
         return button
     }()
     
@@ -58,6 +58,7 @@ class ModesViewController: UIViewController {
     func configureView(){
         view.backgroundColor = .catalinaBlue
         self.navigationController?.navigationBar.topItem?.title = ""
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     func createViews(){
         [modeLabel, switchView, okButton].forEach { view.addSubview($0) }
@@ -82,18 +83,23 @@ class ModesViewController: UIViewController {
     // MARK: - Layouts
     func configureConstraints(){
         constrain(modeLabel, switchView, okButton, view){ ml, mv, ob, v in
-            ml.top == v.top + 25
+            ml.top == v.top + Constant.multiplyToHeight(number: 25)
             ml.centerX == v.centerX
             
-            mv.top == ml.bottom + 50
+            mv.top == ml.bottom + Constant.multiplyToHeight(number: 50)
             mv.centerX == v.centerX
-            mv.height == 337
-            mv.width == 184
+            mv.height == Constant.multiplyToHeight(number: 337)
+            mv.width == Constant.multiplyToWidth(number: 184)
             
-            ob.bottom == v.bottom - 40
             ob.centerX == v.centerX
-            ob.height == 74
-            ob.width == 74
+            ob.height == Constant.multiplyToHeight(number: 74)
+            ob.width == Constant.multiplyToHeight(number: 74)
+                        
+            if UIScreen.main.bounds.height == 812 {
+                ob.bottom == v.bottom - 120
+            } else {
+                ob.bottom == v.bottom - Constant.multiplyToHeight(number: 40)
+            }
         }
     }
 }

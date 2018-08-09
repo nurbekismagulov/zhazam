@@ -25,7 +25,7 @@ class LabelView: UILabel {
     
     private func commonInit() {
         let randomSize = Int(arc4random_uniform(UInt32(15)) + 30)
-        self.frame.size = CGSize(width: 250, height: 150)
+        self.frame.size = CGSize(width: Constant.multiplyToHeight(number: 250), height: Constant.multiplyToHeight(number: 150))
         self.font = UIFont.setCabinSketch(ofSize: CGFloat(randomSize))
         self.backgroundColor = .clear
         array = texts[0].text.components(separatedBy: .whitespacesAndNewlines)

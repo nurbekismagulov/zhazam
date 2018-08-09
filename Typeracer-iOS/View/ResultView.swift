@@ -21,7 +21,7 @@ class ResultView: UIView {
     lazy var resultLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.font = .setCabinSketch(ofSize: 45)
+        label.font = .setCabinSketch(ofSize: Constant.multiplyToWidth(number: 45))
         label.text = "YOUR RESULT"
         return label
     }()
@@ -29,13 +29,13 @@ class ResultView: UIView {
     lazy var scoreLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.font = .setCabinSketch(ofSize: 50)
+        label.font = .setCabinSketch(ofSize: Constant.multiplyToWidth(number: 50))
         return label
     }()
     lazy var shareButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
-        button.layer.cornerRadius = 35
+        button.layer.cornerRadius = Constant.multiplyToHeight(number: 35)
         button.setImage(#imageLiteral(resourceName: "share"), for: .normal)
         return button
     }()
@@ -43,7 +43,7 @@ class ResultView: UIView {
     lazy var homeButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
-        button.layer.cornerRadius = 50
+        button.layer.cornerRadius = Constant.multiplyToHeight(number: 50)
         button.setImage(#imageLiteral(resourceName: "home"), for: .normal)
         return button
     }()
@@ -51,7 +51,7 @@ class ResultView: UIView {
     lazy var replayButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
-        button.layer.cornerRadius = 35
+        button.layer.cornerRadius = Constant.multiplyToHeight(number: 35)
         button.setImage(#imageLiteral(resourceName: "replay"), for: .normal)
         return button
     }()
@@ -75,26 +75,33 @@ class ResultView: UIView {
         constrain(backgroundView, resultLabel, scoreLabel, shareButton, homeButton, replayButton, self) { bv, rl, sl, hb, sb, rb, v in
             bv.edges == v.edges
             
-            rl.top == v.top + 150
+            rl.top == v.top + Constant.multiplyToHeight(number: 150)
             rl.centerX == v.centerX
             
-            sl.top == rl.bottom + 65
+            sl.top == rl.bottom + Constant.multiplyToHeight(number: 65)
             sl.centerX == v.centerX
             
-            hb.bottom == v.bottom - 80
-            hb.left == v.left + 50
-            hb.height == 70
-            hb.width == 70
+            hb.left == v.left + Constant.multiplyToWidth(number: 50)
+            hb.height == Constant.multiplyToHeight(number: 70)
+            hb.width == Constant.multiplyToWidth(number: 70)
             
-            sb.bottom == v.bottom - 65
-            sb.left == hb.right + 18
-            sb.height == 100
-            sb.width == 100
+            sb.left == hb.right + Constant.multiplyToWidth(number: 18)
+            sb.height == Constant.multiplyToHeight(number: 100)
+            sb.width == Constant.multiplyToWidth(number: 100)
             
-            rb.bottom == v.bottom - 80
-            rb.right == v.right - 50
-            rb.height == 70
-            rb.width == 70
+            rb.right == v.right - Constant.multiplyToWidth(number: 50)
+            rb.height == Constant.multiplyToHeight(number: 70)
+            rb.width == Constant.multiplyToWidth(number: 70)
+            
+            if UIScreen.main.bounds.height == 812 {
+                hb.bottom == v.bottom - 140
+                sb.bottom == v.bottom - 120
+                rb.bottom == v.bottom - 140
+            } else {
+                hb.bottom == v.bottom - Constant.multiplyToHeight(number: 80)
+                sb.bottom == v.bottom - Constant.multiplyToHeight(number: 65)
+                rb.bottom == v.bottom - Constant.multiplyToHeight(number: 80)
+            }
         }
     }
     

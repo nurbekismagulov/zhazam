@@ -17,7 +17,7 @@ class ResultCollectionViewCell: UICollectionViewCell {
         label.text = "0"
         label.textColor = "#16aafc".hexColor
         label.setStyle()
-        label.font = .systemFont(ofSize: 23)
+        label.font = .systemFont(ofSize: Constant.multiplyToWidth(number: 23))
         label.layer.borderColor = "#16aafc".hexColor.cgColor
         return label
     }()
@@ -26,7 +26,7 @@ class ResultCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "0"
         label.textColor = .candyAppleRed
-        label.font = .systemFont(ofSize: 23)
+        label.font = .systemFont(ofSize: Constant.multiplyToWidth(number: 23))
         label.setStyle()
         label.layer.borderColor = UIColor.candyAppleRed.cgColor
         return label
@@ -36,7 +36,7 @@ class ResultCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 30)
+        label.font = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 30))
         return label
     }()
  
@@ -58,20 +58,19 @@ class ResultCollectionViewCell: UICollectionViewCell {
     
     func configureConstraints(){
         constrain(timerLabel, classicLabel, titleLabel, contentView){f, s, t, cv in
-            f.top == cv.top + 10
-            f.left == cv.left + 2
-            f.height == 120
-            f.width == 120
+            f.top == cv.top + Constant.multiplyToHeight(number: 10)
+            f.left == cv.left + Constant.multiplyToWidth(number: 2)
+            f.height == Constant.multiplyToHeight(number: 120)
+            f.width == Constant.multiplyToHeight(number: 120)
             
-            s.top == cv.top + 10
-            s.right == cv.right - 2
-            s.height == 120
-            s.width == 120
+            s.top == cv.top + Constant.multiplyToHeight(number: 10)
+            s.right == cv.right - Constant.multiplyToWidth(number: 2)
+            s.height == Constant.multiplyToHeight(number: 120)
+            s.width == Constant.multiplyToHeight(number: 120)
             
-            t.top == s.bottom + 20
+            t.top == s.bottom + Constant.multiplyToHeight(number: 20)
             t.centerX == cv.centerX
-            t.height == 100
-
+            t.height == Constant.multiplyToHeight(number: 100)
         }
     }
     

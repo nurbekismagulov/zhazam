@@ -36,7 +36,7 @@ class ClassicModeViewController: UIViewController {
         let label = UILabel()
         label.text = "0 wpm"
         label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 18)
+        label.font = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 18))
         return label
     }()
 
@@ -52,7 +52,7 @@ class ClassicModeViewController: UIViewController {
         let timer = UILabel()
         timer.text = "3"
         timer.textColor = .white
-        timer.font = .boldSystemFont(ofSize: 50)
+        timer.font = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 50))
         return timer
     }()
     
@@ -83,6 +83,7 @@ class ClassicModeViewController: UIViewController {
     func configureView() {
         view.backgroundColor = .catalinaBlue
         self.navigationController?.navigationBar.topItem?.title = ""
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
 
     func createViews() {
@@ -122,14 +123,20 @@ class ClassicModeViewController: UIViewController {
             
             sl.top == v.top + (30 / 667 * UIScreen.main.bounds.height)
             sl.right == v.right - (10 / 375 * UIScreen.main.bounds.width)
-            
-            ctv.top == ri.bottom + (20 / 667 * UIScreen.main.bounds.height)
+          
             ctv.left == v.left
             ctv.right == v.right
-            ctv.height == 274
+            ctv.height == Constant.multiplyToHeight(number: 274)
 
-            cdl.top == ctv.bottom + 100
             cdl.centerX == v.centerX
+            
+            if UIScreen.main.bounds.height == 812 {
+                cdl.top == ctv.bottom + 150
+                ctv.top == ri.bottom + 30
+            } else {
+                cdl.top == ctv.bottom + Constant.multiplyToHeight(number: 100)
+                ctv.top == ri.bottom + Constant.multiplyToHeight(number: 20)
+            }
         }
         constrain(resultView, view) { rv, v in
             rv.edges == v.edges
