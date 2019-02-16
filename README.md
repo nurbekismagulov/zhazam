@@ -4,4 +4,4 @@ There are 2 interesting modes, such as Classic and Timer. Also user can track hi
 Insipired from www.typeracer.com.
 https://itunes.apple.com/kz/app/zhazam/id1424168976
 
-In this repo code is not so clean and correct because this is not the last version.
+I forgot to push about half of code, that's why code is not clean and correct.
