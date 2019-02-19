@@ -29,7 +29,7 @@ class ShareManager: NSObject, UIDocumentInteractionControllerDelegate {
     
     //MARK: App Stor rate
     func appStoreRate() {
-        guard let url = URL(string : "") else { return }
+        guard let url = URL(string : "itms-apps://itunes.apple.com/ru/app/id1424168976") else { return }
         guard #available(iOS 10, *) else {
             UIApplication.shared.openURL(url)
             return

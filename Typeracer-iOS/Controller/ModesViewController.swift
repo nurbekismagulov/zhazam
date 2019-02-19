@@ -66,7 +66,7 @@ class ModesViewController: UIViewController {
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     func createViews(){
-        [modeLabel, switchView, okButton].forEach { view.addSubview($0) }
+        [modeLabel, switchView, okButton].forEach(view.addSubview)
     }
     
     // MARK: - Logic

@@ -53,7 +53,7 @@ class ResultCollectionViewCell: UICollectionViewCell {
     
     //MARK: Set views
     func configureViews(){
-        [timerLabel, classicLabel, titleLabel].forEach({contentView.addSubview($0)})
+        [timerLabel, classicLabel, titleLabel].forEach(contentView.addSubview)
     }
     
     func configureConstraints(){

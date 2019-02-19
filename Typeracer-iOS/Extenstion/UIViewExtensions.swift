@@ -6,10 +6,8 @@
 //  Copyright © 2018 theSmartest. All rights reserved.
 //
 
-import Foundation
 import UIKit
 extension UIView {
-        
     func setGradientBackground() {
         let colorTop =  UIColor.deepSkyBlue.cgColor
         let colorBottom = UIColor.dodgerBlue.cgColor

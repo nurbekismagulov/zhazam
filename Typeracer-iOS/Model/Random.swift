@@ -14,7 +14,7 @@ struct Random {
     static func generatePoint(min: CGPoint, max: CGPoint) -> CGPoint {
         return CGPoint(x: generateCGFloat(min.x, max.x), y: generateCGFloat(min.y, max.y))
     }
-    
+
     static func generateCGFloat(_ lower: CGFloat, _ upper: CGFloat) -> CGFloat {
         return CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * (upper - lower) + lower
     }

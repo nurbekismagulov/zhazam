@@ -10,7 +10,6 @@ import Foundation
 import ScrollableGraphView
 
 extension LinePlot {
-    
     func setLineStyle(){
         self.adaptAnimationType = .easeOut
         self.lineStyle = .straight
@@ -18,7 +17,6 @@ extension LinePlot {
 }
 
 extension DotPlot {
-   
     func setDotStyle(){
         self.dataPointType = .circle
         self.dataPointSize = Constant.multiplyToHeight(number: 5)
@@ -26,7 +24,6 @@ extension DotPlot {
 }
 
 extension ReferenceLines {
-    
     func setReferenceStyle(){
         self.referenceLineLabelFont = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 8))
         self.referenceLineLabelFont = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 8))
@@ -38,7 +35,6 @@ extension ReferenceLines {
 }
 
 extension ScrollableGraphView {
-    
     func setGraphStyle(){
         self.backgroundFillColor = .catalinaBlue
         self.dataPointSpacing = Constant.multiplyToWidth(number: 60)

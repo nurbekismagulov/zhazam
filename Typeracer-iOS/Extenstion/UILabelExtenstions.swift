@@ -6,7 +6,6 @@
 //  Copyright © 2018 theSmartest. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UILabel {
@@ -17,7 +16,6 @@ extension UILabel {
         }
         
         DispatchQueue.global(qos: .userInteractive).async {
-
             for character in typedText {
                 DispatchQueue.main.async {
                     self.text = self.text! + String(character)

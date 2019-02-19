@@ -12,24 +12,16 @@ class ClassicGame: Game {
     
     // MARK: - Protocol properties
     var text: String
-    
     var textArray: [String]
-    
     var atWord: Int
-    
     var correctLetters: Int
-    
     var wrongLetters: Int
-    
     var timer: Timer
-    
     var seconds: Int
-    
     var wpm: Int
     var correctWords: Int
     
     // MARK: - Classic game properties
-    
     weak var delegate: GameDelegate?
     
     var carIcon: String
@@ -53,7 +45,6 @@ class ClassicGame: Game {
     }
     
     // MARK: - Logic
-    
     func calculateWPM() {
         let minute = Double(seconds) / 60.0
         if seconds > 0 {
@@ -91,6 +82,7 @@ class ClassicGame: Game {
     func updateWPM() {
         delegate?.gameWPMDidUpdate()
     }
+    
     func updateText(with typedString: String) {
         if textArray[atWord].hasPrefix(typedString) || (textBeforeTyping == textArray[atWord] && typedString.hasSuffix(" ")){
             wrongLetters = 0
@@ -124,13 +116,10 @@ class ClassicGame: Game {
         if time > 0 {
             time -= 1
             delegate?.timerDidUpdate(with: time)
-        }
-            
-        else{
+        } else{
             seconds += 1
             calculateWPM()
             delegate?.gameDidStart()
         }
     }
-    
 }

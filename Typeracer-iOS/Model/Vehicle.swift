@@ -9,7 +9,6 @@
 import Foundation
 
 class Vehicle {
-    
     var fullImage: String
     var iconImages: [String]
     var name: String
@@ -19,5 +18,4 @@ class Vehicle {
         self.iconImages = iconImages
         self.name = name
     }
-    
 }

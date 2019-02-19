@@ -248,7 +248,6 @@ extension TimerModeViewController: GameDelegate {
     
     func textDidUpdateRightWord() {
         textField.text = ""
-//        UIView.animate(withDuration: 0.5) {
         self.tableView.scrollToRow(at: IndexPath(row: self.game.atWord, section: 0), at: .top, animated: true)
         let cell = self.tableView.cellForRow(at: IndexPath(row: self.game.atWord, section: 0)) as? TimerModeTableViewCell
         if let cell = cell {

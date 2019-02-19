@@ -126,12 +126,4 @@ class MainMenuViewController: UIViewController {
         let vc = SettingsViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-  
 }
-/*
- KANBAN
- how to do feature experiments
- pomodore principle
- find your own cave
- */

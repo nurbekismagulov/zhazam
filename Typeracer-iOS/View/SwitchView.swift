@@ -83,8 +83,9 @@ class SwitchView: UIView {
         self.clipsToBounds = true
         self.layer.cornerRadius = Constant.multiplyToHeight(number: 20)
     }
+    
     func createViews(){
-        [choiceView, firstImage, firstLabel, secondImage, secondLabel, offlineIsEnableCircle, onlineIsEnableCircle].forEach { self.addSubview($0) }
+        [choiceView, firstImage, firstLabel, secondImage, secondLabel, offlineIsEnableCircle, onlineIsEnableCircle].forEach(self.addSubview)
     }
     
     func addGestures() {
@@ -112,12 +113,7 @@ class SwitchView: UIView {
     
     @objc func viewTapped(_ sender: UITapGestureRecognizer) {
         if !choiceView.frame.contains(sender.location(in: self)) {
-            if atIndex == 0 {
-                animateAtIndexZero()
-            }
-            else {
-                animateAtIndexOne()
-            }
+            atIndex == 0 ? animateAtIndexZero() : animateAtIndexOne()
         }
     }
     func animateAtIndexZero() {

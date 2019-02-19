@@ -81,7 +81,7 @@ class MenuView: UIView {
     }
     
     func createViews(){
-        [soundButton, graphButton, settingsButton, firstLine, secondLine].forEach { self.addSubview($0) }
+        [soundButton, graphButton, settingsButton, firstLine, secondLine].forEach(self.addSubview)
     }
     //MARK: - Layouts
     func setupConstraints(){
@@ -106,7 +106,7 @@ class MenuView: UIView {
             }
         }
         [firstLine, secondLine].forEach { (line) in
-            constrain(line, self){ l, v in
+            constrain(line, self) { l, v in
                 l.centerY == v.centerY
                 l.height == Constant.multiplyToHeight(number: 36)
                 l.width == Constant.multiplyToWidth(number: 1)
@@ -114,15 +114,10 @@ class MenuView: UIView {
         }
         constrain(soundButton, firstLine, graphButton, secondLine, settingsButton, self){ sb, fl, gb, sl, setb, v in
             sb.left == v.left + Constant.multiplyToWidth(number: 7)
-            
             fl.left == sb.right + Constant.multiplyToWidth(number: 4)
-            
             gb.left == fl.right + Constant.multiplyToWidth(number: 6)
-            
             sl.left == gb.right + Constant.multiplyToWidth(number: 5)
-            
             setb.left == sl.right + Constant.multiplyToWidth(number: 4)
-            
         }
         
     }

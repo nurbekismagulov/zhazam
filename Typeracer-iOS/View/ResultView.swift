@@ -69,7 +69,7 @@ class ResultView: UIView {
     }
     
     func createViews(){
-        [backgroundView, resultLabel, scoreLabel, shareButton, homeButton, replayButton].forEach { self.addSubview($0) }
+        [backgroundView, resultLabel, scoreLabel, shareButton, homeButton, replayButton].forEach(self.addSubview)
     }
     func configureConstraints() {
         constrain(backgroundView, resultLabel, scoreLabel, shareButton, homeButton, replayButton, self) { bv, rl, sl, hb, sb, rb, v in

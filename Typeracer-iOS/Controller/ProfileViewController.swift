@@ -164,7 +164,7 @@ class ProfileViewController: UIViewController, Reusable {
     func configureViews(){
         view.backgroundColor = .catalinaBlue
         self.navigationController?.navigationBar.topItem?.title = ""
-        [graphView, collectionView, infoLabel, descriptionLabel, fView, sView, fLabel, sLabel].forEach( {view.addSubview($0)} )
+        [graphView, collectionView, infoLabel, descriptionLabel, fView, sView, fLabel, sLabel].forEach(view.addSubview)
     }
     
     func configureConstraints(){

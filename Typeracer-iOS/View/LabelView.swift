@@ -39,5 +39,4 @@ class LabelView: UILabel {
         let text = Database.database.fetchRealmData()
         texts.append(text)
     }
-
 }

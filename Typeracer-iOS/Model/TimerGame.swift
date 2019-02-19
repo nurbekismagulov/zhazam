@@ -11,26 +11,18 @@ import Foundation
 class TimerGame: Game {
     
     var text: String
-    
     var textArray: [String]
-    
     var atWord: Int
-    
     var correctLetters: Int
-    
     var wrongLetters: Int
-    
     var timer: Timer
-    
     var seconds: Int
-    
     var wpm: Int
-    
     var time = 3
     
     weak var delegate: GameDelegate?
-    var correctWords = 0
     
+    var correctWords = 0
     var textBeforeTyping: String
     
     init() {
