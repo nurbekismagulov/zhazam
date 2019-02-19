@@ -6,7 +6,6 @@
 //  Copyright © 2018 theSmartest. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension String {

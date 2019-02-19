@@ -18,7 +18,8 @@ class MenuView: UIView {
         return button
     }()
     lazy var soundImageView: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "soundOff"))
+        let image = UIImageView(image: #imageLiteral(resourceName: "musicOn"))
+        image.contentMode = .scaleAspectFill
         return image
     }()
     
@@ -29,17 +30,6 @@ class MenuView: UIView {
     }()
     lazy var graphImageView: UIImageView = {
         let image = UIImageView(image: UIImage(named: "graph"))
-        return image
-    }()
-    
-    lazy var profileButton: UIButton = {
-        let button = UIButton()
-        button.addSubview(profileImageView)
-        return button
-    }()
-    
-    lazy var profileImageView: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "profile"))
         return image
     }()
     
@@ -87,60 +77,47 @@ class MenuView: UIView {
     // MARK: - Creating Views
     func configureView(){
         self.backgroundColor = .white
-        self.layer.cornerRadius = 8
+        self.layer.cornerRadius = Constant.multiplyToHeight(number: 8)
     }
     
     func createViews(){
-        [soundButton, graphButton, profileButton, settingsButton, firstLine, secondLine, thirdLine].forEach { self.addSubview($0) }
+        [soundButton, graphButton, settingsButton, firstLine, secondLine].forEach(self.addSubview)
     }
     //MARK: - Layouts
     func setupConstraints(){
-        constrain(soundImageView, soundButton, graphImageView, graphButton, profileImageView, profileButton, settingsImageView, settingsButton){ si, sb, gi, gb, pi, pb, seti, setb in
+        constrain(soundImageView, soundButton, graphImageView, graphButton, settingsImageView, settingsButton){ si, sb, gi, gb, seti, setb in
             si.center == sb.center
-            si.width == 24
-            si.height == 20
+            si.width == Constant.multiplyToWidth(number: 24)
+            si.height == Constant.multiplyToHeight(number: 20)
             
             gi.center == gb.center
-            gi.width == 24
-            gi.height == 20
-            
-            pi.center == pb.center
-            pi.width == 18
-            pi.height == 22
+            gi.width == Constant.multiplyToWidth(number: 24)
+            gi.height == Constant.multiplyToHeight(number: 20)
             
             seti.center == setb.center
-            seti.width == 22
-            seti.height == 22
+            seti.width == Constant.multiplyToWidth(number: 22)
+            seti.height == Constant.multiplyToHeight(number: 22)
         }
-        [soundButton, graphButton, profileButton, settingsButton].forEach { (button) in
+        [soundButton, graphButton, settingsButton].forEach { (button) in
             constrain(button, self){ b, v in
                 b.centerY == v.centerY
-                b.height == 55
-                b.width == 70
+                b.height == Constant.multiplyToHeight(number: 55)
+                b.width == Constant.multiplyToWidth(number: 100)
             }
         }
-        [firstLine, secondLine, thirdLine].forEach { (line) in
-            constrain(line, self){ l, v in
+        [firstLine, secondLine].forEach { (line) in
+            constrain(line, self) { l, v in
                 l.centerY == v.centerY
-                l.height == 33
-                l.width == 1
+                l.height == Constant.multiplyToHeight(number: 36)
+                l.width == Constant.multiplyToWidth(number: 1)
             }
         }
-        constrain(soundButton, firstLine, graphButton, secondLine, profileButton, thirdLine, settingsButton, self){ sb, fl, gb, sl, pb, tl, setb, v in
-            sb.left == v.left + 7
-            
-            fl.left == sb.right + 7
-            
-            gb.left == fl.right + 7
-            
-            sl.left == gb.right + 6
-            
-            pb.left == sl.right + 7
-            
-            tl.left == pb.right + 7
-            
-            setb.left == tl.right + 7
-            
+        constrain(soundButton, firstLine, graphButton, secondLine, settingsButton, self){ sb, fl, gb, sl, setb, v in
+            sb.left == v.left + Constant.multiplyToWidth(number: 7)
+            fl.left == sb.right + Constant.multiplyToWidth(number: 4)
+            gb.left == fl.right + Constant.multiplyToWidth(number: 6)
+            sl.left == gb.right + Constant.multiplyToWidth(number: 5)
+            setb.left == sl.right + Constant.multiplyToWidth(number: 4)
         }
         
     }

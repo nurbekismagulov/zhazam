@@ -8,4 +8,6 @@ target 'Typeracer-iOS' do
   pod "UPCarouselFlowLayout"
   # Pods for Typeracer-iOS
 
+  pod 'RealmSwift'
+  pod 'ScrollableGraphView'
 end

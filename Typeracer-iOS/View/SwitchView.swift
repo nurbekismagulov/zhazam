@@ -20,13 +20,14 @@ class SwitchView: UIView {
     // MARK: - Views
     lazy var choiceView: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 20
+        view.layer.cornerRadius = Constant.multiplyToHeight(number: 20)
         view.clipsToBounds = true
         return view
     }()
     
     lazy var firstImage: UIImageView = {
         let image = UIImageView(image: images[0])
+        image.contentMode = .scaleAspectFill
         return image
     }()
     
@@ -34,31 +35,32 @@ class SwitchView: UIView {
         let label = UILabel()
         label.textColor = .white
         label.text = "Single Player"
-        label.font = .boldSystemFont(ofSize: 14)
+        label.font = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 17))
         return label
     }()
     
     lazy var secondImage: UIImageView = {
         let image = UIImageView(image: images[1])
+        image.contentMode = .scaleAspectFill
         return image
     }()
     lazy var secondLabel: UILabel = {
         let label = UILabel()
         label.textColor = .catalinaBlue
         label.text = "Multiplayer"
-        label.font = .boldSystemFont(ofSize: 14)
+        label.font = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 17))
         return label
     }()
     lazy var offlineIsEnableCircle: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 7.5
-        view.backgroundColor = .green
+        view.layer.cornerRadius = Constant.multiplyToHeight(number: Int(7.5))
+        view.backgroundColor = .appleGreen
         return view
     }()
     lazy var onlineIsEnableCircle: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 7.5
-        view.backgroundColor = .red
+        view.layer.cornerRadius = Constant.multiplyToHeight(number: Int(7.5))
+        view.backgroundColor = .candyAppleRed
         return view
     }()
     
@@ -79,10 +81,11 @@ class SwitchView: UIView {
     func configureView(){
         self.backgroundColor = .white
         self.clipsToBounds = true
-        self.layer.cornerRadius = 20
+        self.layer.cornerRadius = Constant.multiplyToHeight(number: 20)
     }
+    
     func createViews(){
-        [choiceView, firstImage, firstLabel, secondImage, secondLabel, offlineIsEnableCircle, onlineIsEnableCircle].forEach { self.addSubview($0) }
+        [choiceView, firstImage, firstLabel, secondImage, secondLabel, offlineIsEnableCircle, onlineIsEnableCircle].forEach(self.addSubview)
     }
     
     func addGestures() {
@@ -98,7 +101,6 @@ class SwitchView: UIView {
     }
     
     @objc func swipeUp(){
-       // delegate.didSwipeUp()
         if atIndex == 1 {
             animateAtIndexOne()
         }
@@ -111,12 +113,7 @@ class SwitchView: UIView {
     
     @objc func viewTapped(_ sender: UITapGestureRecognizer) {
         if !choiceView.frame.contains(sender.location(in: self)) {
-            if atIndex == 0 {
-                animateAtIndexZero()
-            }
-            else {
-                animateAtIndexOne()
-            }
+            atIndex == 0 ? animateAtIndexZero() : animateAtIndexOne()
         }
     }
     func animateAtIndexZero() {
@@ -150,32 +147,33 @@ class SwitchView: UIView {
             cv.top == v.top
             cv.left == v.left
             cv.right == v.right
-            cv.height == 169
+            cv.height == Constant.multiplyToHeight(number: 169)
             
-            si.top == v.top + 48
+            si.top == v.top + Constant.multiplyToHeight(number: 48)
             si.centerX == v.centerX
-            si.height == 51
-            si.width == 42
+            si.height == Constant.multiplyToHeight(number: 51)
+            si.width == Constant.multiplyToWidth(number: 42)
             
-            sl.top == si.bottom + 24
+            sl.top == si.bottom + Constant.multiplyToHeight(number: 26)
             sl.centerX == v.centerX
             
-            ml.bottom == v.bottom - 35
+            ml.bottom == v.bottom - Constant.multiplyToHeight(number: 35)
             ml.centerX == v.centerX
             
-            mi.bottom == ml.top - 24
+            mi.bottom == ml.top - Constant.multiplyToHeight(number: 24)
             mi.centerX == v.centerX
+            mi.height == Constant.multiplyToHeight(number: 51)
+            mi.width == Constant.multiplyToWidth(number: 42)
             
+            ofc.top == v.top + Constant.multiplyToHeight(number: 15)
+            ofc.right == v.right - Constant.multiplyToWidth(number: 15)
+            ofc.height == Constant.multiplyToHeight(number: 15)
+            ofc.width == Constant.multiplyToHeight(number: 15)
             
-            ofc.top == v.top + 15
-            ofc.right == v.right - 15
-            ofc.height == 15
-            ofc.width == 15
-            
-            onc.bottom == v.bottom - 138
-            onc.right == v.right - 15
-            onc.height == 15
-            onc.width == 15
+            onc.bottom == v.bottom - Constant.multiplyToHeight(number: 138)
+            onc.right == v.right - Constant.multiplyToWidth(number: 15)
+            onc.height == Constant.multiplyToHeight(number: 15)
+            onc.width == Constant.multiplyToHeight(number: 15)
         }
     }
     

@@ -6,7 +6,6 @@
 //  Copyright © 2018 theSmartest. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UILabel {
@@ -17,7 +16,6 @@ extension UILabel {
         }
         
         DispatchQueue.global(qos: .userInteractive).async {
-
             for character in typedText {
                 DispatchQueue.main.async {
                     self.text = self.text! + String(character)
@@ -28,6 +26,18 @@ extension UILabel {
         }
     }
     
+    func setStyle(){
+        self.layer.shadowColor = UIColor.darkGray.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: Constant.multiplyToHeight(number: 1))
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowRadius = Constant.multiplyToHeight(number: 2)
+        self.layer.cornerRadius = Constant.multiplyToHeight(number: 60)
+        self.layer.borderWidth = 3
+        self.textAlignment = .center
+        self.backgroundColor = .clear
+        self.layer.masksToBounds = true
+    }
+
 }
 
 
