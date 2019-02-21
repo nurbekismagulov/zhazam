@@ -43,8 +43,8 @@ class ResultCollectionViewCell: UICollectionViewCell {
     //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureViews()
-        configureConstraints()
+        setupViews()
+        setupConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -52,11 +52,11 @@ class ResultCollectionViewCell: UICollectionViewCell {
     }
     
     //MARK: Set views
-    func configureViews(){
+    func setupViews(){
         [timerLabel, classicLabel, titleLabel].forEach(contentView.addSubview)
     }
     
-    func configureConstraints(){
+    func setupConstraints(){
         constrain(timerLabel, classicLabel, titleLabel, contentView){f, s, t, cv in
             f.top == cv.top + Constant.multiplyToHeight(number: 10)
             f.left == cv.left + Constant.multiplyToWidth(number: 2)

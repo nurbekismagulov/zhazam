@@ -77,7 +77,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! SettingsTableViewCell
         let section = items[indexPath.section][indexPath.row]
-        cell.cellIcon.image = section.image
+        cell.icon.image = section.image
         cell.titleLabel.text = section.title
         cell.backgroundColor = .clear
         return cell

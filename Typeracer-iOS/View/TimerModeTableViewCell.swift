@@ -10,25 +10,33 @@ import UIKit
 import Cartography
 
 class TimerModeTableViewCell: UITableViewCell {
-
-    let label = UILabel()
+    
+    lazy var label: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: Constant.multiplyToWidth(number: 15))
+        return label
+    }()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        configure()
+        commonInit()
+        setupViews()
+        setupConstraints()
     }
-    func configure(){
-        label.textColor = .white
-        self.backgroundColor = .catalinaBlue
-        label.font = UIFont.systemFont(ofSize: Constant.multiplyToWidth(number: 15))
-        self.addSubview(label)
-        constrain(label, self) { l, cv in
-            l.center == cv.center
-        }
-    }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
+    func commonInit() {
+        self.backgroundColor = .catalinaBlue
+    }
+    func setupViews() {
+        contentView.addSubview(label)
+    }
+    func setupConstraints() {
+        constrain(label, contentView) { l, cv in
+            l.center == cv.center
+        }
+    }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LabelView: UILabel {
+class RandomLabelView: UILabel {
     
     var texts: [Text] = []
     var array: [String] = []

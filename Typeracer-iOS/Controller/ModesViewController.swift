@@ -45,9 +45,9 @@ class ModesViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
-        createViews()
-        configureConstraints()
+        commonInit()
+        setupViews()
+        setupConstraints()
     }
     override func viewDidLayoutSubviews() {
         switchView.layoutIfNeeded()
@@ -60,12 +60,12 @@ class ModesViewController: UIViewController {
     }
     
     //MARK: - Creating views
-    func configureView(){
+    func commonInit(){
         view.backgroundColor = .catalinaBlue
         self.navigationController?.navigationBar.topItem?.title = ""
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
-    func createViews(){
+    func setupViews(){
         [modeLabel, switchView, okButton].forEach(view.addSubview)
     }
     
@@ -86,7 +86,7 @@ class ModesViewController: UIViewController {
     }
     
     // MARK: - Layouts
-    func configureConstraints(){
+    func setupConstraints(){
         constrain(modeLabel, switchView, okButton, view){ ml, mv, ob, v in
             ml.top == v.top + Constant.multiplyToHeight(number: 25)
             ml.centerX == v.centerX

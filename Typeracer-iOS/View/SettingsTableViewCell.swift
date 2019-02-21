@@ -13,29 +13,29 @@ class SettingsTableViewCell: UITableViewCell {
     
     //MARK: UI init
     lazy var titleLabel: UILabel = {
-        let titleLabel = UILabel()
-        titleLabel.font = UIFont(name: "Avenir-Next", size: Constant.multiplyToWidth(number: 16))
-        titleLabel.textAlignment = .center
-        titleLabel.numberOfLines = 0
-        titleLabel.textColor = .white
-        return titleLabel
+        let label = UILabel()
+        label.font = UIFont(name: "Avenir-Next", size: Constant.multiplyToWidth(number: 16))
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.textColor = .white
+        return label
     }()
     
-    lazy var cellIcon: UIImageView = {
-        let cellIcon = UIImageView()
-        cellIcon.layer.shadowColor = UIColor.black.cgColor
-        cellIcon.layer.shadowOpacity = 0.07
-        cellIcon.layer.shadowOffset = CGSize(width: Constant.multiplyToHeight(number: 1), height: Constant.multiplyToHeight(number: 1))
-        cellIcon.layer.shadowRadius = Constant.multiplyToHeight(number: 3)
-        cellIcon.contentMode = .scaleAspectFill
-        return cellIcon
+    lazy var icon: UIImageView = {
+        let imageView = UIImageView()
+        imageView.layer.shadowColor = UIColor.black.cgColor
+        imageView.layer.shadowOpacity = 0.07
+        imageView.layer.shadowOffset = CGSize(width: Constant.multiplyToHeight(number: 1), height: Constant.multiplyToHeight(number: 1))
+        imageView.layer.shadowRadius = Constant.multiplyToHeight(number: 3)
+        imageView.contentMode = .scaleAspectFill
+        return imageView
     }()
     
     //MARK: Initilizer
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
-        configureViews()
-        configureConstraints()
+        setupViews()
+        setupConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -43,12 +43,12 @@ class SettingsTableViewCell: UITableViewCell {
     }
    
     //MARK: Set views
-    func configureViews(){
-        [titleLabel, cellIcon].forEach({contentView.addSubview($0)})
+    func setupViews(){
+        [titleLabel, icon].forEach(contentView.addSubview)
     }
     
-    func configureConstraints(){
-        constrain(titleLabel, cellIcon, contentView) { tl, ci, sf in
+    func setupConstraints(){
+        constrain(titleLabel, icon, contentView) { tl, ci, sf in
             ci.centerY == sf.centerY
             ci.width == Constant.multiplyToWidth(number: 24)
             ci.height == Constant.multiplyToHeight(number: 24)
@@ -58,5 +58,4 @@ class SettingsTableViewCell: UITableViewCell {
             tl.left == ci.right + Constant.multiplyToWidth(number: 20)
         }
     }
-
 }

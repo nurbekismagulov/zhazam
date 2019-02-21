@@ -11,7 +11,7 @@ import Cartography
 
 class CarCollectionViewCell: UICollectionViewCell {
     
-    lazy var carNameLabel: UILabel = {
+    lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: Constant.multiplyToWidth(number: 32))
         label.numberOfLines = 2
@@ -20,7 +20,7 @@ class CarCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var carImage: UIImageView = {
+    lazy var imageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFill
         return image
@@ -29,6 +29,7 @@ class CarCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         createViews()
+        setupViews()
         configureConstraints()
     }
     
@@ -39,12 +40,14 @@ class CarCollectionViewCell: UICollectionViewCell {
     func createViews(){
         self.backgroundColor = .white
         self.layer.cornerRadius = Constant.multiplyToHeight(number: 15)
-        self.addSubview(carNameLabel)
-        self.addSubview(carImage)
+    }
+    
+    func setupViews() {
+        [imageView, nameLabel].forEach(contentView.addSubview)
     }
     
     func configureConstraints(){
-        constrain(carNameLabel, carImage, contentView) { cnl, ci, cv in
+        constrain(nameLabel, imageView, contentView) { cnl, ci, cv in
             cnl.top == cv.top + Constant.multiplyToHeight(number: 16)
             cnl.left == cv.left + Constant.multiplyToWidth(number: 29)
             cnl.right == cv.right - Constant.multiplyToWidth(number: 29)

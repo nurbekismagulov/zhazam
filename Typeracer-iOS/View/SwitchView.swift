@@ -11,10 +11,10 @@ import Cartography
 
 class SwitchView: UIView {
     
-   // weak var delegate: SWitchViewDelegate?
+   // weak var delegate: SitchViewDelegate?
     
     var atIndex = 0
-    var initialTouchPoint:CGPoint = CGPoint(x: 0, y: 0)
+    var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
     var images: [UIImage] = [#imageLiteral(resourceName: "singleplayerWhite"), #imageLiteral(resourceName: "multiplayerBlue"), #imageLiteral(resourceName: "singleplayerBlue"), #imageLiteral(resourceName: "multiplayerWhite")]
     
     // MARK: - Views
@@ -57,6 +57,7 @@ class SwitchView: UIView {
         view.backgroundColor = .appleGreen
         return view
     }()
+    
     lazy var onlineIsEnableCircle: UIView = {
         let view = UIView()
         view.layer.cornerRadius = Constant.multiplyToHeight(number: Int(7.5))
@@ -136,6 +137,7 @@ class SwitchView: UIView {
         secondImage.image = images[1]
         secondLabel.textColor = .catalinaBlue
     }
+    
     func setImages(arrayOfImages: [UIImage]){
         firstImage.image = arrayOfImages[0]
         secondImage.image = arrayOfImages[1]

@@ -17,7 +17,6 @@ class ClassicModeViewController: UIViewController {
     
 
     // MARK: - properties
-    var wrongText = ""
     var movePerWord: CGFloat = 0
     var realm: Realm!
     

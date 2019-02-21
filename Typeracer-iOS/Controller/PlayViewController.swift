@@ -20,10 +20,7 @@ class PlayViewController: UIViewController {
         return label
     }()
     
-    lazy var switchView: SwitchView = {
-        let view = SwitchView()
-        return view
-    }()
+    lazy var switchView = SwitchView()
     
     lazy var okButton: UIButton = {
         let button = UIButton()
@@ -39,27 +36,47 @@ class PlayViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
-        createViews()
-        configureConstraints()
+        commonInit()
+        setupViews()
+        setupConstraints()
     }
     override func viewDidLayoutSubviews() {
         switchView.layoutIfNeeded()
         switchView.choiceView.setGradientBackground()
     }
     
-    override func viewLayoutMarginsDidChange() {
-        switchView.choiceView.setGradientBackground()
-    }
-    
     //MARK: - creating Views
-    func configureView(){
+    func commonInit(){
         view.backgroundColor = .catalinaBlue
         self.navigationController?.navigationBar.topItem?.title = ""
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
-    func createViews(){
-        [modeLabel, switchView, okButton].forEach { view.addSubview($0) }
+    
+    func setupViews(){
+        [modeLabel, switchView, okButton].forEach(view.addSubview)
+    }
+    
+    //MARK: - Layouts
+    func setupConstraints(){
+        constrain(modeLabel, switchView, okButton, view){ ml, mv, ob, v in
+            ml.top == v.top + Constant.multiplyToHeight(number: 25)
+            ml.centerX == v.centerX
+            
+            mv.top == ml.bottom + Constant.multiplyToHeight(number: 50)
+            mv.centerX == v.centerX
+            mv.height == Constant.multiplyToHeight(number: 337)
+            mv.width == Constant.multiplyToWidth(number: 184)
+            
+            ob.centerX == v.centerX
+            ob.height == Constant.multiplyToHeight(number: 74)
+            ob.width == Constant.multiplyToHeight(number: 74)
+            
+            if UIScreen.main.bounds.height == 812 {
+                ob.bottom == v.bottom - 120
+            } else {
+                ob.bottom == v.bottom - Constant.multiplyToHeight(number: 40)
+            }
+        }
     }
     
     //MARK: - Logic
@@ -81,29 +98,6 @@ class PlayViewController: UIViewController {
         let alert = UIAlertController(title: "Sorry", message: "Coming soon.", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-    }
-    
-    //MARK: - Layouts
-    func configureConstraints(){
-        constrain(modeLabel, switchView, okButton, view){ ml, mv, ob, v in
-            ml.top == v.top + Constant.multiplyToHeight(number: 25)
-            ml.centerX == v.centerX
-            
-            mv.top == ml.bottom + Constant.multiplyToHeight(number: 50)
-            mv.centerX == v.centerX
-            mv.height == Constant.multiplyToHeight(number: 337)
-            mv.width == Constant.multiplyToWidth(number: 184)
-            
-            ob.centerX == v.centerX
-            ob.height == Constant.multiplyToHeight(number: 74)
-            ob.width == Constant.multiplyToHeight(number: 74)
-            
-            if UIScreen.main.bounds.height == 812 {
-                ob.bottom == v.bottom - 120
-            } else {
-                ob.bottom == v.bottom - Constant.multiplyToHeight(number: 40)
-            }
-        }
     }
     
 

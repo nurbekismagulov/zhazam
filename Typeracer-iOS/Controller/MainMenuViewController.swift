@@ -31,12 +31,9 @@ class MainMenuViewController: UIViewController {
         return button
     }()
     
-    lazy var animatedConteinerView: AnimatedView = {
-        let anim = AnimatedView(frame: .zero)
-        return anim
-    }()
+    lazy var animatedContainerView = AnimatedView()
     
-    lazy var playImage = UIImageView(image: UIImage(named: "play"))
+    lazy var playImageView = UIImageView(image: UIImage(named: "play"))
     
     lazy var menuView: MenuView = {
         let menuView = MenuView()
@@ -49,31 +46,32 @@ class MainMenuViewController: UIViewController {
     // MARK: - lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .catalinaBlue
-        createViews()
-        configureConstraints()
-        Music.share.playBackgroundMusic(filename: "sound")
+        commonInit()
+        setupViews()
+        setupConstraints()
     }
     
     override func viewDidLayoutSubviews() {
         self.playButton.setGradientBackground()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        animatedConteinerView.animateBubbles()
+        animatedContainerView.animateBubbles()
     }
   
+    func commonInit() {
+        view.backgroundColor = .catalinaBlue
+        Music.share.playBackgroundMusic(filename: "sound")
+    }
     
     // MARK : - creating Views
-    func createViews(){
-        [animatedConteinerView,nameLabel, playButton, menuView].forEach { view.addSubview($0) }
-        playButton.addSubview(playImage)
+    func setupViews(){
+        [animatedContainerView,nameLabel, playButton, menuView].forEach(view.addSubview)
+        playButton.addSubview(playImageView)
     }
    
-    func configureConstraints(){
-        
+    func setupConstraints(){
         constrain(nameLabel, view){ nl, v in
             nl.top == v.top + Constant.multiplyToHeight(number: 150)
             nl.centerX == v.centerX
@@ -92,7 +90,7 @@ class MainMenuViewController: UIViewController {
             pb.width == Constant.multiplyToWidth(number: 335)
         }
         
-        constrain(playImage, playButton) { pi, pb in
+        constrain(playImageView, playButton) { pi, pb in
             pi.center == pb.center
             pi.height == Constant.multiplyToHeight(number: 30)
             pi.width == Constant.multiplyToWidth(number: 20)
@@ -114,11 +112,11 @@ class MainMenuViewController: UIViewController {
         if isPressed {
             Music.share.backgroundMusicPlayer.pause()
             menuView.soundImageView.image = #imageLiteral(resourceName: "musinOff")
-            isPressed = false
+            isPressed.toggle()
         } else {
             Music.share.backgroundMusicPlayer.play()
             menuView.soundImageView.image = #imageLiteral(resourceName: "musicOn")
-            isPressed = true
+            isPressed.toggle()
         }
     }
    

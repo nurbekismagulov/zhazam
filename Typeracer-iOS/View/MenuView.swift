@@ -64,8 +64,8 @@ class MenuView: UIView {
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureView()
-        createViews()
+        commonInit()
+        setupViews()
         setupConstraints()
     }
 
@@ -75,14 +75,15 @@ class MenuView: UIView {
     }
     
     // MARK: - Creating Views
-    func configureView(){
+    func commonInit(){
         self.backgroundColor = .white
         self.layer.cornerRadius = Constant.multiplyToHeight(number: 8)
     }
     
-    func createViews(){
+    func setupViews(){
         [soundButton, graphButton, settingsButton, firstLine, secondLine].forEach(self.addSubview)
     }
+    
     //MARK: - Layouts
     func setupConstraints(){
         constrain(soundImageView, soundButton, graphImageView, graphButton, settingsImageView, settingsButton){ si, sb, gi, gb, seti, setb in

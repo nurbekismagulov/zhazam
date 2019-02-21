@@ -119,18 +119,18 @@ extension CarsCollectionViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayOfCars.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! CarCollectionViewCell
-        cell.carNameLabel.text = arrayOfCars[indexPath.row].name
-        cell.carImage.image = UIImage(named: arrayOfCars[indexPath.row].fullImage)
+        cell.nameLabel.text = arrayOfCars[indexPath.row].name
+        cell.imageView.image = UIImage(named: arrayOfCars[indexPath.row].fullImage)
         return cell
     }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         var visibleRect = CGRect()
-        
         visibleRect.origin = collectionView.contentOffset
         visibleRect.size = collectionView.bounds.size
-        
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         atIndex = (collectionView.indexPathForItem(at: visiblePoint)?.row)!
     }
