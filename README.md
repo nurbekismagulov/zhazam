@@ -5,4 +5,4 @@ Insipired from www.typeracer.com.
 
 Link: https://itunes.apple.com/kz/app/zhazam/id1424168976
 
-Code is not so clean, because I wrote it when at the beginning of my iOS path.
+Code is not so clean, because I wrote it at the beginning of my iOS path.
