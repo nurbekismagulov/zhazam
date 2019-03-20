@@ -58,7 +58,6 @@ class TimerModeViewController: UIViewController, Reusable, UICollectionViewDeleg
         tf.font = .systemFont(ofSize: Constant.multiplyToWidth(number: 17))
         tf.setLeftPaddingPoints(Constant.multiplyToWidth(number: 10))
         tf.setRightPaddingPoints(Constant.multiplyToWidth(number: 10))
-        //        tf.keyboardType = .emailAddress
         tf.autocorrectionType = .no
         tf.autocapitalizationType = .none
         tf.isUserInteractionEnabled = false
